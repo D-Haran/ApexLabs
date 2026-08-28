@@ -1,0 +1,54 @@
+{
+  "flat": {
+    "end_speed_m_s": 20.0,
+    "roll_rad": 0.0,
+    "pitch_rad": 6.195411440394206e-19,
+    "max_lateral_error_m": 0.0,
+    "all_on_track": true,
+    "analytic_speed_error_m_s": 0.0
+  },
+  "uphill": {
+    "end_speed_m_s": 9.782558590896144,
+    "roll_rad": 0.0,
+    "pitch_rad": -5.286944711218507e-05,
+    "max_lateral_error_m": 0.0,
+    "all_on_track": true,
+    "analytic_speed_error_m_s": 5.577760475716786e-13
+  },
+  "downhill": {
+    "end_speed_m_s": 30.217441409103856,
+    "roll_rad": 0.0,
+    "pitch_rad": -5.286944711218507e-05,
+    "max_lateral_error_m": 0.0,
+    "all_on_track": true,
+    "analytic_speed_error_m_s": 5.577760475716786e-13
+  },
+  "left": {
+    "end_speed_m_s": 19.737286329160526,
+    "roll_rad": 0.01999113622730921,
+    "pitch_rad": 0.0005893502158901371,
+    "max_lateral_error_m": 0.29537551044758736,
+    "all_on_track": true
+  },
+  "right": {
+    "end_speed_m_s": 19.737286329160526,
+    "roll_rad": -0.019991136227309213,
+    "pitch_rad": 0.0005893502158901372,
+    "max_lateral_error_m": 0.29537551044758736,
+    "all_on_track": true
+  },
+  "braking": {
+    "end_speed_m_s": 13.743014403696156,
+    "roll_rad": 0.0,
+    "pitch_rad": -0.003074134641808958,
+    "max_lateral_error_m": 0.0,
+    "all_on_track": true
+  },
+  "acceleration": {
+    "end_speed_m_s": 31.453567420449133,
+    "roll_rad": 0.0,
+    "pitch_rad": 0.003534658576872774,
+    "max_lateral_error_m": 0.0,
+    "all_on_track": true
+  }
+}

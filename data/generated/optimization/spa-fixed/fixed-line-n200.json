@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "problem": "fixed_reference_line_minimum_time",
+  "claim": "locally optimized reduced-model solution; independent replay required",
+  "track": "Spa-Francorchamps",
+  "vehicle": "McLaren P1 \u2014 approximate model",
+  "solver": {
+    "modeling": "CasADi 3.8.1",
+    "nlp": "IPOPT",
+    "status": "Solve_Succeeded",
+    "success": true,
+    "iterations": 530,
+    "wall_time_s": 3.768777707940899
+  },
+  "mesh": {
+    "nodes": 200,
+    "spacing_m": 35.074439968381036
+  },
+  "size": {
+    "decision_variables": 1201,
+    "constraints": 3802
+  },
+  "objective": {
+    "predicted_lap_time_s": 182.62958321278123,
+    "reference_lap_time_s": 276.9699999998931,
+    "predicted_delta_s": -94.34041678711188
+  },
+  "residuals": {
+    "maximum_speed_dynamic_defect_m2_s2": 6.821210263296962e-13,
+    "maximum_time_dynamic_defect_s": 2.6887936321884354e-12,
+    "maximum_lateral_equilibrium_m_s2": 8.334666290465975e-12,
+    "maximum_normalized_yaw_equilibrium": 5.069689048992153e-13,
+    "maximum_tire_force_violation": 1.0001980355056617e-08,
+    "minimum_normal_load_n": 939.614851266821,
+    "maximum_control_violation": 0.0,
+    "periodicity_speed_m_s": 0.0,
+    "maximum_track_violation_m": 0.0
+  },
+  "model_notes": [
+    "Fixed centerline: lateral_offset_m is identically zero.",
+    "Spatial trapezoidal direct collocation uses dt/ds = 1/v.",
+    "Tire capacity and nonlinear lateral force mirror the production four-contact formulas.",
+    "Quasi-steady sideslip/lateral/yaw equilibrium replaces full transient planar dynamics.",
+    "Elevation grade is exported but omitted because the current production planar simulator has no grade force.",
+    "A 1e-7 cyclic control smoothness term is numerical regularization; reported lap time excludes it."
+  ],
+  "warm_start": {
+    "source": "/Users/derrickratnaharan/ApexLab/data/generated/optimization/spa-fixed/fixed-line-n100.csv",
+    "mapped_samples": 100,
+    "kind": "previous_refinement"
+  },
+  "trajectory": "fixed-line-n200.csv"
+}

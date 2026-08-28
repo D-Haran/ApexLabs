@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "accepted": true,
+  "acceptance_checks": {
+    "solver_success": true,
+    "replay_completed": true,
+    "lap_time_difference_within_1_percent": true,
+    "maximum_position_error_within_0_5_m": true,
+    "maximum_speed_error_within_1_mps": true,
+    "maximum_yaw_error_within_0_25_rad": true,
+    "rms_yaw_error_within_0_05_rad": true,
+    "no_track_violation": true,
+    "production_tire_utilization_bounded": true
+  },
+  "optimizer": {
+    "schema_version": 1,
+    "problem": "fixed_reference_line_minimum_time",
+    "claim": "locally optimized reduced-model solution; independent replay required",
+    "track": "ApexLab Technical Test Circuit",
+    "vehicle": "Generic nonlinear performance car",
+    "solver": {
+      "modeling": "CasADi 3.8.1",
+      "nlp": "IPOPT",
+      "status": "Solve_Succeeded",
+      "success": true,
+      "iterations": 790,
+      "wall_time_s": 20.5700817090692
+    },
+    "mesh": {
+      "nodes": 800,
+      "spacing_m": 1.3484421191660265
+    },
+    "size": {
+      "decision_variables": 4801,
+      "constraints": 15202
+    },
+    "objective": {
+      "predicted_lap_time_s": 42.949107239438824,
+      "reference_lap_time_s": 50.70999999997244,
+      "predicted_delta_s": -7.760892760533615
+    },
+    "residuals": {
+      "maximum_speed_dynamic_defect_m2_s2": 3.836930773104541e-13,
+      "maximum_time_dynamic_defect_s": 6.265821195228227e-15,
+      "maximum_lateral_equilibrium_m_s2": 7.105427357601002e-15,
+      "maximum_normalized_yaw_equilibrium": 2.741162048321322e-16,
+      "maximum_tire_force_violation": 9.996459660044366e-09,
+      "minimum_normal_load_n": 663.8104932684596,
+      "maximum_control_violation": 0.0,
+      "periodicity_speed_m_s": 0.0,
+      "maximum_track_violation_m": 0.0
+    },
+    "model_notes": [
+      "Fixed centerline: lateral_offset_m is identically zero.",
+      "Spatial trapezoidal direct collocation uses dt/ds = 1/v.",
+      "Tire capacity and nonlinear lateral force mirror the production four-contact formulas.",
+      "Quasi-steady sideslip/lateral/yaw equilibrium replaces full transient planar dynamics.",
+      "Elevation grade is exported but omitted because the current production planar simulator has no grade force.",
+      "A 1e-7 cyclic control smoothness term is numerical regularization; reported lap time excludes it."
+    ],
+    "warm_start": {
+      "source": "/Users/derrickratnaharan/ApexLab/data/generated/optimization/technical-fixed/fixed-line-n400.csv",
+      "mapped_samples": 400,
+      "kind": "previous_refinement"
+    },
+    "trajectory": "fixed-line-n800.csv"
+  },
+  "production_replay": {
+    "schema_version": 1,
+    "completed": true,
+    "replayed_lap_time_s": 43.175000000003635,
+    "maximum_position_error_m": 0.2718059183991239,
+    "maximum_speed_error_mps": 0.4310471655112824,
+    "maximum_yaw_error_rad": 0.20968769595569015,
+    "maximum_tire_utilization": 1.0000000000000004,
+    "maximum_track_violation_m": 0,
+    "maximum_steering_correction_rad": 0.26497941599004515,
+    "maximum_longitudinal_command_correction": 0.15086650792894885,
+    "rms_position_error_m": 0.0482194723014034,
+    "rms_speed_error_mps": 0.14792481552025988,
+    "rms_yaw_error_rad": 0.03383640473066964
+  },
+  "comparison": {
+    "lap_time_difference_s": 0.2258927605648111,
+    "lap_time_difference_percent": 0.5259544961097139
+  },
+  "interpretation": "Validated locally optimized fixed-line solution within declared replay tolerances."
+}

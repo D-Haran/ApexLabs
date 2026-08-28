@@ -1,0 +1,18 @@
+{
+  "draw_calls": 135,
+  "triangles": 636128,
+  "textures": 71,
+  "geometries": 194,
+  "asset_name": "Mclaren P1",
+  "asset_ready_ms": 7.700000047683716,
+  "texture_memory_estimate_bytes": 69847873,
+  "frame_samples": 300,
+  "average_frame_ms": 16.66933333317439,
+  "p95_frame_ms": 16.899999976158142,
+  "selector_seek_average_ms": 0.12299999952316285,
+  "selector_seek_p95_ms": 0.20000004768371582,
+  "seek_to_paint_ms": 22.700000047683716,
+  "session_load_ms": 2489,
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+  "viewport": "1512 × 1100 @ 1"
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://apexlab.dev/schemas/track-v1.json",
+  "title": "ApexLab track schema v1",
+  "type": "object",
+  "required": ["schema_version", "name", "provenance", "closed", "control_points"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "name": {"type": "string", "minLength": 1},
+    "provenance": {"type": "string", "minLength": 1},
+    "closed": {"const": true},
+    "interpolation": {"const": "periodic_uniform_catmull_rom"},
+    "control_points": {
+      "type": "array", "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["x_m", "y_m", "left_width_m", "right_width_m"],
+        "properties": {
+          "x_m": {"type": "number"}, "y_m": {"type": "number"},
+          "left_width_m": {"type": "number", "exclusiveMinimum": 0},
+          "right_width_m": {"type": "number", "exclusiveMinimum": 0}
+        },
+        "additionalProperties": false
+      }
+    },
+    "sector_boundaries_fraction": {
+      "type": "array", "items": {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
+    }
+  },
+  "additionalProperties": false
+}

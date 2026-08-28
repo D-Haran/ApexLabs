@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "problem": "free_racing_line_minimum_time",
+  "claim": "locally optimized reduced-model solution; independent replay required",
+  "track": "ApexLab Technical Test Circuit",
+  "vehicle": "Generic nonlinear performance car",
+  "initialization": "center",
+  "line_locked": false,
+  "solver": {
+    "modeling": "CasADi 3.8.1",
+    "nlp": "IPOPT",
+    "status": "Solve_Succeeded",
+    "success": true,
+    "iterations": 1238,
+    "wall_time_s": 7.266535124974325
+  },
+  "mesh": {
+    "nodes": 100,
+    "centerline_spacing_m": 10.787536953328212,
+    "optimized_path_length_m": 1034.6013378217697
+  },
+  "size": {
+    "decision_variables": 701,
+    "constraints": 2202
+  },
+  "objective": {
+    "predicted_lap_time_s": 35.02212349546911,
+    "fixed_line_warm_start_lap_time_s": 42.027,
+    "predicted_gain_vs_fixed_s": 7.004876504530891
+  },
+  "line": {
+    "safety_margin_m": 2.5,
+    "minimum_offset_m": -5.499999883190425,
+    "maximum_offset_m": 5.499999860156407,
+    "maximum_absolute_offset_m": 5.499999883190425,
+    "closest_cg_boundary_clearance_m": 2.5000001168095753
+  },
+  "residuals": {
+    "maximum_speed_dynamic_defect_m2_s2": 4.121147867408581e-13,
+    "maximum_time_dynamic_defect_s": 5.10702591327572e-15,
+    "maximum_lateral_equilibrium_m_s2": 8.884670776865278e-12,
+    "maximum_normalized_yaw_equilibrium": 8.96131559630379e-14,
+    "maximum_tire_force_violation": 1.0021465213227998e-08,
+    "minimum_normal_load_n": 594.848371643131,
+    "maximum_control_violation": 0.0,
+    "maximum_track_violation_m": 0.0,
+    "periodicity_speed_m_s": 0.0,
+    "periodicity_lateral_offset_m": 0.0
+  },
+  "model_notes": [
+    "Track boundaries constrain CG with an explicit safety margin; no body envelope is modeled.",
+    "The line emerges from displaced centerline geometry; no apex or racing-line rules are imposed.",
+    "Slope and second-derivative bounds suppress mesh-scale zig-zag artifacts.",
+    "Lateral offset, slope and curvature use cyclic indices, enforcing closed-line periodicity.",
+    "Independent production replay is mandatory before acceptance."
+  ],
+  "warm_start": {
+    "source": "/Users/derrickratnaharan/ApexLab/data/generated/optimization/technical-fixed/fixed-line-n100.csv",
+    "initialization": "center"
+  },
+  "trajectory": "racing-line-center-n100.csv"
+}

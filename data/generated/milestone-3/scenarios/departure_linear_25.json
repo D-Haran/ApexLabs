@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "name": "departure 25.0",
+  "duration_s": 6.0,
+  "timestep_s": 0.005,
+  "integrator": "rk4",
+  "initial_state": {
+    "position_x_m": 0.0,
+    "position_y_m": 0.0,
+    "yaw_rad": 0.0,
+    "vx_m_s": 25.0,
+    "vy_m_s": 0.0,
+    "yaw_rate_rad_s": 0.0
+  },
+  "steering_profile": {
+    "type": "constant",
+    "value": 0.025
+  },
+  "throttle_profile": {
+    "type": "constant",
+    "value": 0.0
+  },
+  "brake_profile": {
+    "type": "constant",
+    "value": 0.0
+  }
+}

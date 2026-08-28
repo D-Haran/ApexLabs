@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "problem": "fixed_line_grip_and_mass_sensitivity",
+  "nodes": 100,
+  "base_vehicle": "configs/vehicles/generic_nonlinear_performance_car.json",
+  "rows": [
+    {
+      "case": "grip-0.90",
+      "mass_kg": 1450.0,
+      "mu_reference": 0.9,
+      "success": true,
+      "lap_time_s": 47.33942320187935,
+      "iterations": 445,
+      "wall_time_s": 1.38990766601637,
+      "maximum_tire_force_violation": 9.998138983391414e-09
+    },
+    {
+      "case": "grip-1.20",
+      "mass_kg": 1450.0,
+      "mu_reference": 1.2,
+      "success": true,
+      "lap_time_s": 42.02697080831015,
+      "iterations": 309,
+      "wall_time_s": 1.0427377090090886,
+      "maximum_tire_force_violation": 9.996189209715567e-09
+    },
+    {
+      "case": "grip-1.35",
+      "mass_kg": 1450.0,
+      "mu_reference": 1.35,
+      "success": true,
+      "lap_time_s": 40.70936515831842,
+      "iterations": 195,
+      "wall_time_s": 0.7770862500183284,
+      "maximum_tire_force_violation": 1.0004305828203996e-08
+    },
+    {
+      "case": "mass-1200",
+      "mass_kg": 1200.0,
+      "mu_reference": 1.2,
+      "success": true,
+      "lap_time_s": 42.740277541062824,
+      "iterations": 1522,
+      "wall_time_s": 4.493971374933608,
+      "maximum_tire_force_violation": 1.0057647159555927e-08
+    },
+    {
+      "case": "mass-1450",
+      "mass_kg": 1450.0,
+      "mu_reference": 1.2,
+      "success": true,
+      "lap_time_s": 42.02697080831015,
+      "iterations": 309,
+      "wall_time_s": 1.0535765419481322,
+      "maximum_tire_force_violation": 9.996189209715567e-09
+    },
+    {
+      "case": "mass-1600",
+      "mass_kg": 1600.0,
+      "mu_reference": 1.2,
+      "success": true,
+      "lap_time_s": 42.21108681866044,
+      "iterations": 241,
+      "wall_time_s": 0.8932646249886602,
+      "maximum_tire_force_violation": 9.99570737292288e-09
+    }
+  ],
+  "note": "These are reduced-model local solutions; sensitivity trends are not OEM claims."
+}

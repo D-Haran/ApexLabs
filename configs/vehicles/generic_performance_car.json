@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "name": "Generic Performance Car",
+  "provenance": "Illustrative engineering assumptions; not measured from a production vehicle",
+  "mass_kg": 1450.0,
+  "aero": {
+    "air_density_kgpm3": 1.225,
+    "drag_coefficient": 0.32,
+    "lift_coefficient_down": 0.20,
+    "reference_area_m2": 2.20
+  },
+  "powertrain": {
+    "maximum_drive_force_n": 8000.0,
+    "driven_wheel_static_load_fraction": 0.55
+  },
+  "brakes": {
+    "maximum_brake_force_n": 16000.0
+  },
+  "tires": {
+    "friction_coefficient": 1.05,
+    "rolling_resistance_coefficient": 0.015
+  }
+}

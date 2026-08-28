@@ -1,0 +1,68 @@
+{
+  "schema_version": 3,
+  "name": "McLaren P1 \u2014 approximate model",
+  "provenance": "Published McLaren headline specifications anchored with explicitly documented derived, estimated, and fitted parameters; not OEM dynamics data",
+  "mass_kg": 1490.0,
+  "aero": {
+    "air_density_kgpm3": 1.225,
+    "drag_coefficient": 0.34,
+    "lift_coefficient_down": 0.9425,
+    "reference_area_m2": 2.0
+  },
+  "powertrain": {
+    "maximum_drive_force_n": 12000.0,
+    "driven_wheel_static_load_fraction": 0.58
+  },
+  "brakes": {
+    "maximum_brake_force_n": 19162.0
+  },
+  "tires": {
+    "tire_mu_reference": 1.25,
+    "tire_reference_load_n": 3653.0,
+    "tire_load_sensitivity_exponent": -0.08,
+    "rolling_resistance_coefficient": 0.012
+  },
+  "planar": {
+    "wheelbase_m": 2.67,
+    "cg_to_front_axle_m": 1.5486,
+    "cg_to_rear_axle_m": 1.1214,
+    "yaw_moment_of_inertia_kg_m2": 2400.0,
+    "front_cornering_stiffness_n_per_rad": 130000.0,
+    "rear_cornering_stiffness_n_per_rad": 150000.0
+  },
+  "nonlinear_planar": {
+    "front_track_m": 1.658,
+    "rear_track_m": 1.604,
+    "cg_height_m": 0.45,
+    "front_roll_moment_fraction": 0.48,
+    "front_brake_bias": 0.59,
+    "drivetrain_type": "RWD",
+    "drive_front_fraction": 0.0,
+    "force_iteration_tolerance_mps2": 1e-06,
+    "force_iteration_max_iterations": 80,
+    "force_iteration_relaxation": 0.5
+  },
+  "normal_load_model": "sprung_body",
+  "suspension": {
+    "parameter_class": "estimated",
+    "assumptions": "Generic passive springs/dampers, all mass lumped as sprung; not the McLaren hydraulic suspension.",
+    "roll_inertia_kg_m2": 650,
+    "pitch_inertia_kg_m2": 2200,
+    "fl_spring_rate_n_m": 65000,
+    "fl_compression_damping_ns_m": 3500,
+    "fl_rebound_damping_ns_m": 4500,
+    "fl_nominal_ride_height_m": 0.12,
+    "fr_spring_rate_n_m": 65000,
+    "fr_compression_damping_ns_m": 3500,
+    "fr_rebound_damping_ns_m": 4500,
+    "fr_nominal_ride_height_m": 0.12,
+    "rl_spring_rate_n_m": 75000,
+    "rl_compression_damping_ns_m": 3500,
+    "rl_rebound_damping_ns_m": 4500,
+    "rl_nominal_ride_height_m": 0.12,
+    "rr_spring_rate_n_m": 75000,
+    "rr_compression_damping_ns_m": 3500,
+    "rr_rebound_damping_ns_m": 4500,
+    "rr_nominal_ride_height_m": 0.12
+  }
+}

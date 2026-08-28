@@ -1,0 +1,287 @@
+{
+  "zero_steer": {
+    "max_abs_y_m": 0.0,
+    "max_abs_vy_m_s": 0.0,
+    "max_abs_yaw_rad": 0.0,
+    "max_abs_yaw_rate_rad_s": 0.0
+  },
+  "constant_corner": {
+    "measured": {
+      "yaw_rate_rad_s": 0.07142082184564058,
+      "vy_m_s": -0.13055911699147377,
+      "lateral_accel_m_s2": 1.428276079674815,
+      "front_slip_angle_rad": 0.012242956633206735,
+      "rear_slip_angle_rad": 0.01224239560619458,
+      "mean_vx_m_s": 19.997736401180873,
+      "max_vx_deviation_m_s": 0.005044720178428719,
+      "turn_radius_m": 279.9986878392594
+    },
+    "independent_reference": {
+      "yaw_rate_rad_s": 0.07142048714707455,
+      "lateral_accel_m_s2": 1.4282480756111235,
+      "front_slip_angle_rad": 0.01224212636238106,
+      "rear_slip_angle_rad": 0.01224212636238106,
+      "vy_m_s": -0.1305420365495244,
+      "turn_radius_m": 280.0
+    },
+    "relative_errors": {
+      "yaw_rate_rad_s": 4.68631032073251e-06,
+      "vy_m_s": 0.0001308424657745304,
+      "lateral_accel_m_s2": 1.9607282635084208e-05,
+      "front_slip_angle_rad": 6.782080180335406e-05,
+      "rear_slip_angle_rad": 2.1993222872436616e-05,
+      "turn_radius_m": 4.686288359323498e-06
+    }
+  },
+  "step_steer": {
+    "steady_yaw_rate_rad_s": 0.13995539479807634,
+    "peak_yaw_rate_rad_s": 0.14245617297213864,
+    "response_time_90_s": 0.31800000000000095,
+    "overshoot_percent": 1.7868394267118948,
+    "steady_lateral_accel_m_s2": 2.744817941945218,
+    "steady_vy_m_s": -0.23703428628538295
+  },
+  "understeer_gradient_s2_per_m": {
+    "understeer": 0.005477980665950592,
+    "neutral": 0.0,
+    "oversteer": -0.002040816326530612
+  },
+  "handling_speed_sweep": {
+    "understeer": [
+      {
+        "nominal_speed_m_s": 10.0,
+        "mean_vx_m_s": 9.997834652053125,
+        "yaw_rate_gain_s_inv": 2.986597860727203,
+        "reference_yaw_rate_gain_s_inv": 2.986602806448358,
+        "lateral_accel_m_s2": 0.14929779891676892,
+        "front_slip_angle_rad": 0.0018281563372500049,
+        "rear_slip_angle_rad": 0.0010102879410643746,
+        "yaw_gain_relative_error": 1.655968829922148e-06
+      },
+      {
+        "nominal_speed_m_s": 15.0,
+        "mean_vx_m_s": 14.992726867399961,
+        "yaw_rate_gain_s_inv": 3.7189984878204227,
+        "reference_yaw_rate_gain_s_inv": 3.719033164767707,
+        "lateral_accel_m_s2": 0.27879251610602,
+        "front_slip_angle_rad": 0.0034138238491484424,
+        "rear_slip_angle_rad": 0.0018865693874556206,
+        "yaw_gain_relative_error": 9.32418339610324e-06
+      },
+      {
+        "nominal_speed_m_s": 20.0,
+        "mean_vx_m_s": 19.98514131620274,
+        "yaw_rate_gain_s_inv": 4.006615275123275,
+        "reference_yaw_rate_gain_s_inv": 4.006694291006257,
+        "lateral_accel_m_s2": 0.40037267441311164,
+        "front_slip_angle_rad": 0.004902581337805845,
+        "rear_slip_angle_rad": 0.0027092906076104407,
+        "yaw_gain_relative_error": 1.972096627365655e-05
+      },
+      {
+        "nominal_speed_m_s": 25.0,
+        "mean_vx_m_s": 24.97671345461723,
+        "yaw_rate_gain_s_inv": 4.017124789155679,
+        "reference_yaw_rate_gain_s_inv": 4.017252098927142,
+        "lateral_accel_m_s2": 0.5016892661592001,
+        "front_slip_angle_rad": 0.006143213200044028,
+        "rear_slip_angle_rad": 0.0033948879003796793,
+        "yaw_gain_relative_error": 3.1690759834667465e-05
+      },
+      {
+        "nominal_speed_m_s": 30.0,
+        "mean_vx_m_s": 29.9686623931747,
+        "yaw_rate_gain_s_inv": 3.8818405683190087,
+        "reference_yaw_rate_gain_s_inv": 3.8820074211989115,
+        "lateral_accel_m_s2": 0.5816915441809788,
+        "front_slip_angle_rad": 0.007122850236032175,
+        "rear_slip_angle_rad": 0.003936252970844085,
+        "yaw_gain_relative_error": 4.298108215654502e-05
+      }
+    ],
+    "neutral": [
+      {
+        "nominal_speed_m_s": 10.0,
+        "mean_vx_m_s": 9.997338815109494,
+        "yaw_rate_gain_s_inv": 3.57048254561237,
+        "reference_yaw_rate_gain_s_inv": 3.5704781482533905,
+        "lateral_accel_m_s2": 0.1784770917167752,
+        "front_slip_angle_rad": 0.0015298184126957483,
+        "rear_slip_angle_rad": 0.0015298094476615999,
+        "yaw_gain_relative_error": 1.2315882627303732e-06
+      },
+      {
+        "nominal_speed_m_s": 15.0,
+        "mean_vx_m_s": 14.987110842149631,
+        "yaw_rate_gain_s_inv": 5.352564365167309,
+        "reference_yaw_rate_gain_s_inv": 5.352539586482012,
+        "lateral_accel_m_s2": 0.40110766195763825,
+        "front_slip_angle_rad": 0.0034380866617195927,
+        "rear_slip_angle_rad": 0.003438094991518292,
+        "yaw_gain_relative_error": 4.629332468633952e-06
+      },
+      {
+        "nominal_speed_m_s": 20.0,
+        "mean_vx_m_s": 19.96005146795737,
+        "yaw_rate_gain_s_inv": 7.128818508225298,
+        "reference_yaw_rate_gain_s_inv": 7.128589809984775,
+        "lateral_accel_m_s2": 0.7115249367994986,
+        "front_slip_angle_rad": 0.006098792207415571,
+        "rear_slip_angle_rad": 0.006098877439094235,
+        "yaw_gain_relative_error": 3.208183478347192e-05
+      },
+      {
+        "nominal_speed_m_s": 25.0,
+        "mean_vx_m_s": 24.90397921279714,
+        "yaw_rate_gain_s_inv": 8.895217670624309,
+        "reference_yaw_rate_gain_s_inv": 8.894278290284694,
+        "lateral_accel_m_s2": 1.1079013960684316,
+        "front_slip_angle_rad": 0.009496248556908575,
+        "rear_slip_angle_rad": 0.009496521449303416,
+        "yaw_gain_relative_error": 0.00010561625226425096
+      },
+      {
+        "nominal_speed_m_s": 30.0,
+        "mean_vx_m_s": 29.803974004577878,
+        "yaw_rate_gain_s_inv": 10.646962352196134,
+        "reference_yaw_rate_gain_s_inv": 10.644276430206386,
+        "lateral_accel_m_s2": 1.5874297494240832,
+        "front_slip_angle_rad": 0.013606366043036586,
+        "rear_slip_angle_rad": 0.013607000370061158,
+        "yaw_gain_relative_error": 0.00025233485877215723
+      }
+    ],
+    "oversteer": [
+      {
+        "nominal_speed_m_s": 10.0,
+        "mean_vx_m_s": 9.997112008766416,
+        "yaw_rate_gain_s_inv": 3.8509255562389084,
+        "reference_yaw_rate_gain_s_inv": 3.8509139058978263,
+        "lateral_accel_m_s2": 0.1924912693425354,
+        "front_slip_angle_rad": 0.0013749498987949982,
+        "rear_slip_angle_rad": 0.001767785408270783,
+        "yaw_gain_relative_error": 3.0253444680478934e-06
+      },
+      {
+        "nominal_speed_m_s": 15.0,
+        "mean_vx_m_s": 14.982882936662826,
+        "yaw_rate_gain_s_inv": 6.3980194809674105,
+        "reference_yaw_rate_gain_s_inv": 6.397845809534444,
+        "lateral_accel_m_s2": 0.47932263208397646,
+        "front_slip_angle_rad": 0.003423735164833598,
+        "rear_slip_angle_rad": 0.0044020123419711565,
+        "yaw_gain_relative_error": 2.7145298298356778e-05
+      },
+      {
+        "nominal_speed_m_s": 20.0,
+        "mean_vx_m_s": 19.927304453565593,
+        "yaw_rate_gain_s_inv": 10.018461007146536,
+        "reference_yaw_rate_gain_s_inv": 10.015749071842562,
+        "lateral_accel_m_s2": 0.9984260822018641,
+        "front_slip_angle_rad": 0.007131432438932424,
+        "rear_slip_angle_rad": 0.00916968468224683,
+        "yaw_gain_relative_error": 0.00027076709735068436
+      },
+      {
+        "nominal_speed_m_s": 25.0,
+        "mean_vx_m_s": 24.71972967180425,
+        "yaw_rate_gain_s_inv": 15.954498298305722,
+        "reference_yaw_rate_gain_s_inv": 15.918137682020564,
+        "lateral_accel_m_s2": 1.9741604949514564,
+        "front_slip_angle_rad": 0.014099349176056842,
+        "rear_slip_angle_rad": 0.01813342843257239,
+        "yaw_gain_relative_error": 0.002284225517550792
+      },
+      {
+        "nominal_speed_m_s": 30.0,
+        "mean_vx_m_s": 28.85669966171026,
+        "yaw_rate_gain_s_inv": 26.803064993370583,
+        "reference_yaw_rate_gain_s_inv": 26.219213484088773,
+        "lateral_accel_m_s2": 3.8916034032330153,
+        "front_slip_angle_rad": 0.02777888181392972,
+        "rear_slip_angle_rad": 0.03577115650591241,
+        "yaw_gain_relative_error": 0.022268078698704123
+      }
+    ]
+  },
+  "max_handling_yaw_gain_relative_error": 0.022268078698704123,
+  "convergence_reference": {
+    "integrator": "rk4",
+    "timestep_s": 0.0005,
+    "final_yaw_rate_rad_s": -0.05446462277776028,
+    "final_vy_m_s": 0.21482346229026972,
+    "final_yaw_rad": 0.008253889016812548
+  },
+  "convergence": [
+    {
+      "integrator": "euler",
+      "timestep_s": 0.02,
+      "yaw_rate_error_rad_s": 0.0013047314708507576,
+      "vy_error_m_s": 0.008361564418406187,
+      "yaw_error_rad": 0.00019620583054849247
+    },
+    {
+      "integrator": "euler",
+      "timestep_s": 0.01,
+      "yaw_rate_error_rad_s": 0.0006528698516397313,
+      "vy_error_m_s": 0.004137850533161652,
+      "yaw_error_rad": 9.816191922220122e-05
+    },
+    {
+      "integrator": "euler",
+      "timestep_s": 0.005,
+      "yaw_rate_error_rad_s": 0.00032654142882468373,
+      "vy_error_m_s": 0.002058314407622275,
+      "yaw_error_rad": 4.909303795656329e-05
+    },
+    {
+      "integrator": "euler",
+      "timestep_s": 0.002,
+      "yaw_rate_error_rad_s": 0.00013063970736025554,
+      "vy_error_m_s": 0.0008207948357977224,
+      "yaw_error_rad": 1.9639781632318012e-05
+    },
+    {
+      "integrator": "euler",
+      "timestep_s": 0.001,
+      "yaw_rate_error_rad_s": 6.532351062433356e-05,
+      "vy_error_m_s": 0.0004099769051012503,
+      "yaw_error_rad": 9.820291253995542e-06
+    },
+    {
+      "integrator": "rk4",
+      "timestep_s": 0.02,
+      "yaw_rate_error_rad_s": 6.13334232013596e-08,
+      "vy_error_m_s": 2.3702354898236244e-07,
+      "yaw_error_rad": 9.091154192300555e-09
+    },
+    {
+      "integrator": "rk4",
+      "timestep_s": 0.01,
+      "yaw_rate_error_rad_s": 3.6635085867708916e-09,
+      "vy_error_m_s": 1.3718819108499147e-08,
+      "yaw_error_rad": 5.429195912287632e-10
+    },
+    {
+      "integrator": "rk4",
+      "timestep_s": 0.005,
+      "yaw_rate_error_rad_s": 2.2379442049524911e-10,
+      "vy_error_m_s": 8.245725213740229e-10,
+      "yaw_error_rad": 3.315913862933506e-11
+    },
+    {
+      "integrator": "rk4",
+      "timestep_s": 0.002,
+      "yaw_rate_error_rad_s": 5.646691447758201e-12,
+      "vy_error_m_s": 2.0527635147260526e-11,
+      "yaw_error_rad": 8.304450876961411e-13
+    },
+    {
+      "integrator": "rk4",
+      "timestep_s": 0.001,
+      "yaw_rate_error_rad_s": 3.4630631695620195e-13,
+      "vy_error_m_s": 1.1859402349045922e-12,
+      "yaw_error_rad": 5.568462357885551e-14
+    }
+  ]
+}

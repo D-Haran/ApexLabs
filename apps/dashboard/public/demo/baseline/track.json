@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "name": "ApexLab Technical Test Circuit",
+  "provenance": "Generated synthetic geometry authored for ApexLab validation; no real circuit data",
+  "closed": true,
+  "interpolation": "periodic_uniform_catmull_rom",
+  "control_points": [
+    {
+      "x_m": 0,
+      "y_m": 0,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": 120,
+      "y_m": 0,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": 210,
+      "y_m": 15,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": 270,
+      "y_m": 65,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": 260,
+      "y_m": 125,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": 210,
+      "y_m": 155,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": 145,
+      "y_m": 145,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": 105,
+      "y_m": 105,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": 80,
+      "y_m": 65,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": 30,
+      "y_m": 55,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": -25,
+      "y_m": 85,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": -80,
+      "y_m": 130,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": -135,
+      "y_m": 115,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": -155,
+      "y_m": 65,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": -130,
+      "y_m": 20,
+      "left_width_m": 8,
+      "right_width_m": 8
+    },
+    {
+      "x_m": -75,
+      "y_m": -10,
+      "left_width_m": 8,
+      "right_width_m": 8
+    }
+  ],
+  "sector_boundaries_fraction": [
+    0.3333333333333333,
+    0.6666666666666666,
+    1.0
+  ]
+}

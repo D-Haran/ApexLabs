@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://apexlab.local/schemas/vehicle-v3.json",
+  "title": "ApexLab nonlinear four-tire vehicle parameters v3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "name", "provenance", "mass_kg", "aero", "powertrain", "brakes", "tires", "planar", "nonlinear_planar"],
+  "properties": {
+    "schema_version": { "const": 3 },
+    "name": { "type": "string", "minLength": 1 },
+    "provenance": { "type": "string", "minLength": 1 },
+    "mass_kg": { "type": "number", "exclusiveMinimum": 0 },
+    "aero": {
+      "type": "object", "additionalProperties": false,
+      "required": ["air_density_kgpm3", "drag_coefficient", "lift_coefficient_down", "reference_area_m2"],
+      "properties": {
+        "air_density_kgpm3": { "type": "number", "minimum": 0 },
+        "drag_coefficient": { "type": "number", "minimum": 0 },
+        "lift_coefficient_down": { "type": "number", "minimum": 0 },
+        "reference_area_m2": { "type": "number", "minimum": 0 }
+      }
+    },
+    "powertrain": {
+      "type": "object", "additionalProperties": false,
+      "required": ["maximum_drive_force_n", "driven_wheel_static_load_fraction"],
+      "properties": {
+        "maximum_drive_force_n": { "type": "number", "minimum": 0 },
+        "driven_wheel_static_load_fraction": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }
+      }
+    },
+    "brakes": {
+      "type": "object", "additionalProperties": false,
+      "required": ["maximum_brake_force_n"],
+      "properties": { "maximum_brake_force_n": { "type": "number", "minimum": 0 } }
+    },
+    "tires": {
+      "type": "object", "additionalProperties": false,
+      "required": ["tire_mu_reference", "tire_reference_load_n", "tire_load_sensitivity_exponent", "rolling_resistance_coefficient"],
+      "properties": {
+        "tire_mu_reference": { "type": "number", "exclusiveMinimum": 0 },
+        "tire_reference_load_n": { "type": "number", "exclusiveMinimum": 0 },
+        "tire_load_sensitivity_exponent": { "type": "number", "minimum": -0.5, "maximum": 0 },
+        "rolling_resistance_coefficient": { "type": "number", "minimum": 0 }
+      }
+    },
+    "planar": {
+      "type": "object", "additionalProperties": false,
+      "required": ["wheelbase_m", "cg_to_front_axle_m", "cg_to_rear_axle_m", "yaw_moment_of_inertia_kg_m2", "front_cornering_stiffness_n_per_rad", "rear_cornering_stiffness_n_per_rad"],
+      "properties": {
+        "wheelbase_m": { "type": "number", "exclusiveMinimum": 0 },
+        "cg_to_front_axle_m": { "type": "number", "exclusiveMinimum": 0 },
+        "cg_to_rear_axle_m": { "type": "number", "exclusiveMinimum": 0 },
+        "yaw_moment_of_inertia_kg_m2": { "type": "number", "exclusiveMinimum": 0 },
+        "front_cornering_stiffness_n_per_rad": { "type": "number", "exclusiveMinimum": 0 },
+        "rear_cornering_stiffness_n_per_rad": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    },
+    "nonlinear_planar": {
+      "type": "object", "additionalProperties": false,
+      "required": ["front_track_m", "rear_track_m", "cg_height_m", "front_roll_moment_fraction", "front_brake_bias", "drivetrain_type", "drive_front_fraction", "force_iteration_tolerance_mps2", "force_iteration_max_iterations", "force_iteration_relaxation"],
+      "properties": {
+        "front_track_m": { "type": "number", "exclusiveMinimum": 0 },
+        "rear_track_m": { "type": "number", "exclusiveMinimum": 0 },
+        "cg_height_m": { "type": "number", "minimum": 0 },
+        "front_roll_moment_fraction": { "type": "number", "minimum": 0, "maximum": 1 },
+        "front_brake_bias": { "type": "number", "minimum": 0, "maximum": 1 },
+        "drivetrain_type": { "enum": ["FWD", "RWD", "AWD"] },
+        "drive_front_fraction": { "type": "number", "minimum": 0, "maximum": 1 },
+        "force_iteration_tolerance_mps2": { "type": "number", "exclusiveMinimum": 0 },
+        "force_iteration_max_iterations": { "type": "integer", "minimum": 1 },
+        "force_iteration_relaxation": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }
+      }
+    }
+  }
+}

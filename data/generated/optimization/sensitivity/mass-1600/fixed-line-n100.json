@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "problem": "fixed_reference_line_minimum_time",
+  "claim": "locally optimized reduced-model solution; independent replay required",
+  "track": "ApexLab Technical Test Circuit",
+  "vehicle": "Generic nonlinear performance car \u00b7 sensitivity mass-1600",
+  "solver": {
+    "modeling": "CasADi 3.8.1",
+    "nlp": "IPOPT",
+    "status": "Solve_Succeeded",
+    "success": true,
+    "iterations": 241,
+    "wall_time_s": 0.8932646249886602
+  },
+  "mesh": {
+    "nodes": 100,
+    "spacing_m": 10.787536953328212
+  },
+  "size": {
+    "decision_variables": 601,
+    "constraints": 1902
+  },
+  "objective": {
+    "predicted_lap_time_s": 42.21108681866044,
+    "reference_lap_time_s": 50.70999999997244,
+    "predicted_delta_s": -8.498913181311998
+  },
+  "residuals": {
+    "maximum_speed_dynamic_defect_m2_s2": 1.1679546219056647e-13,
+    "maximum_time_dynamic_defect_s": 5.717648576819556e-15,
+    "maximum_lateral_equilibrium_m_s2": 1.127986593019159e-12,
+    "maximum_normalized_yaw_equilibrium": 5.109126305272231e-14,
+    "maximum_tire_force_violation": 9.99570737292288e-09,
+    "minimum_normal_load_n": 758.9251064087885,
+    "maximum_control_violation": 0.0,
+    "periodicity_speed_m_s": 0.0,
+    "maximum_track_violation_m": 0.0
+  },
+  "model_notes": [
+    "Fixed centerline: lateral_offset_m is identically zero.",
+    "Spatial trapezoidal direct collocation uses dt/ds = 1/v.",
+    "Tire capacity and nonlinear lateral force mirror the production four-contact formulas.",
+    "Quasi-steady sideslip/lateral/yaw equilibrium replaces full transient planar dynamics.",
+    "Elevation grade is exported but omitted because the current production planar simulator has no grade force.",
+    "A 1e-7 cyclic control smoothness term is numerical regularization; reported lap time excludes it."
+  ],
+  "warm_start": {
+    "source": "/Users/derrickratnaharan/ApexLab/apps/dashboard/public/demo/baseline",
+    "mapped_samples": 1078,
+    "kind": "feasible_reference_lap"
+  },
+  "trajectory": "fixed-line-n100.csv"
+}

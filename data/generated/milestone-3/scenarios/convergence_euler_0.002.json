@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "name": "nonlinear convergence",
+  "duration_s": 2.0,
+  "timestep_s": 0.002,
+  "integrator": "euler",
+  "initial_state": {
+    "position_x_m": 0.0,
+    "position_y_m": 0.0,
+    "yaw_rad": 0.0,
+    "vx_m_s": 22.0,
+    "vy_m_s": 0.0,
+    "yaw_rate_rad_s": 0.0
+  },
+  "steering_profile": {
+    "type": "sine",
+    "offset": 0.0,
+    "amplitude": 0.04,
+    "frequency_hz": 0.5,
+    "phase_rad": 0.0,
+    "start_time_s": 0.0
+  },
+  "throttle_profile": {
+    "type": "sine",
+    "offset": 0.2,
+    "amplitude": 0.2,
+    "frequency_hz": 0.5,
+    "phase_rad": 0.0,
+    "start_time_s": 0.0
+  },
+  "brake_profile": {
+    "type": "constant",
+    "value": 0.0
+  }
+}

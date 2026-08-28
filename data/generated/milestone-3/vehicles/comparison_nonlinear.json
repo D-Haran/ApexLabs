@@ -1,0 +1,45 @@
+{
+  "schema_version": 3,
+  "name": "Generic nonlinear performance car",
+  "provenance": "Illustrative engineering reference choices; no OEM or proprietary tire data",
+  "mass_kg": 1450.0,
+  "aero": {
+    "air_density_kgpm3": 1.225,
+    "drag_coefficient": 0.0,
+    "lift_coefficient_down": 0.0,
+    "reference_area_m2": 0.0
+  },
+  "powertrain": {
+    "maximum_drive_force_n": 9000.0,
+    "driven_wheel_static_load_fraction": 0.45
+  },
+  "brakes": {
+    "maximum_brake_force_n": 18000.0
+  },
+  "tires": {
+    "tire_mu_reference": 1.2,
+    "tire_reference_load_n": 3555.0,
+    "tire_load_sensitivity_exponent": -0.08,
+    "rolling_resistance_coefficient": 0.0
+  },
+  "planar": {
+    "wheelbase_m": 2.8,
+    "cg_to_front_axle_m": 1.25,
+    "cg_to_rear_axle_m": 1.55,
+    "yaw_moment_of_inertia_kg_m2": 2500.0,
+    "front_cornering_stiffness_n_per_rad": 120000.0,
+    "rear_cornering_stiffness_n_per_rad": 130000.0
+  },
+  "nonlinear_planar": {
+    "front_track_m": 1.6,
+    "rear_track_m": 1.58,
+    "cg_height_m": 0.5,
+    "front_roll_moment_fraction": 0.55,
+    "front_brake_bias": 0.62,
+    "drivetrain_type": "RWD",
+    "drive_front_fraction": 0.0,
+    "force_iteration_tolerance_mps2": 1e-06,
+    "force_iteration_max_iterations": 80,
+    "force_iteration_relaxation": 0.5
+  }
+}

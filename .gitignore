@@ -1,0 +1,23 @@
+/build/
+/build-*/
+/.cache/
+/.DS_Store
+__pycache__/
+*.pyc
+
+# Generated validation artifacts are intentionally versionable. Only transient
+# scratch files under the generated directory are ignored.
+/data/generated/*.tmp
+
+# Dashboard build/cache/test outputs
+node_modules/
+apps/dashboard/dist/
+apps/dashboard/test-results/
+apps/dashboard/playwright-report/
+apps/dashboard/public/assets/*.glb
+*.tsbuildinfo
+
+# User-provided source car packages; retain local files and attribution, regenerate runtime GLBs.
+/assets/cars/*/scene.bin
+/assets/cars/*/scene.gltf
+/assets/cars/*/textures/

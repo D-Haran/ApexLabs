@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "telemetry_schema_version": 4,
+  "wheel_schema_version": 1,
+  "spatial_schema_version": 1,
+  "session_name": "Suzuka \u00b7 P1 approximate reference",
+  "files": {
+    "telemetry": "telemetry.csv",
+    "wheels": "wheels.csv",
+    "geometry": "geometry.csv",
+    "spatial": "spatial.csv",
+    "render": "render.json"
+  },
+  "vehicle": {
+    "name": "McLaren P1 \u2014 approximate model",
+    "mass_kg": 1490.0,
+    "mu_reference": 1.25,
+    "front_axle_m": 1.5486,
+    "rear_axle_m": 1.1214,
+    "front_track_m": 1.658,
+    "rear_track_m": 1.604,
+    "provenance": "Published McLaren headline specifications anchored with explicitly documented derived, estimated, and fitted parameters; not OEM dynamics data",
+    "aero": {
+      "air_density_kgpm3": 1.225,
+      "drag_coefficient": 0.34,
+      "lift_coefficient_down": 0.9425,
+      "reference_area_m2": 2.0
+    }
+  },
+  "track": {
+    "name": "Suzuka",
+    "length_m": 5805.847214365854,
+    "reference_offset_m": 0,
+    "geometry_sha256": "0cefbd265bada8b12d302dc685a78f82022f348e48d39b2fbca6a1bf24096279",
+    "sector_boundaries_fraction": [
+      0.3333333333333333,
+      0.6666666666666666,
+      1.0
+    ],
+    "provenance": "OpenStreetMap contributors (ODbL 1.0); imported without forced length scaling",
+    "kind": "real_imported",
+    "coordinate_system": {
+      "type": "local_enu_wgs84",
+      "origin_lat_deg": 34.844427875,
+      "origin_lon_deg": 136.533185544,
+      "origin_elevation_m": 0.0,
+      "x_axis": "east",
+      "y_axis": "north",
+      "z_axis": "up",
+      "units": "metres"
+    },
+    "elevation_source": null,
+    "elevation_limitation": "No elevation source requested; this import is flat."
+  },
+  "simulation": {
+    "timestep_s": 0.02,
+    "controller_timestep_s": 0.02,
+    "integrator": "rk4",
+    "warmup_laps": 0
+  },
+  "laps": [
+    {
+      "number": 0,
+      "start_time_s": 0.0,
+      "end_time_s": 245.940000000052,
+      "lap_time_s": 245.940000000052,
+      "sector_times_s": [
+        78.0800000000016,
+        89.82000000001048,
+        78.04000000003992
+      ]
+    }
+  ]
+}

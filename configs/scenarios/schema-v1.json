@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://apexlab.local/schemas/scenario-v1.json",
+  "title": "ApexLab deterministic planar scenario v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "name", "duration_s", "timestep_s", "integrator",
+    "initial_state", "steering_profile", "throttle_profile", "brake_profile"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "duration_s": { "type": "number", "minimum": 0 },
+    "timestep_s": { "type": "number", "exclusiveMinimum": 0 },
+    "integrator": { "enum": ["euler", "rk4"] },
+    "initial_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "position_x_m", "position_y_m", "yaw_rad", "vx_m_s", "vy_m_s",
+        "yaw_rate_rad_s"
+      ],
+      "properties": {
+        "position_x_m": { "type": "number" },
+        "position_y_m": { "type": "number" },
+        "yaw_rad": { "type": "number" },
+        "vx_m_s": { "type": "number", "minimum": 0 },
+        "vy_m_s": { "type": "number" },
+        "yaw_rate_rad_s": { "type": "number" }
+      }
+    },
+    "steering_profile": { "$ref": "#/$defs/profile" },
+    "throttle_profile": { "$ref": "#/$defs/profile" },
+    "brake_profile": { "$ref": "#/$defs/profile" }
+  },
+  "$defs": {
+    "profile": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": { "enum": ["constant", "step", "ramp", "sine"] },
+        "value": { "type": "number" },
+        "initial_value": { "type": "number" },
+        "final_value": { "type": "number" },
+        "start_time_s": { "type": "number", "minimum": 0 },
+        "duration_s": { "type": "number", "exclusiveMinimum": 0 },
+        "offset": { "type": "number" },
+        "amplitude": { "type": "number" },
+        "frequency_hz": { "type": "number", "minimum": 0 },
+        "phase_rad": { "type": "number" }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "problem": "fixed_reference_line_minimum_time",
+  "claim": "locally optimized reduced-model solution; independent replay required",
+  "track": "Spa-Francorchamps",
+  "vehicle": "McLaren P1 \u2014 approximate model",
+  "solver": {
+    "modeling": "CasADi 3.8.1",
+    "nlp": "IPOPT",
+    "status": "Solve_Succeeded",
+    "success": true,
+    "iterations": 734,
+    "wall_time_s": 11.604229541029781
+  },
+  "mesh": {
+    "nodes": 400,
+    "spacing_m": 17.537219984190518
+  },
+  "size": {
+    "decision_variables": 2401,
+    "constraints": 7602
+  },
+  "objective": {
+    "predicted_lap_time_s": 188.077400043669,
+    "reference_lap_time_s": 276.9699999998931,
+    "predicted_delta_s": -88.8925999562241
+  },
+  "residuals": {
+    "maximum_speed_dynamic_defect_m2_s2": 8.242295734817162e-13,
+    "maximum_time_dynamic_defect_s": 3.580686303017444e-09,
+    "maximum_lateral_equilibrium_m_s2": 1.7100337501574359e-07,
+    "maximum_normalized_yaw_equilibrium": 1.030152084362283e-08,
+    "maximum_tire_force_violation": 1.000586546950899e-08,
+    "minimum_normal_load_n": 939.6866949116693,
+    "maximum_control_violation": 0.0,
+    "periodicity_speed_m_s": 0.0,
+    "maximum_track_violation_m": 0.0
+  },
+  "model_notes": [
+    "Fixed centerline: lateral_offset_m is identically zero.",
+    "Spatial trapezoidal direct collocation uses dt/ds = 1/v.",
+    "Tire capacity and nonlinear lateral force mirror the production four-contact formulas.",
+    "Quasi-steady sideslip/lateral/yaw equilibrium replaces full transient planar dynamics.",
+    "Elevation grade is exported but omitted because the current production planar simulator has no grade force.",
+    "A 1e-7 cyclic control smoothness term is numerical regularization; reported lap time excludes it."
+  ],
+  "warm_start": {
+    "source": "/Users/derrickratnaharan/ApexLab/data/generated/optimization/spa-fixed/fixed-line-n200.csv",
+    "mapped_samples": 200,
+    "kind": "previous_refinement"
+  },
+  "trajectory": "fixed-line-n400.csv"
+}

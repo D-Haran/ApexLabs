@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://apexlab.local/schemas/vehicle-v1.json",
+  "title": "ApexLab longitudinal vehicle parameters v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "name", "provenance", "mass_kg", "aero", "powertrain",
+    "brakes", "tires"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "provenance": { "type": "string", "minLength": 1 },
+    "mass_kg": { "type": "number", "exclusiveMinimum": 0 },
+    "aero": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "air_density_kgpm3", "drag_coefficient", "lift_coefficient_down",
+        "reference_area_m2"
+      ],
+      "properties": {
+        "air_density_kgpm3": { "type": "number", "minimum": 0 },
+        "drag_coefficient": { "type": "number", "minimum": 0 },
+        "lift_coefficient_down": { "type": "number", "minimum": 0 },
+        "reference_area_m2": { "type": "number", "minimum": 0 }
+      }
+    },
+    "powertrain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["maximum_drive_force_n", "driven_wheel_static_load_fraction"],
+      "properties": {
+        "maximum_drive_force_n": { "type": "number", "minimum": 0 },
+        "driven_wheel_static_load_fraction": {
+          "type": "number", "exclusiveMinimum": 0, "maximum": 1
+        }
+      }
+    },
+    "brakes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["maximum_brake_force_n"],
+      "properties": {
+        "maximum_brake_force_n": { "type": "number", "minimum": 0 }
+      }
+    },
+    "tires": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["friction_coefficient", "rolling_resistance_coefficient"],
+      "properties": {
+        "friction_coefficient": { "type": "number", "minimum": 0 },
+        "rolling_resistance_coefficient": { "type": "number", "minimum": 0 }
+      }
+    }
+  }
+}

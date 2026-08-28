@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "assetName": "Mclaren P1",
+  "sourceFile": "assets/cars/mclaren_p1/scene.gltf",
+  "source": {
+    "author": "Kevin Love SketchFab (https://sketchfab.com/Tyler_Kevin)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/mclaren-p1-7917d2a323b24c89acb418464376c4c9",
+    "title": "Mclaren P1"
+  },
+  "outputGLB": "mclaren-p1.glb",
+  "localForwardAxis": "+X",
+  "localLeftAxis": "-Z",
+  "localUpAxis": "+Y",
+  "sourceSceneForwardAxis": "+Z",
+  "sourceSceneUpAxis": "+Y",
+  "scaleMetersPerAssetUnit": 1.0001081644378444,
+  "scaleBasis": "explicit wheelbase normalization; dimension anchor is documented by caller",
+  "bodyNode": "BODY",
+  "wheels": {
+    "FL": {
+      "steerPivot": "FL_STEER",
+      "spinPivot": "FL_SPIN",
+      "center": [
+        1.335000029805546,
+        0.32496633518442475,
+        -0.8220085746704389
+      ],
+      "radius": 0.32496633518442475,
+      "tireNodes": [
+        "FL_tire_5_2"
+      ],
+      "rimNodes": [
+        "FL_rim_7_16",
+        "FL_rim_7_19",
+        "FL_rim_7_20",
+        "FL_rim_7_23",
+        "FL_rim_7_24",
+        "FL_rim_7_26",
+        "FL_rim_7_28",
+        "FL_rim_7_31"
+      ],
+      "discNodes": [
+        "FL_disc_13_2"
+      ],
+      "caliperNodes": [
+        "FL_caliper_10_4",
+        "FL_caliper_10_6"
+      ],
+      "contactPlaneCorrectionM": 0.0016181724870842906
+    },
+    "FR": {
+      "steerPivot": "FR_STEER",
+      "spinPivot": "FR_SPIN",
+      "center": [
+        1.3349999701944542,
+        0.32496633518442475,
+        0.8220088876286713
+      ],
+      "radius": 0.32496633518442475,
+      "tireNodes": [
+        "FR_tire_5_3"
+      ],
+      "rimNodes": [
+        "FR_rim_7_17",
+        "FR_rim_7_18",
+        "FR_rim_7_21",
+        "FR_rim_7_22",
+        "FR_rim_7_25",
+        "FR_rim_7_27",
+        "FR_rim_7_29",
+        "FR_rim_7_30"
+      ],
+      "discNodes": [
+        "FR_disc_13_3"
+      ],
+      "caliperNodes": [
+        "FR_caliper_10_5",
+        "FR_caliper_10_7"
+      ],
+      "contactPlaneCorrectionM": 0.0016181724870842906
+    },
+    "RL": {
+      "steerPivot": "RL_STEER",
+      "spinPivot": "RL_SPIN",
+      "center": [
+        -1.335,
+        0.3474159324043767,
+        -0.7932030047975542
+      ],
+      "radius": 0.3474159324043767,
+      "tireNodes": [
+        "RL_tire_5_0"
+      ],
+      "rimNodes": [
+        "RL_rim_7_0",
+        "RL_rim_7_3",
+        "RL_rim_7_4",
+        "RL_rim_7_7",
+        "RL_rim_7_8",
+        "RL_rim_7_10",
+        "RL_rim_7_12",
+        "RL_rim_7_15"
+      ],
+      "discNodes": [
+        "RL_disc_13_0"
+      ],
+      "caliperNodes": [
+        "RL_caliper_10_0",
+        "RL_caliper_10_2"
+      ],
+      "contactPlaneCorrectionM": -0.0016181724870843461
+    },
+    "RR": {
+      "steerPivot": "RR_STEER",
+      "spinPivot": "RR_SPIN",
+      "center": [
+        -1.335,
+        0.3474159324043767,
+        0.793202691839322
+      ],
+      "radius": 0.3474159324043767,
+      "tireNodes": [
+        "RR_tire_5_1"
+      ],
+      "rimNodes": [
+        "RR_rim_7_1",
+        "RR_rim_7_2",
+        "RR_rim_7_5",
+        "RR_rim_7_6",
+        "RR_rim_7_9",
+        "RR_rim_7_11",
+        "RR_rim_7_13",
+        "RR_rim_7_14"
+      ],
+      "discNodes": [
+        "RR_disc_13_1"
+      ],
+      "caliperNodes": [
+        "RR_caliper_10_1",
+        "RR_caliper_10_3"
+      ],
+      "contactPlaneCorrectionM": -0.0016181724870843461
+    }
+  },
+  "wheelbase": 2.67,
+  "frontTrack": 1.6440174622991102,
+  "rearTrack": 1.5864056966368763,
+  "groundOffset": 0.00010771718481010538,
+  "sourceOriginCorrection": [
+    0.13395738994687284,
+    0.00010771718481010538,
+    -2.235415946794106e-8
+  ],
+  "cameraTarget": [
+    0,
+    0.65,
+    0
+  ],
+  "visualCG": [
+    0,
+    0.45,
+    0
+  ],
+  "originConvention": "axle midpoint on tire-derived contact plane; runtime aligns midpoint with physical axle midpoint",
+  "sourceTriangleCount": 241320,
+  "processedTriangleCount": 228936,
+  "sourcePackageBytes": 16772489,
+  "processedBytes": 11751168,
+  "textureMemoryEstimateBytes": 69847873,
+  "primitiveCount": 88,
+  "removedAlternativeMaterials": [
+    "Rim_Blurred_Spokes.003",
+    "Rim_Blurred.003",
+    "DAMAGE_GLASS.003"
+  ],
+  "sourceSHA256": "a69751aa7958a2dc5e339424139cb447011f19f6c3bd0898ed1724fcb1ce5f5a",
+  "classification": "welded triangle connectivity, spatial merging of concentric tire shells, bbox centers and explicit source forward sign",
+  "limitations": [
+    "Kinematic wheel spin only; no physical angular momentum or tire wheelspin.",
+    "F1 brake material assigned stationary: supplied rear-only low-detail blocks; no fabricated front brake components."
+  ],
+  "uncompressedProcessedBytes": 16493672,
+  "compression": "lossless EXT_meshopt_compression, each buffer verified byte-for-byte"
+}

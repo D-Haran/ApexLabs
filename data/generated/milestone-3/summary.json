@@ -1,0 +1,147 @@
+{
+  "experiment_1_tire_curve": {
+    "max_cpp_python_difference_n": 2.7284841053187847e-12
+  },
+  "experiment_2_friction_circle": {
+    "maximum_delivered_boundary_excess": 0.0
+  },
+  "experiment_3_longitudinal_transfer": {
+    "max_reference_error_n": 0.0002503785669887293,
+    "max_conservation_error_n": 1.8189894035458565e-12
+  },
+  "experiment_4_lateral_transfer": {
+    "right_tires_gain_in_all_left_turn_samples": true,
+    "max_conservation_error_n": 1.8189894035458565e-12
+  },
+  "experiment_5_departure": {
+    "first_speed_above_5_percent_m_s": 30.0,
+    "threshold": 0.05
+  },
+  "experiment_6_limit_cornering": {
+    "first_saturation_time_s": 3.111999999999879,
+    "first_saturated_wheels": [
+      "rl"
+    ],
+    "first_saturation_details": {
+      "rl": {
+        "normal_load_n": 1336.5622827893233,
+        "force_capacity_n": 1734.4368008234812,
+        "slip_angle_rad": 0.07991468215170827,
+        "friction_utilization": 1.0
+      }
+    },
+    "peak_lateral_acceleration_m_s2": 10.574404496424084
+  },
+  "experiment_7_trail_braking": {
+    "front_utilization_before_braking": 0.6010355972533457,
+    "front_utilization_during_braking": 0.7318223638310453,
+    "front_lateral_force_before_n": 4184.644187455753,
+    "front_lateral_force_during_n": 3439.771570329127,
+    "front_brake_force_during_n": -5580.0,
+    "front_remaining_lateral_capacity_during_n": 9493.55185897418
+  },
+  "experiment_8_power_on_exit": {
+    "rear_utilization_before_power": 0.41492398482599474,
+    "rear_utilization_at_full_power": 1.0000000000000002,
+    "rear_requested_drive_n": 9000.0,
+    "rear_delivered_drive_n": 6847.952357185801,
+    "rear_requested_lateral_force_n": 6746.553414016951,
+    "rear_lateral_force_before_n": 2498.854999411192,
+    "rear_lateral_force_full_power_n": 5477.805653428693
+  },
+  "experiment_9_load_sensitivity": {
+    "front_capacity_reduction_at_max_steer_fraction": 0.011704395187363104,
+    "total_weight_error_n": 1.8189894035458565e-12
+  },
+  "experiment_10_convergence": {
+    "reference": {
+      "final_yaw_rate_rad_s": -0.07218434039079641,
+      "peak_lateral_accel_m_s2": 4.956290345590851,
+      "peak_utilization": 0.7231665936575941,
+      "endpoint_x_m": 46.937225552727114,
+      "endpoint_y_m": 3.535430182560561
+    },
+    "runs": [
+      {
+        "integrator": "euler",
+        "timestep_s": 0.01,
+        "final_yaw_rate_error_rad_s": 0.0008972510748889995,
+        "peak_lateral_accel_error_m_s2": 0.03191335307107224,
+        "peak_utilization_error": 0.0030156050579416283,
+        "endpoint_error_m": 0.013970707096859448
+      },
+      {
+        "integrator": "euler",
+        "timestep_s": 0.005,
+        "final_yaw_rate_error_rad_s": 0.0004475612459155648,
+        "peak_lateral_accel_error_m_s2": 0.0158309072502405,
+        "peak_utilization_error": 0.0014873566636361968,
+        "endpoint_error_m": 0.0069933842905374344
+      },
+      {
+        "integrator": "euler",
+        "timestep_s": 0.002,
+        "final_yaw_rate_error_rad_s": 0.00017878529292104928,
+        "peak_lateral_accel_error_m_s2": 0.00633182980578173,
+        "peak_utilization_error": 0.000590019486332749,
+        "endpoint_error_m": 0.002799401548649034
+      },
+      {
+        "integrator": "euler",
+        "timestep_s": 0.001,
+        "final_yaw_rate_error_rad_s": 8.935405397256235e-05,
+        "peak_lateral_accel_error_m_s2": 0.003161625894258613,
+        "peak_utilization_error": 0.00029406512338803203,
+        "endpoint_error_m": 0.001400049517867989
+      },
+      {
+        "integrator": "euler",
+        "timestep_s": 0.0005,
+        "final_yaw_rate_error_rad_s": 4.466749862114261e-05,
+        "peak_lateral_accel_error_m_s2": 0.0015790067554251053,
+        "peak_utilization_error": 0.00014667603191831358,
+        "endpoint_error_m": 0.0007001129666163319
+      },
+      {
+        "integrator": "rk4",
+        "timestep_s": 0.01,
+        "final_yaw_rate_error_rad_s": 6.541391261993823e-09,
+        "peak_lateral_accel_error_m_s2": 0.000357789954901655,
+        "peak_utilization_error": 3.019688054051173e-07,
+        "endpoint_error_m": 8.06621963762186e-08
+      },
+      {
+        "integrator": "rk4",
+        "timestep_s": 0.005,
+        "final_yaw_rate_error_rad_s": 3.609869625442741e-10,
+        "peak_lateral_accel_error_m_s2": 6.972496768398173e-06,
+        "peak_utilization_error": 3.3739690596945593e-07,
+        "endpoint_error_m": 1.4445223070507284e-08
+      },
+      {
+        "integrator": "rk4",
+        "timestep_s": 0.002,
+        "final_yaw_rate_error_rad_s": 1.3324230607736354e-11,
+        "peak_lateral_accel_error_m_s2": 2.3607259302949046e-06,
+        "peak_utilization_error": 3.3965161694293755e-07,
+        "endpoint_error_m": 3.194792366261124e-10
+      },
+      {
+        "integrator": "rk4",
+        "timestep_s": 0.001,
+        "final_yaw_rate_error_rad_s": 4.0493997044421803e-13,
+        "peak_lateral_accel_error_m_s2": 2.3615846318492117e-06,
+        "peak_utilization_error": 3.3970694901519494e-07,
+        "endpoint_error_m": 3.9768226622294365e-11
+      },
+      {
+        "integrator": "rk4",
+        "timestep_s": 0.0005,
+        "final_yaw_rate_error_rad_s": 3.595734821004726e-14,
+        "peak_lateral_accel_error_m_s2": 4.5075054799781356e-12,
+        "peak_utilization_error": 8.903988657493755e-14,
+        "endpoint_error_m": 1.1183509998793902e-11
+      }
+    ]
+  }
+}

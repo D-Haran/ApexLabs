@@ -1,0 +1,20 @@
+{
+  "draw_calls": 118,
+  "triangles": 635192,
+  "textures": 61,
+  "geometries": 118,
+  "asset_name": "Mclaren P1",
+  "asset_ready_ms": 3547.100000023842,
+  "texture_memory_estimate_bytes": 69847873,
+  "frame_samples": 300,
+  "average_frame_ms": 16.664000000158946,
+  "p95_frame_ms": 17.299999952316284,
+  "selector_seek_average_ms": 0.115,
+  "selector_seek_p95_ms": 0.20000004768371582,
+  "seek_to_paint_ms": 23.399999976158142,
+  "session_load_ms": 2456.2000000476837,
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+  "viewport": "1512 × 1100 @ 1",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Pro, Unspecified Version)",
+  "scenario": "Spa/P1 processed asset and sprung body; elevated real track, terrain, kerbs, barriers, pit context and instanced forest; chase camera; 1512×1100"
+}

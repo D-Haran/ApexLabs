@@ -1,0 +1,72 @@
+{
+  "selected_way_ids": [
+    179968226,
+    179968249,
+    179968239,
+    179968257,
+    179968234,
+    19842206,
+    179968242,
+    179968264,
+    179968220,
+    179968262,
+    179968245,
+    179968263,
+    179968229,
+    179968251,
+    179968230,
+    179968252,
+    179968228,
+    1443867792,
+    1443867793,
+    179968254
+  ],
+  "cycle_candidates": [
+    {
+      "way_ids": [
+        179968226,
+        179968249,
+        179968239,
+        179968257,
+        179968234,
+        19842206,
+        179968242,
+        179968264,
+        179968220,
+        179968262,
+        179968245,
+        179968263,
+        179968229,
+        179968251,
+        179968230,
+        179968252,
+        179968228,
+        1443867792,
+        1443867793,
+        179968254
+      ],
+      "polyline_length_m": 5797.915,
+      "reference_error_m": 4.915
+    },
+    {
+      "way_ids": [
+        1238685998
+      ],
+      "polyline_length_m": 100.864,
+      "reference_error_m": 5692.136
+    }
+  ],
+  "output": "configs/tracks/monza.json",
+  "render_output": "configs/tracks/monza.render.json",
+  "length_validation": {
+    "imported_length_m": 5796.971,
+    "reference_length_m": 5793.0,
+    "reference_url": "https://www.formula1.com/en/information/italy-autodromo-nazionalemonza.FiJN1jnQlRLeHqOxIt13m",
+    "absolute_difference_m": 3.971,
+    "percentage_difference": 0.06854
+  },
+  "elevation": {
+    "source": null,
+    "limitation": "No elevation source requested; this import is flat."
+  }
+}

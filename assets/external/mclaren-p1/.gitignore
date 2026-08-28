@@ -1,0 +1,5 @@
+raw/
+work/
+processed/*.glb
+reports/*.json
+

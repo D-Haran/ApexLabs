@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "telemetry_schema_version": 4,
+  "wheel_schema_version": 1,
+  "spatial_schema_version": 1,
+  "session_name": "Technical circuit \u00b7 baseline",
+  "files": {
+    "telemetry": "telemetry.csv",
+    "wheels": "wheels.csv",
+    "geometry": "geometry.csv",
+    "spatial": "spatial.csv"
+  },
+  "vehicle": {
+    "name": "Generic nonlinear performance car",
+    "mass_kg": 1450.0,
+    "mu_reference": 1.2,
+    "front_axle_m": 1.25,
+    "rear_axle_m": 1.55,
+    "front_track_m": 1.6,
+    "rear_track_m": 1.58,
+    "provenance": "Illustrative engineering reference choices; no OEM or proprietary tire data"
+  },
+  "track": {
+    "name": "ApexLab Technical Test Circuit",
+    "length_m": 1078.7536953328213,
+    "reference_offset_m": 0,
+    "geometry_sha256": "32480be47cc818dbd176ee7184d5d606754ba245244c3c3126eb8c0e74d7ffbf",
+    "sector_boundaries_fraction": [
+      0.3333333333333333,
+      0.6666666666666666,
+      1.0
+    ],
+    "provenance": "Generated synthetic geometry authored for ApexLab validation; no real circuit data"
+  },
+  "simulation": {
+    "timestep_s": 0.005,
+    "controller_timestep_s": 0.02,
+    "integrator": "rk4",
+    "warmup_laps": 1
+  },
+  "laps": [
+    {
+      "number": 1,
+      "start_time_s": 50.935000000007605,
+      "end_time_s": 101.64499999998004,
+      "lap_time_s": 50.70999999997244,
+      "sector_times_s": [
+        13.365000000006404,
+        18.894999999982815,
+        18.44999999998322
+      ]
+    }
+  ]
+}

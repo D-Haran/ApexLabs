@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "telemetry_schema_version": 4,
+  "wheel_schema_version": 1,
+  "spatial_schema_version": 1,
+  "session_kind": "validation_scene",
+  "session_name": "Flat straight · physical validation interval",
+  "files": {
+    "telemetry": "telemetry.csv",
+    "wheels": "wheels.csv",
+    "geometry": "geometry.csv",
+    "spatial": "spatial.csv",
+    "chassis": "chassis.csv"
+  },
+  "vehicle": {
+    "name": "McLaren P1 — approximate model",
+    "mass_kg": 1490.0,
+    "mu_reference": 1.25,
+    "front_axle_m": 1.5486,
+    "rear_axle_m": 1.1214,
+    "front_track_m": 1.658,
+    "rear_track_m": 1.604,
+    "cg_height_m": 0.45,
+    "normal_load_model": "sprung_body",
+    "aero": {
+      "air_density_kgpm3": 0,
+      "drag_coefficient": 0,
+      "lift_coefficient_down": 0,
+      "reference_area_m2": 0
+    },
+    "suspension": {
+      "parameter_class": "estimated",
+      "assumptions": "Generic passive springs/dampers, all mass lumped as sprung; not the McLaren hydraulic suspension.",
+      "roll_inertia_kg_m2": 650,
+      "pitch_inertia_kg_m2": 2200,
+      "fl_spring_rate_n_m": 65000,
+      "fl_compression_damping_ns_m": 3500,
+      "fl_rebound_damping_ns_m": 4500,
+      "fl_nominal_ride_height_m": 0.12,
+      "fr_spring_rate_n_m": 65000,
+      "fr_compression_damping_ns_m": 3500,
+      "fr_rebound_damping_ns_m": 4500,
+      "fr_nominal_ride_height_m": 0.12,
+      "rl_spring_rate_n_m": 75000,
+      "rl_compression_damping_ns_m": 3500,
+      "rl_rebound_damping_ns_m": 4500,
+      "rl_nominal_ride_height_m": 0.12,
+      "rr_spring_rate_n_m": 75000,
+      "rr_compression_damping_ns_m": 3500,
+      "rr_rebound_damping_ns_m": 4500,
+      "rr_nominal_ride_height_m": 0.12
+    },
+    "provenance": "Published McLaren headline specifications anchored with explicitly documented derived, estimated, and fitted parameters; not OEM dynamics data; grade/flat scenes disable aero and rolling resistance for analytical coastdown."
+  },
+  "track": {
+    "name": "Flat straight",
+    "length_m": 300,
+    "reference_offset_m": 0,
+    "geometry_sha256": "1c60c860d79cab5d5b3246761ffdb26699e2b8a526f91ec67b4f6ec9e399d1d5",
+    "sector_boundaries_fraction": [
+      1
+    ],
+    "kind": "synthetic_validation",
+    "provenance": "Analytical open test road, not a completed racing lap."
+  },
+  "simulation": {
+    "timestep_s": 0.005,
+    "controller_timestep_s": 0.005,
+    "integrator": "rk4",
+    "warmup_laps": 0
+  },
+  "laps": [
+    {
+      "number": 0,
+      "start_time_s": 0,
+      "end_time_s": 6,
+      "lap_time_s": 6,
+      "sector_times_s": [
+        6
+      ]
+    }
+  ]
+}

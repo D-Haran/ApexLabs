@@ -1,0 +1,97 @@
+{
+  "constant_force": {
+    "euler": {
+      "velocity_error_mps": 3.907985046680551e-14,
+      "position_error_m": 1.0000000000000995
+    },
+    "rk4": {
+      "velocity_error_mps": 3.907985046680551e-14,
+      "position_error_m": 9.947598300641403e-14
+    }
+  },
+  "coastdown": {
+    "euler": {
+      "velocity_error_mps": 0.004663630048540313,
+      "position_error_m": 0.173020355157405
+    },
+    "rk4": {
+      "velocity_error_mps": 1.4210854715202004e-13,
+      "position_error_m": 1.3415046851150692e-11
+    }
+  },
+  "braking_max_distance_error_m": 8.526512829121202e-13,
+  "terminal_velocity_mps": 42.855056099990506,
+  "terminal_equilibrium_error_mps": 0.0,
+  "convergence": [
+    {
+      "integrator": "euler",
+      "timestep_s": 2.0,
+      "final_velocity_mps": 30.57402105027396,
+      "absolute_error_mps": 0.19225142352663838,
+      "observed_order": null
+    },
+    {
+      "integrator": "euler",
+      "timestep_s": 1.0,
+      "final_velocity_mps": 30.671635769355383,
+      "absolute_error_mps": 0.09463670444521455,
+      "observed_order": 1.02252254
+    },
+    {
+      "integrator": "euler",
+      "timestep_s": 0.5,
+      "final_velocity_mps": 30.719316066870643,
+      "absolute_error_mps": 0.0469564069299544,
+      "observed_order": 1.01107782
+    },
+    {
+      "integrator": "euler",
+      "timestep_s": 0.25,
+      "final_velocity_mps": 30.74288351387817,
+      "absolute_error_mps": 0.0233889599224284,
+      "observed_order": 1.00549431
+    },
+    {
+      "integrator": "euler",
+      "timestep_s": 0.125,
+      "final_velocity_mps": 30.754600152111326,
+      "absolute_error_mps": 0.01167232168927157,
+      "observed_order": 1.00273616
+    },
+    {
+      "integrator": "rk4",
+      "timestep_s": 2.0,
+      "final_velocity_mps": 30.76627261882607,
+      "absolute_error_mps": 1.4502547074357608e-07,
+      "observed_order": null
+    },
+    {
+      "integrator": "rk4",
+      "timestep_s": 1.0,
+      "final_velocity_mps": 30.766272482878726,
+      "absolute_error_mps": 9.07812847117384e-09,
+      "observed_order": 3.99776759
+    },
+    {
+      "integrator": "rk4",
+      "timestep_s": 0.5,
+      "final_velocity_mps": 30.76627247436818,
+      "absolute_error_mps": 5.67581537325168e-10,
+      "observed_order": 3.99949534
+    },
+    {
+      "integrator": "rk4",
+      "timestep_s": 0.25,
+      "final_velocity_mps": 30.76627247383606,
+      "absolute_error_mps": 3.54631879417866e-11,
+      "observed_order": 4.00043352
+    },
+    {
+      "integrator": "rk4",
+      "timestep_s": 0.125,
+      "final_velocity_mps": 30.76627247380282,
+      "absolute_error_mps": 2.2239987629291136e-12,
+      "observed_order": 3.99509434
+    }
+  ]
+}

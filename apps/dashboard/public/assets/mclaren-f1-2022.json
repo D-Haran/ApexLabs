@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "assetName": "Gulf Mclaren F1 2022 Car",
+  "sourceFile": "assets/cars/gulf_mclaren_f1_2022_car/scene.gltf",
+  "source": {
+    "author": "chwashere123 (https://sketchfab.com/chwashere123)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/gulf-mclaren-f1-2022-car-dabbf81921e94065bfadbb5fd1b2ee5b",
+    "title": "Gulf Mclaren F1 2022 Car"
+  },
+  "outputGLB": "mclaren-f1-2022.glb",
+  "localForwardAxis": "+X",
+  "localLeftAxis": "-Z",
+  "localUpAxis": "+Y",
+  "sourceSceneForwardAxis": "+Z",
+  "sourceSceneUpAxis": "+Y",
+  "scaleMetersPerAssetUnit": 0.7763246572977425,
+  "scaleBasis": "explicit wheelbase normalization; dimension anchor is documented by caller",
+  "bodyNode": "BODY",
+  "wheels": {
+    "FL": {
+      "steerPivot": "FL_STEER",
+      "spinPivot": "FL_SPIN",
+      "center": [
+        1.7991213767175218,
+        0.35256124683637113,
+        -0.8267455534660999
+      ],
+      "radius": 0.35256124683637113,
+      "tireNodes": [
+        "FL_tire_38_0"
+      ],
+      "rimNodes": [
+        "FL_rim_33_7",
+        "FL_rim_33_8",
+        "FL_rim_33_11"
+      ],
+      "discNodes": [],
+      "caliperNodes": [],
+      "contactPlaneCorrectionM": 0.014832263480789698
+    },
+    "FR": {
+      "steerPivot": "FR_STEER",
+      "spinPivot": "FR_SPIN",
+      "center": [
+        1.8008786232824785,
+        0.35348739347929203,
+        0.8232268849610673
+      ],
+      "radius": 0.35348739347929203,
+      "tireNodes": [
+        "FR_tire_38_1"
+      ],
+      "rimNodes": [
+        "FR_rim_33_9",
+        "FR_rim_33_10",
+        "FR_rim_33_12"
+      ],
+      "discNodes": [],
+      "caliperNodes": [],
+      "contactPlaneCorrectionM": -0.004120926058178376
+    },
+    "RL": {
+      "steerPivot": "RL_STEER",
+      "spinPivot": "RL_SPIN",
+      "center": [
+        -1.8008255949339576,
+        0.36844174348253633,
+        -0.7733876518051517
+      ],
+      "radius": 0.36844174348253633,
+      "tireNodes": [
+        "RL_tire_39_0"
+      ],
+      "rimNodes": [
+        "RL_rim_33_0",
+        "RL_rim_33_1",
+        "RL_rim_33_4"
+      ],
+      "discNodes": [],
+      "caliperNodes": [
+        "RL_caliper_34_0"
+      ],
+      "contactPlaneCorrectionM": 0.003983127834129352
+    },
+    "RR": {
+      "steerPivot": "RR_STEER",
+      "spinPivot": "RR_SPIN",
+      "center": [
+        -1.799174405066043,
+        0.3684417203462586,
+        0.776906320310184
+      ],
+      "radius": 0.3684417203462586,
+      "tireNodes": [
+        "RR_tire_39_1"
+      ],
+      "rimNodes": [
+        "RR_rim_33_2",
+        "RR_rim_33_3",
+        "RR_rim_33_5",
+        "RR_rim_33_6"
+      ],
+      "discNodes": [],
+      "caliperNodes": [
+        "RR_caliper_34_1"
+      ],
+      "contactPlaneCorrectionM": -0.014694465256740619
+    }
+  },
+  "wheelbase": 3.6000000000000005,
+  "frontTrack": 1.6499724384271672,
+  "rearTrack": 1.5502939721153357,
+  "groundOffset": -0.04920559124205008,
+  "sourceOriginCorrection": [
+    0.3893748546913225,
+    -0.04920559124205008,
+    1.0723766458746296
+  ],
+  "cameraTarget": [
+    0,
+    0.65,
+    0
+  ],
+  "visualCG": [
+    0,
+    0.45,
+    0
+  ],
+  "originConvention": "axle midpoint on tire-derived contact plane; runtime aligns midpoint with physical axle midpoint",
+  "sourceTriangleCount": 1050630,
+  "processedTriangleCount": 1050630,
+  "sourcePackageBytes": 67774007,
+  "processedBytes": 29951804,
+  "textureMemoryEstimateBytes": 39146834,
+  "primitiveCount": 59,
+  "removedAlternativeMaterials": [],
+  "sourceSHA256": "5cf282c0a7f5733af3a8c140feee4381b75895403387de84b39e040812a57722",
+  "classification": "welded triangle connectivity, spatial merging of concentric tire shells, bbox centers and explicit source forward sign",
+  "limitations": [
+    "Kinematic wheel spin only; no physical angular momentum or tire wheelspin.",
+    "F1 brake material assigned stationary: supplied rear-only low-detail blocks; no fabricated front brake components."
+  ],
+  "uncompressedProcessedBytes": 66127396,
+  "compression": "lossless EXT_meshopt_compression, each buffer verified byte-for-byte"
+}

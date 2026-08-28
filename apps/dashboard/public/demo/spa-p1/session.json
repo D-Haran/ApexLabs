@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "telemetry_schema_version": 4,
+  "wheel_schema_version": 1,
+  "spatial_schema_version": 1,
+  "session_name": "Spa-Francorchamps \u00b7 McLaren P1 approximate reference",
+  "files": {
+    "telemetry": "telemetry.csv",
+    "wheels": "wheels.csv",
+    "geometry": "geometry.csv",
+    "spatial": "spatial.csv",
+    "render": "render.json"
+  },
+  "vehicle": {
+    "name": "McLaren P1 \u2014 approximate model",
+    "mass_kg": 1490.0,
+    "mu_reference": 1.25,
+    "front_axle_m": 1.5486,
+    "rear_axle_m": 1.1214,
+    "front_track_m": 1.658,
+    "rear_track_m": 1.604,
+    "provenance": "Published McLaren headline specifications anchored with explicitly documented derived, estimated, and fitted parameters; not OEM dynamics data",
+    "aero": {
+      "air_density_kgpm3": 1.225,
+      "drag_coefficient": 0.34,
+      "lift_coefficient_down": 0.9425,
+      "reference_area_m2": 2.0
+    }
+  },
+  "track": {
+    "name": "Spa-Francorchamps",
+    "length_m": 7014.887993676208,
+    "reference_offset_m": 0,
+    "geometry_sha256": "ca4a81bd7c2d6e9c0d28756ce319f5fd496ef68ada7182cbc417294279ee887e",
+    "sector_boundaries_fraction": [
+      0.3333333333333333,
+      0.6666666666666666,
+      1.0
+    ],
+    "provenance": "OpenStreetMap contributors (ODbL 1.0); imported without forced length scaling",
+    "kind": "real_imported",
+    "coordinate_system": {
+      "type": "local_enu_wgs84",
+      "origin_lat_deg": 50.434583407,
+      "origin_lon_deg": 5.969146848,
+      "origin_elevation_m": 408.062,
+      "x_axis": "east",
+      "y_axis": "north",
+      "z_axis": "up",
+      "units": "metres"
+    },
+    "elevation_source": "Copernicus DEM 2021 GLO-30 Public GeoTIFF",
+    "elevation_limitation": "Terrain-derived DSM elevation; not survey-grade racetrack paving geometry."
+  },
+  "simulation": {
+    "timestep_s": 0.01,
+    "controller_timestep_s": 0.02,
+    "integrator": "rk4",
+    "warmup_laps": 0
+  },
+  "laps": [
+    {
+      "number": 0,
+      "start_time_s": 0.0,
+      "end_time_s": 276.9699999998931,
+      "lap_time_s": 276.9699999998931,
+      "sector_times_s": [
+        102.00000000001528,
+        94.479999999951,
+        80.48999999992682
+      ]
+    }
+  ]
+}

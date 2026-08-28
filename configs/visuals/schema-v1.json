@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://apexlab.dev/schemas/vehicle-visual-v1.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "name", "asset", "paint", "wheels", "ride_visual_offset_m", "scale", "camera_target_m"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "name": {"type": "string", "minLength": 1},
+    "asset": {
+      "type": "object", "additionalProperties": false,
+      "required": ["production_glb", "fallback"],
+      "properties": {
+        "production_glb": {"type": "string"},
+        "fallback": {"const": "procedural_coupe"}
+      }
+    },
+    "paint": {
+      "type": "object", "additionalProperties": false,
+      "required": ["base_color_srgb", "metalness", "roughness"],
+      "properties": {
+        "base_color_srgb": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"},
+        "metalness": {"type": "number", "minimum": 0, "maximum": 1},
+        "roughness": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "wheels": {
+      "type": "object", "additionalProperties": false,
+      "required": ["material_color_srgb", "metalness", "roughness", "visual_radius_m"],
+      "properties": {
+        "material_color_srgb": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"},
+        "metalness": {"type": "number", "minimum": 0, "maximum": 1},
+        "roughness": {"type": "number", "minimum": 0, "maximum": 1},
+        "visual_radius_m": {"type": "number", "exclusiveMinimum": 0}
+      }
+    },
+    "ride_visual_offset_m": {"type": "number"},
+    "scale": {"type": "number", "exclusiveMinimum": 0},
+    "camera_target_m": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {"type": "number"}
+    }
+  }
+}
+

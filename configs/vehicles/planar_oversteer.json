@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "name": "Planar validation car - oversteer",
+  "provenance": "Purpose-built linear bicycle-model validation fixture",
+  "mass_kg": 1500.0,
+  "aero": {
+    "air_density_kgpm3": 1.225,
+    "drag_coefficient": 0.0,
+    "lift_coefficient_down": 0.0,
+    "reference_area_m2": 0.0
+  },
+  "powertrain": {
+    "maximum_drive_force_n": 6000.0,
+    "driven_wheel_static_load_fraction": 1.0
+  },
+  "brakes": { "maximum_brake_force_n": 12000.0 },
+  "tires": {
+    "friction_coefficient": 1.1,
+    "rolling_resistance_coefficient": 0.0
+  },
+  "planar": {
+    "wheelbase_m": 2.8,
+    "cg_to_front_axle_m": 1.2,
+    "cg_to_rear_axle_m": 1.6,
+    "yaw_moment_of_inertia_kg_m2": 2500.0,
+    "front_cornering_stiffness_n_per_rad": 120000.0,
+    "rear_cornering_stiffness_n_per_rad": 70000.0
+  }
+}

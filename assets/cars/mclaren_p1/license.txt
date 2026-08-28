@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mclaren P1
+* source:	https://sketchfab.com/3d-models/mclaren-p1-7917d2a323b24c89acb418464376c4c9
+* author:	Kevin Love SketchFab (https://sketchfab.com/Tyler_Kevin)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mclaren P1" (https://sketchfab.com/3d-models/mclaren-p1-7917d2a323b24c89acb418464376c4c9) by Kevin Love SketchFab (https://sketchfab.com/Tyler_Kevin) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

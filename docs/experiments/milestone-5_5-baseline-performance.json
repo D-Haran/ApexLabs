@@ -1,0 +1,13 @@
+{
+  "frame_samples": 300,
+  "average_frame_ms": 16.667000000079472,
+  "p95_frame_ms": 17.5,
+  "selector_seek_average_ms": 0.14,
+  "selector_seek_p95_ms": 0.2999999523162842,
+  "seek_to_paint_ms": 27.100000023841858,
+  "session_load_ms": 715.1999999284744,
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+  "viewport": "1512 × 1100 @ 1",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Pro, Unspecified Version)",
+  "scenario": "Spa/P1 procedural fallback; elevated real track, terrain, kerbs, barriers, pit context and instanced forest; chase camera; 1512×1100"
+}

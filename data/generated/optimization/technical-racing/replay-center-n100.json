@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "completed": true,
+  "replayed_lap_time_s": 35.634999999999778,
+  "maximum_position_error_m": 1.8934039263867906,
+  "maximum_speed_error_mps": 1.8731079694330042,
+  "maximum_yaw_error_rad": 0.44173324734185826,
+  "maximum_tire_utilization": 1.0000000000000004,
+  "maximum_track_violation_m": 0,
+  "maximum_steering_correction_rad": 0.54475649746254806,
+  "maximum_longitudinal_command_correction": 0.65558778930155148,
+  "rms_position_error_m": 0.72111154851233383,
+  "rms_speed_error_mps": 0.68089348568111108,
+  "rms_yaw_error_rad": 0.13244142929804231
+}

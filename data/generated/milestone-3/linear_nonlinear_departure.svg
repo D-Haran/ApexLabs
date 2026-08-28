@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520">
+<rect width="100%" height="100%" fill="#111827"/>
+<text x="86" y="30" fill="#f3f4f6" font-family="sans-serif" font-size="20">Departure from linear bicycle response</text>
+<line x1="86.0" y1="54" x2="86.0" y2="448" stroke="#243044"/>
+<line x1="86" y1="54.0" x2="872" y2="54.0" stroke="#243044"/>
+<text x="86.0" y="470" fill="#9ca3af" text-anchor="middle" font-family="monospace" font-size="11">10</text>
+<text x="76" y="58.0" fill="#9ca3af" text-anchor="end" font-family="monospace" font-size="11">0.185</text>
+<line x1="243.20000000000002" y1="54" x2="243.20000000000002" y2="448" stroke="#243044"/>
+<line x1="86" y1="132.8" x2="872" y2="132.8" stroke="#243044"/>
+<text x="243.20000000000002" y="470" fill="#9ca3af" text-anchor="middle" font-family="monospace" font-size="11">15</text>
+<text x="76" y="136.8" fill="#9ca3af" text-anchor="end" font-family="monospace" font-size="11">0.163</text>
+<line x1="400.40000000000003" y1="54" x2="400.40000000000003" y2="448" stroke="#243044"/>
+<line x1="86" y1="211.60000000000002" x2="872" y2="211.60000000000002" stroke="#243044"/>
+<text x="400.40000000000003" y="470" fill="#9ca3af" text-anchor="middle" font-family="monospace" font-size="11">20</text>
+<text x="76" y="215.60000000000002" fill="#9ca3af" text-anchor="end" font-family="monospace" font-size="11">0.142</text>
+<line x1="557.5999999999999" y1="54" x2="557.5999999999999" y2="448" stroke="#243044"/>
+<line x1="86" y1="290.4" x2="872" y2="290.4" stroke="#243044"/>
+<text x="557.5999999999999" y="470" fill="#9ca3af" text-anchor="middle" font-family="monospace" font-size="11">25</text>
+<text x="76" y="294.4" fill="#9ca3af" text-anchor="end" font-family="monospace" font-size="11">0.12</text>
+<line x1="714.8000000000001" y1="54" x2="714.8000000000001" y2="448" stroke="#243044"/>
+<line x1="86" y1="369.20000000000005" x2="872" y2="369.20000000000005" stroke="#243044"/>
+<text x="714.8000000000001" y="470" fill="#9ca3af" text-anchor="middle" font-family="monospace" font-size="11">30</text>
+<text x="76" y="373.20000000000005" fill="#9ca3af" text-anchor="end" font-family="monospace" font-size="11">0.0981</text>
+<line x1="872.0" y1="54" x2="872.0" y2="448" stroke="#243044"/>
+<line x1="86" y1="448.0" x2="872" y2="448.0" stroke="#243044"/>
+<text x="872.0" y="470" fill="#9ca3af" text-anchor="middle" font-family="monospace" font-size="11">35</text>
+<text x="76" y="452.0" fill="#9ca3af" text-anchor="end" font-family="monospace" font-size="11">0.0763</text>
+<text x="479.0" y="500" fill="#d1d5db" text-anchor="middle" font-family="sans-serif" font-size="13">initial speed (m/s)</text>
+<text x="20" y="251.0" fill="#d1d5db" text-anchor="middle" font-family="sans-serif" font-size="13" transform="rotate(-90 20 251.0)">settled yaw rate (rad/s)</text>
+<polyline points="86.00,420.33 243.20,300.19 400.40,208.90 557.60,144.97 714.80,104.05 872.00,81.17" fill="none" stroke="#22d3ee" stroke-width="2.2"/>
+<line x1="86" y1="472" x2="108" y2="472" stroke="#22d3ee" stroke-width="3"/>
+<text x="114" y="476" fill="#d1d5db" font-family="sans-serif" font-size="11">linear</text>
+<polyline points="86.00,420.83 243.20,303.17 400.40,218.63 557.60,167.15 714.80,144.14 872.00,142.92" fill="none" stroke="#f59e0b" stroke-width="2.2"/>
+<line x1="276" y1="472" x2="298" y2="472" stroke="#f59e0b" stroke-width="3"/>
+<text x="304" y="476" fill="#d1d5db" font-family="sans-serif" font-size="11">nonlinear</text>
+</svg>

@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "problem": "fixed_reference_line_grid_refinement",
+  "rows": [
+    {
+      "nodes": 40,
+      "spacing_m": 26.96884238332053,
+      "decision_variables": 241,
+      "constraints": 762,
+      "predicted_lap_time_s": 40.17007331456459,
+      "replayed_lap_time_s": 42.215000000003144,
+      "replay_difference_s": 2.044926685438554,
+      "iterations": 383,
+      "solver_wall_time_s": 1.894206125056371,
+      "maximum_dynamic_defect_m2_s2": 2.8421709430404007e-13,
+      "maximum_tire_force_violation": 1.000870986089808e-08,
+      "maximum_replay_position_error_m": 7.092969527071721,
+      "rms_replay_position_error_m": 2.0929365120353185
+    },
+    {
+      "nodes": 100,
+      "spacing_m": 10.787536953328212,
+      "decision_variables": 601,
+      "constraints": 1902,
+      "predicted_lap_time_s": 42.02697080831015,
+      "replayed_lap_time_s": 42.21000000000314,
+      "replay_difference_s": 0.18302919169298804,
+      "iterations": 309,
+      "solver_wall_time_s": 1.1342715000500903,
+      "maximum_dynamic_defect_m2_s2": 1.5631940186722204e-13,
+      "maximum_tire_force_violation": 9.996189209715567e-09,
+      "maximum_replay_position_error_m": 1.4542614704671286,
+      "rms_replay_position_error_m": 0.3106055127275383
+    },
+    {
+      "nodes": 200,
+      "spacing_m": 5.393768476664106,
+      "decision_variables": 1201,
+      "constraints": 3802,
+      "predicted_lap_time_s": 42.49952083890356,
+      "replayed_lap_time_s": 42.725000000003405,
+      "replay_difference_s": 0.2254791610998481,
+      "iterations": 471,
+      "solver_wall_time_s": 3.2140333340503275,
+      "maximum_dynamic_defect_m2_s2": 2.6645352591003757e-13,
+      "maximum_tire_force_violation": 1.0000109407215518e-08,
+      "maximum_replay_position_error_m": 0.45895265995386114,
+      "rms_replay_position_error_m": 0.10797885787525201
+    },
+    {
+      "nodes": 400,
+      "spacing_m": 2.696884238332053,
+      "decision_variables": 2401,
+      "constraints": 7602,
+      "predicted_lap_time_s": 42.82592385845253,
+      "replayed_lap_time_s": 43.05000000000357,
+      "replay_difference_s": 0.22407614155103772,
+      "iterations": 969,
+      "solver_wall_time_s": 11.377724749967456,
+      "maximum_dynamic_defect_m2_s2": 2.4513724383723456e-13,
+      "maximum_tire_force_violation": 9.998622374496335e-09,
+      "maximum_replay_position_error_m": 0.17612153828347327,
+      "rms_replay_position_error_m": 0.044516746532459545
+    },
+    {
+      "nodes": 800,
+      "spacing_m": 1.3484421191660265,
+      "decision_variables": 4801,
+      "constraints": 15202,
+      "predicted_lap_time_s": 42.949107239438824,
+      "replayed_lap_time_s": 43.175000000003635,
+      "replay_difference_s": 0.2258927605648111,
+      "iterations": 790,
+      "solver_wall_time_s": 20.5700817090692,
+      "maximum_dynamic_defect_m2_s2": 3.836930773104541e-13,
+      "maximum_tire_force_violation": 9.996459660044366e-09,
+      "maximum_replay_position_error_m": 0.2718059183991239,
+      "rms_replay_position_error_m": 0.0482194723014034
+    }
+  ],
+  "note": "N=800 required a hierarchical N=400 warm start; a raw-reference N=800 attempt reached the iteration limit and was rejected."
+}

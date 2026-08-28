@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+<rect width="100%" height="100%" fill="#111827"/>
+<text x="86" y="30" fill="#f3f4f6" font-family="sans-serif" font-size="20">Handling balance: measured yaw-rate gain</text>
+<line x1="86.00" y1="54" x2="86.00" y2="448" stroke="#243044"/>
+<line x1="86" y1="54.00" x2="872" y2="54.00" stroke="#243044"/>
+<text x="86.00" y="470" fill="#9ca3af" text-anchor="middle" font-family="monospace" font-size="11">10</text>
+<text x="76" y="58.00" fill="#9ca3af" text-anchor="end" font-family="monospace" font-size="11">28.7</text>
+<line x1="243.20" y1="54" x2="243.20" y2="448" stroke="#243044"/>
+<line x1="86" y1="132.80" x2="872" y2="132.80" stroke="#243044"/>
+<text x="243.20" y="470" fill="#9ca3af" text-anchor="middle" font-family="monospace" font-size="11">14</text>
+<text x="76" y="136.80" fill="#9ca3af" text-anchor="end" font-family="monospace" font-size="11">23.2</text>
+<line x1="400.40" y1="54" x2="400.40" y2="448" stroke="#243044"/>
+<line x1="86" y1="211.60" x2="872" y2="211.60" stroke="#243044"/>
+<text x="400.40" y="470" fill="#9ca3af" text-anchor="middle" font-family="monospace" font-size="11">18</text>
+<text x="76" y="215.60" fill="#9ca3af" text-anchor="end" font-family="monospace" font-size="11">17.7</text>
+<line x1="557.60" y1="54" x2="557.60" y2="448" stroke="#243044"/>
+<line x1="86" y1="290.40" x2="872" y2="290.40" stroke="#243044"/>
+<text x="557.60" y="470" fill="#9ca3af" text-anchor="middle" font-family="monospace" font-size="11">22</text>
+<text x="76" y="294.40" fill="#9ca3af" text-anchor="end" font-family="monospace" font-size="11">12.1</text>
+<line x1="714.80" y1="54" x2="714.80" y2="448" stroke="#243044"/>
+<line x1="86" y1="369.20" x2="872" y2="369.20" stroke="#243044"/>
+<text x="714.80" y="470" fill="#9ca3af" text-anchor="middle" font-family="monospace" font-size="11">26</text>
+<text x="76" y="373.20" fill="#9ca3af" text-anchor="end" font-family="monospace" font-size="11">6.61</text>
+<line x1="872.00" y1="54" x2="872.00" y2="448" stroke="#243044"/>
+<line x1="86" y1="448.00" x2="872" y2="448.00" stroke="#243044"/>
+<text x="872.00" y="470" fill="#9ca3af" text-anchor="middle" font-family="monospace" font-size="11">30</text>
+<text x="76" y="452.00" fill="#9ca3af" text-anchor="end" font-family="monospace" font-size="11">1.08</text>
+<text x="479.00" y="500" fill="#d1d5db" text-anchor="middle" font-family="sans-serif" font-size="13">nominal speed (m/s)</text>
+<text x="20" y="251.00" fill="#d1d5db" text-anchor="middle" font-family="sans-serif" font-size="13" transform="rotate(-90 20 251.00)">yaw-rate gain r/delta (1/s)</text>
+<polyline points="86.00,420.83 282.50,410.38 479.00,406.28 675.50,406.13 872.00,408.06" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-linejoin="round"/>
+<line x1="86" y1="472" x2="108" y2="472" stroke="#22d3ee" stroke-width="3"/>
+<text x="114" y="476" fill="#d1d5db" font-family="sans-serif" font-size="11">understeer</text>
+<polyline points="86.00,412.50 282.50,387.09 479.00,361.75 675.50,336.56 872.00,311.58" fill="none" stroke="#f59e0b" stroke-width="2.2" stroke-linejoin="round"/>
+<line x1="276" y1="472" x2="298" y2="472" stroke="#f59e0b" stroke-width="3"/>
+<text x="304" y="476" fill="#d1d5db" font-family="sans-serif" font-size="11">neutral</text>
+<polyline points="86.00,408.50 282.50,372.18 479.00,320.54 675.50,235.89 872.00,81.17" fill="none" stroke="#a78bfa" stroke-width="2.2" stroke-linejoin="round"/>
+<line x1="466" y1="472" x2="488" y2="472" stroke="#a78bfa" stroke-width="3"/>
+<text x="494" y="476" fill="#d1d5db" font-family="sans-serif" font-size="11">oversteer</text>
+</svg>

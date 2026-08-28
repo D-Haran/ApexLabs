@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "name": "McLaren P1",
+  "asset": {
+    "production_glb": "assets/external/mclaren-p1/processed/mclaren-p1-production.glb",
+    "fallback": "procedural_coupe"
+  },
+  "paint": {
+    "base_color_srgb": "#F47A24",
+    "metalness": 0.72,
+    "roughness": 0.24
+  },
+  "wheels": {
+    "material_color_srgb": "#17191B",
+    "metalness": 0.82,
+    "roughness": 0.28,
+    "visual_radius_m": 0.35
+  },
+  "ride_visual_offset_m": 0.0,
+  "scale": 1.0,
+  "camera_target_m": [0.0, 0.72, 0.0]
+}
+

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://apexlab.dev/schemas/track-v2.json",
+  "title": "ApexLab elevated track schema v2",
+  "type": "object",
+  "required": [
+    "schema_version", "name", "kind", "provenance", "closed", "interpolation",
+    "coordinate_system", "control_points", "sector_boundaries_fraction"
+  ],
+  "properties": {
+    "schema_version": {"const": 2},
+    "name": {"type": "string", "minLength": 1},
+    "kind": {"enum": ["real_imported", "synthetic_validation"]},
+    "provenance": {"type": "string", "minLength": 1},
+    "closed": {"const": true},
+    "interpolation": {"const": "periodic_uniform_catmull_rom"},
+    "coordinate_system": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "origin_lat_deg", "origin_lon_deg", "x_axis", "y_axis", "z_axis", "units"],
+      "properties": {
+        "type": {"const": "local_enu_wgs84"},
+        "origin_lat_deg": {"type": "number", "minimum": -90, "maximum": 90},
+        "origin_lon_deg": {"type": "number", "minimum": -180, "maximum": 180},
+        "origin_elevation_m": {"type": "number"},
+        "x_axis": {"const": "east"},
+        "y_axis": {"const": "north"},
+        "z_axis": {"const": "up"},
+        "units": {"const": "metres"}
+      }
+    },
+    "control_points": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["x_m", "y_m", "elevation_m", "left_width_m", "right_width_m"],
+        "properties": {
+          "x_m": {"type": "number"},
+          "y_m": {"type": "number"},
+          "elevation_m": {"type": "number"},
+          "left_width_m": {"type": "number", "exclusiveMinimum": 0},
+          "right_width_m": {"type": "number", "exclusiveMinimum": 0}
+        }
+      }
+    },
+    "sector_boundaries_fraction": {
+      "type": "array",
+      "items": {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
+    },
+    "source": {"type": "object"},
+    "course_selection": {"type": "object"},
+    "length_validation": {"type": "object"},
+    "elevation": {"type": "object"}
+  },
+  "additionalProperties": false
+}

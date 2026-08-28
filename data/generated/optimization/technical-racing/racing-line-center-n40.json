@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "problem": "free_racing_line_minimum_time",
+  "claim": "locally optimized reduced-model solution; independent replay required",
+  "track": "ApexLab Technical Test Circuit",
+  "vehicle": "Generic nonlinear performance car",
+  "initialization": "center",
+  "line_locked": false,
+  "solver": {
+    "modeling": "CasADi 3.8.1",
+    "nlp": "IPOPT",
+    "status": "Solve_Succeeded",
+    "success": true,
+    "iterations": 320,
+    "wall_time_s": 0.8382913330569863
+  },
+  "mesh": {
+    "nodes": 40,
+    "centerline_spacing_m": 26.96884238332053,
+    "optimized_path_length_m": 1017.7170335585533
+  },
+  "size": {
+    "decision_variables": 281,
+    "constraints": 882
+  },
+  "objective": {
+    "predicted_lap_time_s": 34.31108353029385,
+    "fixed_line_warm_start_lap_time_s": 40.1701,
+    "predicted_gain_vs_fixed_s": 5.859016469706148
+  },
+  "line": {
+    "safety_margin_m": 1.0,
+    "minimum_offset_m": -6.9999999064872735,
+    "maximum_offset_m": 6.999999821166422,
+    "maximum_absolute_offset_m": 6.9999999064872735,
+    "closest_cg_boundary_clearance_m": 1.0000000935127265
+  },
+  "residuals": {
+    "maximum_speed_dynamic_defect_m2_s2": 8.898837222659495e-11,
+    "maximum_time_dynamic_defect_s": 3.809175197488912e-13,
+    "maximum_lateral_equilibrium_m_s2": 4.9039883265322715e-11,
+    "maximum_normalized_yaw_equilibrium": 2.2588545859191856e-12,
+    "maximum_tire_force_violation": 1.0009752804407412e-08,
+    "minimum_normal_load_n": 598.2750438171829,
+    "maximum_control_violation": 0.0,
+    "maximum_track_violation_m": 0.0,
+    "periodicity_speed_m_s": 0.0,
+    "periodicity_lateral_offset_m": 3.364015677610937
+  },
+  "model_notes": [
+    "Track boundaries constrain CG with an explicit safety margin; no body envelope is modeled.",
+    "The line emerges from displaced centerline geometry; no apex or racing-line rules are imposed.",
+    "Slope and second-derivative bounds suppress mesh-scale zig-zag artifacts.",
+    "Independent production replay is mandatory before acceptance."
+  ],
+  "warm_start": {
+    "source": "/Users/derrickratnaharan/ApexLab/data/generated/optimization/technical-fixed/fixed-line-n40.csv",
+    "initialization": "center"
+  },
+  "trajectory": "racing-line-center-n40.csv"
+}
