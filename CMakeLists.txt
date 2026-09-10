@@ -37,3 +37,5 @@ endif()
 if(APEXLAB_BUILD_BENCHMARKS)
     add_subdirectory(cpp/benchmarks)
 endif()
+
+add_subdirectory(apps/sim-server)

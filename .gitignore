@@ -21,3 +21,33 @@ apps/dashboard/public/assets/*.glb
 /assets/cars/*/scene.bin
 /assets/cars/*/scene.gltf
 /assets/cars/*/textures/
+
+# Reproduce dense contact traces/meshes; retain compact validation.json and demo replays.
+/data/generated/contact-3d/dt-*/
+
+# Reproducible dense dynamic shooting/replay traces and transient solver logs.
+/data/generated/dynamics/*-reference.json
+/data/generated/dynamics/*-fastest.json
+/data/generated/dynamics/*.progress.json
+/data/generated/dynamics/*.log
+/data/generated/dynamics/*.tmp
+/data/generated/dynamics/study/*.json
+!/data/generated/dynamics/study/summary.json
+/data/generated/dynamics/study/*.log
+/data/generated/dynamics/sensitivity/*.json
+!/data/generated/dynamics/sensitivity/summary.json
+/data/generated/dynamics/sensitivity/*.log
+!/data/generated/dynamics/study/replay-audit.json
+# Other objective traces are also reproducible, not source assets.
+/data/generated/dynamics/*-shortest.json
+/data/generated/dynamics/*-clearance.json
+/data/generated/dynamics/*-neutral.json
+/data/generated/dynamics/*-platform.json
+/data/generated/dynamics/*-fuel.json
+/data/generated/dynamics/*-wear.json
+/data/generated/dynamics/*-custom.json
+# M6.1 staged candidates, immutable reference versions and dense cache-validation laps.
+/data/generated/dynamics/*-candidate.json
+/data/generated/dynamics/*-reference-*.json
+/data/generated/dynamics/m61-cache-validation.json
+/data/generated/dynamics/m61-cache-repeat.json

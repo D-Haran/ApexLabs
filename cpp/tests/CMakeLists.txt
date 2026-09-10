@@ -88,3 +88,38 @@ target_link_libraries(apexlab-road-tests PRIVATE ApexLab::sim_core)
 target_compile_definitions(apexlab-road-tests PRIVATE APEXLAB_SOURCE_DIR="${PROJECT_SOURCE_DIR}")
 apexlab_enable_warnings(apexlab-road-tests)
 add_test(NAME apexlab.road-sprung-body COMMAND apexlab-road-tests)
+
+add_executable(apexlab-contact-tests test_contact_vehicle.cpp)
+target_link_libraries(apexlab-contact-tests PRIVATE ApexLab::sim_core)
+target_compile_definitions(apexlab-contact-tests PRIVATE APEXLAB_SOURCE_DIR="${PROJECT_SOURCE_DIR}")
+apexlab_enable_warnings(apexlab-contact-tests)
+add_test(NAME apexlab.contact-3d COMMAND apexlab-contact-tests)
+add_test(NAME apexlab.contact-cli-smoke COMMAND apexlab-contact-scenes
+    ${PROJECT_SOURCE_DIR}/configs/vehicles/mclaren-p1-sprung-approx.json
+    ${CMAKE_CURRENT_BINARY_DIR}/contact-scenes .002)
+
+add_executable(apexlab-dynamic-tests test_dynamic_vehicle.cpp)
+target_link_libraries(apexlab-dynamic-tests PRIVATE ApexLab::sim_core)
+target_compile_definitions(apexlab-dynamic-tests PRIVATE APEXLAB_SOURCE_DIR="${PROJECT_SOURCE_DIR}")
+apexlab_enable_warnings(apexlab-dynamic-tests)
+add_test(NAME apexlab.dynamic-vehicle COMMAND apexlab-dynamic-tests)
+
+add_executable(apexlab-resource-tests test_resources.cpp)
+target_link_libraries(apexlab-resource-tests PRIVATE ApexLab::sim_core)
+target_compile_definitions(apexlab-resource-tests PRIVATE APEXLAB_SOURCE_DIR="${PROJECT_SOURCE_DIR}")
+apexlab_enable_warnings(apexlab-resource-tests)
+add_test(NAME apexlab.resources COMMAND apexlab-resource-tests)
+
+add_test(NAME apexlab.force-audit COMMAND apexlab-force-audit ${PROJECT_SOURCE_DIR}/configs/vehicles/mclaren-p1-dynamic.json)
+add_test(NAME apexlab.native-driver COMMAND ${Python3_EXECUTABLE} -m unittest discover -s tools/dynamics -p test_native.py WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
+add_test(NAME apexlab.native-shooting COMMAND ${Python3_EXECUTABLE} -m unittest discover -s tools/dynamics -p test_optimization.py WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
+
+set_tests_properties(apexlab.native-driver apexlab.native-shooting PROPERTIES ENVIRONMENT "APEXLAB_RUNTIME=$<TARGET_FILE:apexlab_runtime>")
+
+# Instrumented/debug builds validate correctness, not release wall-clock budgets.
+if(CMAKE_BUILD_TYPE STREQUAL "Release" AND NOT CMAKE_CXX_FLAGS MATCHES "sanitize")
+  set_property(TEST apexlab.native-driver APPEND PROPERTY ENVIRONMENT "APEXLAB_PERFORMANCE_ASSERT=1")
+endif()
+add_test(NAME apexlab.evaluation-cache COMMAND ${Python3_EXECUTABLE} -m unittest discover -s tools/dynamics -p test_cache.py WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
+add_test(NAME apexlab.host-ownership COMMAND ${Python3_EXECUTABLE} -m unittest discover -s tools/dynamics -p test_host.py WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
+set_tests_properties(apexlab.host-ownership PROPERTIES ENVIRONMENT "APEXLAB_RUNTIME=$<TARGET_FILE:apexlab_runtime>")
