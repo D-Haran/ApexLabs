@@ -1,3 +1,4 @@
+import ForestBillboards from "./ForestBillboards";
 import { Line, useTexture } from "@react-three/drei";
 import { useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
@@ -9,6 +10,15 @@ import {
 } from "./environmentGeometry";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 import type { Overlays } from "./Scene";
+
+export type EnvironmentSession = Pick<Session, "geometry" | "renderContext"> & {
+  manifest: {
+    track: Pick<
+      Session["manifest"]["track"],
+      "length_m" | "kind" | "sector_boundaries_fraction"
+    >;
+  };
+};
 
 export function renderTrackPoint(row: ElevatedGeometry, multiplier: number) {
   const width = multiplier >= 0 ? row.left_width_m : row.right_width_m;
@@ -108,7 +118,10 @@ function kerb(
   return geometry;
 }
 
-export function trackElevationAt(session: Session, progress: number) {
+export function trackElevationAt(
+  session: EnvironmentSession,
+  progress: number,
+) {
   const rows = session.geometry;
   let s = progress % session.manifest.track.length_m;
   if (s < 0) s += session.manifest.track.length_m;
@@ -127,7 +140,7 @@ export function trackElevationAt(session: Session, progress: number) {
   );
 }
 
-function nearestElevation(session: Session, x: number, y: number) {
+function nearestElevation(session: EnvironmentSession, x: number, y: number) {
   let best = session.geometry[0];
   let distance = Number.POSITIVE_INFINITY;
   for (let index = 0; index < session.geometry.length; index += 4) {
@@ -142,7 +155,7 @@ function nearestElevation(session: Session, x: number, y: number) {
 }
 
 function contextStrip(
-  session: Session,
+  session: EnvironmentSession,
   points: [number, number][],
   halfWidth: number,
 ) {
@@ -181,7 +194,7 @@ function contextStrip(
   return geometry;
 }
 
-function PitAndServiceRoads({ session }: { session: Session }) {
+function PitAndServiceRoads({ session }: { session: EnvironmentSession }) {
   const meshes = useMemo(() => {
     if (!session.renderContext) return [];
     return session.renderContext.features
@@ -243,7 +256,7 @@ interface Placement {
   variant: number;
 }
 
-function Forest({ session }: { session: Session }) {
+function Forest({ session }: { session: EnvironmentSession }) {
   const first = useRef<THREE.InstancedMesh>(null);
   const second = useRef<THREE.InstancedMesh>(null);
   const trunks = useRef<THREE.InstancedMesh>(null);
@@ -391,9 +404,11 @@ function BarrierPosts({ rows }: { rows: ElevatedGeometry[] }) {
 export function TrackEnvironment({
   session,
   overlays,
+  detailed = false,
 }: {
-  session: Session;
+  session: EnvironmentSession;
   overlays: Overlays;
+  detailed?: boolean;
 }) {
   const texturePaths = ["asphalt", "grass", "gravel"].flatMap((name) =>
     ["color", "normal", "roughness"].map(
@@ -593,7 +608,11 @@ export function TrackEnvironment({
             />
           </mesh>
           <BarrierPosts rows={geometry} />
-          <Forest session={session} />
+          {detailed ? (
+            <ForestBillboards session={session} />
+          ) : (
+            <Forest session={session} />
+          )}
           <PitAndServiceRoads session={session} />
           <mesh
             position={[start.x_m, start.elevation_m + 0.025, -start.y_m]}

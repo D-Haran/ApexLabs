@@ -1,0 +1,50 @@
+{
+  "assets": [
+    {
+      "file": "twig_diff.jpg",
+      "bytes": 510932,
+      "md5": "b6e5f4e8c228c275e5ff75cb165c2e1f",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_tree_01/pine_tree_01_twig_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "publisher": "Poly Haven"
+    },
+    {
+      "file": "twig_alpha.png",
+      "bytes": 351928,
+      "md5": "641911a5a3f543911dad04ebb26e7bca",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/pine_tree_01/pine_tree_01_twig_alpha_1k.png",
+      "license": "CC0-1.0",
+      "publisher": "Poly Haven"
+    },
+    {
+      "file": "twig_nor_gl.jpg",
+      "bytes": 797935,
+      "md5": "972d28f52f07ea271792b5bfbb8a3286",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_tree_01/pine_tree_01_twig_nor_gl_1k.jpg",
+      "license": "CC0-1.0",
+      "publisher": "Poly Haven"
+    },
+    {
+      "file": "bark_diff.jpg",
+      "bytes": 725265,
+      "md5": "7d3a558ed614c7e75594c7be3bf80311",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/pine_tree_01/pine_tree_01_bark_diff_1k.jpg",
+      "license": "CC0-1.0",
+      "publisher": "Poly Haven"
+    },
+    {
+      "file": "sky.hdr",
+      "bytes": 1435119,
+      "md5": "c69498687e876bf68d2a8b8a62234eb9",
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+      "license": "CC0-1.0",
+      "publisher": "Poly Haven"
+    }
+  ],
+  "tree_geometry": "ApexLab authored foliage cards using Poly Haven pine twig maps; not the 17-million-triangle source tree mesh",
+  "source_pages": [
+    "https://polyhaven.com/a/pine_tree_01",
+    "https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky"
+  ],
+  "license_url": "https://polyhaven.com/license"
+}
