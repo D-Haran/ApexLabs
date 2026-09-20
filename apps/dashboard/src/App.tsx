@@ -278,7 +278,7 @@ export default function App() {
           </span>
         </a>
         <nav className="mode-nav" aria-label="Workspace modes">
-          <button className="active">DRIVE</button>
+          <button onClick={() => { location.href = "/?drive"; }}>DRIVE</button>
           <button
             onClick={() =>
               document

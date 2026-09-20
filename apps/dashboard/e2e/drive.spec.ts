@@ -1,0 +1,20 @@
+import {test,expect} from '@playwright/test';
+test('native DRIVE keyboard, reset, vehicle selection and modeled telemetry',async({page})=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('/?drive');
+ await expect(page.getByRole('button',{name:'Start driving'})).toBeEnabled({timeout:30000});
+ await page.getByRole('button',{name:'Start driving'}).click();
+ await page.keyboard.down('w');await page.waitForTimeout(1500);await page.keyboard.up('w');
+ const s=await page.request.get('http://127.0.0.1:8765/state').then(r=>r.json());
+ expect(s.time).toBeGreaterThan(1);expect(Math.hypot(...s.velocity)).toBeGreaterThan(1);expect(s.gear).toBeGreaterThan(0);expect(s.wheels).toHaveLength(4);
+ await page.getByRole('button',{name:'Pause driving'}).click();
+ await page.screenshot({path:'../../docs/screenshots/m6-drive-p1.png'});
+ await page.getByLabel('Tire forces',{exact:true}).check();await page.screenshot({path:'../../docs/screenshots/m6-drive-forces.png'});
+ await page.getByRole('button',{name:'Reset session'}).click();
+ await expect.poll(async()=>page.request.get('http://127.0.0.1:8765/state').then(r=>r.json()).then(s=>s.time)).toBe(0);
+ await page.getByLabel('Vehicle',{exact:true}).selectOption('mcl36');
+ await expect(page.getByText('DRS request · closes under braking')).toBeVisible();
+ await expect(page.getByRole('button',{name:'Start driving'})).toBeEnabled({timeout:30000});
+ await page.waitForTimeout(3000);await page.screenshot({path:'../../docs/screenshots/m6-drive-f1.png'});
+ expect(errors).toEqual([]);
+});
