@@ -1,0 +1,1408 @@
+APEXLAB — MILESTONE 6
+DYNAMIC VEHICLE PHYSICS, DRIVER MODE, VEHICLE-SPECIFIC
+OPTIMIZATION & FINAL ENGINEERING EXPERIENCE
+
+ApexLab Milestones 1–5.5 are complete.
+
+This milestone is intended to transform ApexLab from a deterministic
+lap simulator/visualizer into an interactive computational motorsport
+laboratory.
+
+DO NOT discard or silently rewrite the validated earlier models.
+
+Preserve independently runnable:
+
+    longitudinal model
+    linear bicycle model
+    nonlinear planar four-tire model
+    existing feasible-lap simulator
+    existing passive sprung-body approximation
+
+Build the new systems alongside them and quantify differences.
+
+The milestone must be completed in gated phases:
+
+    Phase A — genuine 3D road contact and airborne dynamics
+    Phase B — vehicle-specific P1 and MCL36-inspired models
+    Phase C — tire/fuel/energy state
+    Phase D — real-time human driving + optimized ghost
+    Phase E — free-path multi-objective optimal control
+    Phase F — force/physics validation
+    Phase G — UI and environment fidelity
+    Phase H — final validation and documentation
+
+Do not move to a later phase while the current phase fails validation.
+
+
+============================================================
+PHASE A — STOP GLUING THE CAR TO THE ROAD
+============================================================
+
+CURRENT PROBLEM
+
+The current sprung-body implementation effectively assumes continuous
+road contact.
+
+This is physically wrong over sufficiently sharp crests or during
+sufficient vertical acceleration.
+
+The road may PUSH on a tire.
+
+It may not PULL a tire toward the road.
+
+That unilateral-contact property must be modeled explicitly.
+
+
+1. NORMAL CONTACT
+
+Each wheel must have a contact state.
+
+For wheel i:
+
+    contact_i ∈ {airborne, contacting}
+
+Normal tire/road force must satisfy:
+
+    Fz_i >= 0
+
+The road may never generate negative normal force merely to keep a
+wheel attached.
+
+Use a physically defensible vertical tire/contact model.
+
+Conceptually:
+
+    delta_tire = geometric tire compression
+
+    if delta_tire > 0:
+        Fz = tire_vertical_stiffness * delta
+           + tire_vertical_damping * delta_dot
+    else:
+        Fz = 0
+
+Use a smooth formulation where necessary for numerical stability.
+
+Never clamp a calculated negative Fz back to a positive value.
+
+
+2. BODY VERTICAL DYNAMICS
+
+The new vehicle model must integrate real vertical body motion.
+
+At minimum retain:
+
+    global X
+    global Y
+    global Z
+
+    roll
+    pitch
+    yaw
+
+and corresponding linear/angular velocities.
+
+Prefer quaternion orientation internally.
+
+The existing planar X/Y/yaw state should remain available as a
+simplified validated model.
+
+
+3. UNSPRUNG MASSES
+
+Add four wheel/unsprung vertical DOFs if computationally practical:
+
+    z_u_FL
+    z_u_FR
+    z_u_RL
+    z_u_RR
+
+with:
+
+    unsprung mass
+    tire vertical stiffness/damping
+    suspension spring/damper
+
+This is preferable to treating the wheel contact point as rigidly
+attached to the chassis.
+
+
+4. AIRBORNE CONDITION
+
+When suspension extension and tire geometry can no longer maintain
+contact:
+
+    Fz_i = 0
+
+If all four tires lose contact:
+
+the car becomes a free rigid body subject to:
+
+    gravity
+    aerodynamic forces
+    aerodynamic moments
+
+but:
+
+    tire Fx = 0
+    tire Fy = 0
+    tire Fz = 0
+
+until contact is regained.
+
+Do not special-case “jump”.
+
+It must emerge from the equations.
+
+
+5. BALLISTIC MOTION
+
+While fully airborne:
+
+    m * a = gravity + aero
+
+No road-normal constraint.
+
+The trajectory must therefore become ballistic.
+
+The car should naturally reconnect with the road if its trajectory
+intersects the surface again.
+
+
+6. LANDING
+
+Landing must occur through tire/suspension compliance.
+
+Do not teleport the chassis back to road height.
+
+Track:
+
+    tire compression
+    suspension compression
+    damper force
+    vertical acceleration
+
+A large landing should visibly compress the suspension.
+
+Avoid numerical impulse explosions.
+
+
+7. ROAD QUERY
+
+Implement a physical road-surface query for each wheel contact point.
+
+Given world wheel position:
+
+return:
+
+    surface point
+    surface normal
+    road material
+    friction coefficient
+    curb/road/grass/runoff classification
+
+Track geometry must be queried independently at each wheel.
+
+Do not assume all four tires occupy the same road plane.
+
+
+8. CURBS
+
+Curbs must have actual height geometry.
+
+They may change:
+
+    wheel vertical position
+    normal load
+    chassis roll
+    tire contact
+
+The renderer and simulator must use consistent curb geometry.
+
+
+9. OFF-TRACK SURFACE
+
+Manual driving requires leaving the ideal path.
+
+Support at minimum:
+
+    asphalt
+    curb
+    asphalt runoff
+    grass
+
+with configurable:
+
+    mu
+    rolling resistance
+    roughness / vertical disturbance
+
+Do not instantly reset the vehicle just because it leaves the track.
+
+Barrier collision can remain a documented later limitation.
+
+
+10. REQUIRED CREST TEST
+
+Create a deterministic convex crest.
+
+Sweep speed.
+
+At low speed:
+    all wheels remain in contact.
+
+At sufficiently high speed:
+    available normal reaction must approach zero and wheels/car
+    should lose contact.
+
+Demonstrate the transition quantitatively.
+
+Report:
+
+    speed
+    vertical acceleration demand
+    four Fz values
+    airborne duration
+    maximum height above road
+    landing loads
+
+
+============================================================
+PHASE B — THE P1 AND F1 CAR MUST NOT DRIVE ALIKE
+============================================================
+
+Create distinct physical vehicle definitions:
+
+    McLaren P1 — approximate calibrated model
+
+    McLaren MCL36 / 2022 F1-inspired approximate model
+
+Do NOT share one generic physics configuration with different meshes.
+
+
+11. PARAMETER PROVENANCE
+
+Every physical parameter must be tagged:
+
+    published
+    derived
+    calibrated
+    estimated
+    unknown
+
+Produce:
+
+    docs/vehicles/mclaren-p1.md
+    docs/vehicles/mcl36-approx.md
+
+
+12. P1 PUBLISHED ANCHORS
+
+Use McLaren published targets where applicable:
+
+    system power         916 PS
+    system torque        900 Nm
+    maximum speed        350 km/h
+    0-100 km/h           2.8 s
+    0-200 km/h           6.8 s
+    100-0 km/h           30 m
+    200-0 km/h           116 m
+    lightest dry mass    1395 kg
+    DIN mass             1490 kg
+    peak downforce       up to 600 kg equivalent
+
+Use the owner-handbook axle data where appropriate to establish an
+approximately 42/58 front/rear distribution.
+
+Do not invent proprietary suspension/aero maps.
+
+
+13. P1 CALIBRATION
+
+Fit unknown/estimated parameters against published performance anchors.
+
+Potential fitted variables:
+
+    effective CdA
+    aero ClA curve
+    effective rolling resistance
+    drivetrain efficiency
+    longitudinal tire grip
+    power/torque curve approximation
+
+Run independent:
+
+    0-100
+    0-200
+    top-speed
+    braking-distance
+
+tests.
+
+Report residuals.
+
+Do not hand-adjust telemetry after simulation.
+
+
+14. P1 ACTIVE AERO
+
+Model P1 active aero as a speed/state-dependent system.
+
+At minimum support distinct effective aero states:
+
+    road
+    race/high-downforce
+    braking aero where justified
+
+Do not claim proprietary McLaren control logic.
+
+Use documented/estimated mappings and mark them accordingly.
+
+
+15. 2022 F1 / MCL36 ANCHORS
+
+Use published McLaren/FIA values:
+
+    mass excluding fuel        795 kg incl. driver
+    front weight fraction      44.5–46.0 %
+    18-inch F1 wheels
+    1.6 L turbo V6 hybrid
+    maximum engine speed       15000 rpm
+    MGU-K maximum power        120 kW
+    MGU-K deployment           4 MJ/lap
+    MGU-K recovery             2 MJ/lap
+    maximum fuel flow          100 kg/h above 10500 rpm
+    eight forward gears
+    limited-slip differential
+    rear brake-by-wire
+
+Do NOT invent a fixed F1 top speed.
+
+Top speed must emerge from:
+
+    power
+    gearing
+    drag
+    aero setup
+    DRS state
+    gradient
+
+
+16. F1 AERO MUST BE DIFFERENT
+
+The F1 model must have a much stronger speed-dependent aerodynamic
+component than the P1.
+
+Implement an explicit aero map:
+
+    downforce = f(v, frontRideHeight, rearRideHeight, pitch, DRS)
+
+    drag = g(v, aeroSetup, DRS)
+
+The actual coefficients will require engineering estimates because
+McLaren does not publish the MCL36 aero map.
+
+Clearly mark this.
+
+Support aero-balance migration.
+
+Do not use the P1's simple aero model.
+
+
+17. GROUND EFFECT
+
+The MCL36-inspired model should respond to ride height.
+
+Implement a smooth approximate floor-effect map.
+
+Very high ride height:
+    reduced floor downforce
+
+effective operating range:
+    stronger downforce
+
+extreme low ride / inappropriate attitude:
+    optionally reduced/stalled performance if justified by the chosen
+    approximate model
+
+Document assumptions.
+
+
+18. DRS
+
+Support DRS as a real state for the F1 configuration.
+
+When enabled:
+
+    rear downforce decreases
+    drag decreases
+
+Do not simply add speed.
+
+
+19. POWERTRAIN DIFFERENCES
+
+P1:
+    7-speed dual-clutch hybrid road-car architecture
+
+F1:
+    8-speed sequential racing gearbox
+    2022 hybrid architecture
+
+Gear ratios may be estimated/calibrated when proprietary values are
+unavailable.
+
+Display that distinction clearly.
+
+
+============================================================
+PHASE C — FUEL, ENERGY, TIRE TEMPERATURE AND WEAR
+============================================================
+
+20. FUEL MASS STATE
+
+Add:
+
+    fuel_mass_kg
+
+Fuel mass contributes to total vehicle mass.
+
+Where the tank position is known/estimated, fuel burn may also alter:
+
+    CG position
+    axle loads
+
+Do not show a decorative fuel bar.
+
+The UI fuel bar must derive from this state.
+
+
+21. FUEL CONSUMPTION
+
+Model fuel mass flow from power demand.
+
+For F1 obey the applicable fuel-flow envelope including the published
+100 kg/h upper limit.
+
+For P1, use an explicitly estimated engine-efficiency/BSFC map where
+real data is unavailable.
+
+Do not use road NEDC consumption directly as track consumption.
+
+
+22. HYBRID ENERGY
+
+F1 state should include at least:
+
+    battery/ERS energy state
+
+respecting:
+
+    MGU-K power limit
+    deployment/lap constraint
+    recovery/lap constraint
+
+P1 should include an approximate hybrid energy/SOC state if sufficient
+public parameters can be sourced.
+
+Unknown parameters must remain marked estimated.
+
+
+23. TIRE THERMAL STATE
+
+The target UI includes tire temperature.
+
+Do not fake it.
+
+Implement at least a simple physically meaningful thermal model per tire:
+
+    tread/surface temperature
+
+Prefer:
+
+    surface temperature
+    carcass temperature
+
+if stable and justifiable.
+
+Heating sources should include:
+
+    slip/friction work
+    deformation/load contribution
+
+Cooling should include:
+
+    air convection
+    road conduction approximation
+
+Parameters may be generic/calibrated.
+
+
+24. TIRE WEAR
+
+Add per-tire wear state:
+
+    wear_i ∈ [0,1] or physically meaningful equivalent
+
+Wear rate should depend on quantities such as:
+
+    sliding/friction energy
+    load
+    temperature
+    speed
+
+Grip should depend on:
+
+    tire temperature
+    wear
+
+Do not claim it is the proprietary Pirelli model.
+
+Research has explicitly modeled F1 grip as dependent on tyre temperature
+and wear in optimal-control studies; use this class of approach as
+guidance, but document your implementation.
+
+
+25. TIRE PRESSURE
+
+Do not display pressure unless modeled.
+
+If pressure is added, derive it from a thermodynamic/volume model or make
+it a static setup value clearly marked as such.
+
+
+============================================================
+PHASE D — DRIVE MODE
+============================================================
+
+26. NEW APPLICATION MODE
+
+Add:
+
+    DRIVE
+
+as a genuine interactive mode.
+
+The user must be able to control the SAME physics model used by the
+simulator.
+
+Do not introduce browser-only arcade physics.
+
+
+27. REAL-TIME SIMULATION ARCHITECTURE
+
+Preferred options:
+
+A:
+    compile sim-core for WebAssembly and execute it inside a Web Worker
+
+or, if this would significantly compromise the existing architecture:
+
+B:
+    run the native C++ sim server locally and stream/control it through a
+    low-latency transport.
+
+Do not duplicate vehicle physics in TypeScript.
+
+Target physics update:
+
+    >= 200 Hz
+
+independent of rendering frequency.
+
+
+28. INPUT
+
+Support:
+
+    keyboard
+    Gamepad API
+
+Keyboard defaults:
+
+    W / Up     throttle
+    S / Down   brake
+    A / Left   steer left
+    D / Right  steer right
+
+Gamepad:
+
+    analog steering
+    analog throttle
+    analog brake
+
+Add configurable:
+
+    deadzone
+    steering saturation
+    steering rate
+
+Do not use instantaneous +/- maximum steering from keyboard.
+
+
+29. VEHICLE-SPECIFIC DRIVER AIDS
+
+Driver aids must be configuration-specific.
+
+Do not secretly stabilize both cars.
+
+Create explicit modes:
+
+    Authentic
+    Assisted
+
+For F1 authentic mode:
+
+    no traction control
+    no ABS
+
+For P1, modeled road-car aids may be enabled only where implemented.
+
+Clearly show assists in the UI.
+
+
+30. GHOST LAP
+
+Render the selected optimized solution as a translucent ghost car.
+
+Provide two modes:
+
+    Time Ghost
+        ghost state evaluated at the player's elapsed time
+
+    Distance Reference
+        ghost/reference state evaluated at the player's current track s
+
+The first answers:
+    "where should the optimized car be right now?"
+
+The second answers:
+    "what should the car be doing at this location?"
+
+
+31. LIVE DELTA
+
+Using the optimized lap's monotonic spatial timing map:
+
+    t_opt(s)
+
+calculate live:
+
+    delta = t_player - t_opt(s_player)
+
+Display:
+
+    current delta
+    sector delta
+    best delta
+
+Do not calculate delta merely from Euclidean ghost distance.
+
+
+32. OPTIMAL LINE OVERLAY
+
+The Overlay menu must include:
+
+    Optimal path
+    Reference path
+    Player trajectory
+    Track boundaries
+    Tire forces
+    Tire loads
+    Velocity vector
+    Aero force
+    CG
+    Suspension/contact points
+    Road frame
+
+"Optimal path" must use the actual current optimization result.
+
+
+============================================================
+PHASE E — DO NOT DRIVE THE CENTERLINE
+============================================================
+
+33. REMOVE THE CENTERLINE ASSUMPTION
+
+The optimized solution must be free to use track width.
+
+Do not encode:
+
+    "turn left -> apex inside"
+
+as a heuristic.
+
+The line must emerge from optimization.
+
+
+34. WHY
+
+Racing line depends on:
+
+    vehicle dynamics
+    braking ability
+    acceleration
+    power
+    tire limits
+    aero
+    corner geometry
+    following corner
+    following straight
+    track width
+
+Therefore the optimal P1 line and optimal F1 line should differ
+naturally.
+
+
+35. SPATIAL OPTIMAL CONTROL
+
+Use track progress s as the independent variable where numerically
+beneficial.
+
+Decision states should support at minimum:
+
+    lateral path position e_y(s)
+    heading error
+    longitudinal velocity
+    lateral velocity
+    yaw rate
+    relevant body/suspension states
+
+and controls such as:
+
+    steering
+    drive/brake
+    gear / power request where appropriate
+    DRS where allowed
+    hybrid deployment where modeled
+
+
+36. TRACK BOUNDARY CONSTRAINT
+
+Do not constrain only the CG if sufficient vehicle dimensions are known.
+
+Prefer a body footprint / safety-envelope constraint.
+
+At minimum use:
+
+    e_y + vehicle half-width + margin
+
+against track boundaries.
+
+Document approximation.
+
+
+37. FASTEST-LAP OBJECTIVE
+
+Primary mode:
+
+    MINIMUM TIME
+
+Minimize:
+
+    T = integral dt
+
+subject to full dynamics and constraints.
+
+
+38. MULTI-OBJECTIVE OPTIMIZATION
+
+The user must be able to select optimization targets.
+
+Support presets:
+
+    Fastest Lap
+    Shortest Path
+    Maximum Clearance
+    Neutral Handling
+    Platform Stability
+    Minimum Fuel
+    Tire Preservation
+    Custom
+
+
+39. SHORTEST PATH
+
+Minimize geometric path length.
+
+Do not call it fastest.
+
+
+40. MAXIMUM CLEARANCE
+
+Maximize minimum clearance from track limits or minimize a smooth
+boundary-risk cost.
+
+This should generally produce a more central/conservative path.
+
+
+41. NEUTRAL HANDLING
+
+Do not define oversteer/understeer as a vague label.
+
+Construct a documented balance metric based on quantities such as:
+
+    front vs rear normalized tire utilization
+    front vs rear slip reserve
+    yaw response error
+    front/rear slip-angle relationship
+
+Choose one defensible definition and document it.
+
+The optimization target should minimize the selected imbalance metric.
+
+
+42. PLATFORM STABILITY
+
+"Keep the car most level" should correspond to a physical objective.
+
+Penalize appropriately normalized quantities such as:
+
+    roll angle
+    pitch angle
+    heave displacement
+    roll/pitch rates
+    suspension travel variation
+
+Do not simply minimize steering.
+
+
+43. MINIMUM FUEL
+
+Minimize:
+
+    fuel_mass_start - fuel_mass_finish
+
+while satisfying a lap-time constraint or user-defined maximum time.
+
+Otherwise the trivial solution is driving arbitrarily slowly.
+
+
+44. TIRE PRESERVATION
+
+Minimize a function of:
+
+    total wear
+    maximum individual-tire wear
+    thermal excursions
+
+again with an optional lap-time constraint.
+
+
+45. CUSTOM OBJECTIVE
+
+Implement normalized weighted terms:
+
+    J =
+        wt * J_time
+      + wp * J_path
+      + wc * J_clearance
+      + wb * J_balance
+      + ws * J_stability
+      + wf * J_fuel
+      + ww * J_wear
+
+Each component must be normalized to a documented reference scale.
+
+Never add raw seconds, meters, kilograms and degrees without
+normalization.
+
+
+46. PARETO MODE
+
+Where practical support a Pareto sweep for competing objectives.
+
+Examples:
+
+    lap time vs fuel
+    lap time vs tire wear
+    lap time vs clearance
+
+Display the resulting trade-off curve.
+
+Do not pretend one weighted solution is universally "best".
+
+
+47. VEHICLE-SPECIFIC OPTIMIZATION
+
+Run the same track for:
+
+    P1
+    F1
+
+The optimizer must use their actual selected model.
+
+Compare:
+
+    racing line
+    braking point
+    apex
+    exit
+    speed profile
+    tire utilization
+    aero utilization
+
+The objective is to demonstrate why different cars should not produce
+identical lines.
+
+
+============================================================
+PHASE F — TIRE-FORCE ARROW AUDIT
+============================================================
+
+48. FORCE SEMANTICS
+
+Every displayed tire-force arrow must be explicitly defined as:
+
+    force exerted by road on vehicle
+
+NOT:
+
+    force exerted by tire on road
+
+unless the UI says otherwise.
+
+
+49. TRANSFORM
+
+For each contact patch:
+
+start with tire-local:
+
+    [Fx_tire, Fy_tire, Fz]
+
+rotate by wheel steer angle
+
+then rotate by body/world orientation
+
+then render the WORLD-space force vector originating at the actual
+contact patch.
+
+
+50. REAR WHEELS
+
+Rear wheels may have:
+
+    steering angle = 0
+
+while still having substantial:
+
+    Fy != 0
+
+because their contact-patch velocity may have a nonzero slip angle.
+
+This is physically expected.
+
+Do not force the arrow to align with the wheel just because it is a
+rear wheel.
+
+
+51. CONSTANT-RADIUS TEST
+
+Construct a steady left-hand corner.
+
+Verify:
+
+    sum tire lateral force points toward the required center of curvature
+
+and that rear lateral tire forces have the correct sign.
+
+Repeat mirrored right turn.
+
+If arrows visually point opposite the physical force:
+
+investigate whether the visualization currently displays the road
+reaction with the wrong sign.
+
+
+52. FORCE DEBUG UI
+
+When Tire Forces is enabled allow optional labels:
+
+    Fx
+    Fy
+    Fz
+    slip angle
+
+and frame:
+
+    Tire Local
+    Body
+    World
+
+The actual 3D arrow remains world transformed.
+
+
+============================================================
+PHASE G — MAKE THE APPLICATION MATCH THE TARGET
+============================================================
+
+The supplied visual reference:
+
+    docs/design/apexlab-target-ui.png
+
+is now the required interface target.
+
+The existing layout is directionally correct but still visually behind
+the target.
+
+Do not merely "take inspiration".
+
+Perform a structured visual-difference pass.
+
+
+53. MATCH PANEL GEOMETRY
+
+Match the target closely for:
+
+    header height
+    navigation placement
+    left session width
+    central viewport aspect
+    right-column width
+    bottom telemetry height
+    card padding
+    separators
+    typography hierarchy
+    data density
+
+
+54. TARGET MAIN VIEWPORT
+
+The central viewport must look substantially more realistic.
+
+Use:
+
+    actual P1/F1 GLTF assets
+    full PBR materials
+    correct texture maps
+    environment map
+    ACES tone mapping
+    anisotropic texture filtering
+    high-quality shadows
+    SSAO/GTAO if performance allows
+    subtle contact shadows
+
+Do not replace the real mesh with procedural polygons when the GLTF
+exists.
+
+
+55. ENVIRONMENT
+
+Spa should become recognizable from more than its road shape.
+
+Improve:
+
+    forest density
+    terrain
+    guardrails
+    fencing
+    curb detail
+    road paint
+    braking-marker boards
+    pit/start-finish area
+    grandstand/building silhouettes
+    distant terrain
+
+Use instancing and reusable assets.
+
+Use license-compatible local assets and record provenance.
+
+
+56. NO GIANT LOW-POLY OBJECTS
+
+The current cone/tree primitives are acceptable as fallback only.
+
+Primary showcase mode must use substantially higher-quality trees,
+materials, barriers and props.
+
+Do not render obviously faceted placeholder geometry in the final
+showcase screenshot.
+
+
+57. CAR STATUS PANEL
+
+Match the target layout.
+
+Now that the relevant states exist, legitimately show:
+
+    tire temperature
+    tire wear
+    utilization
+    tire load
+
+Do not show tire pressure unless modeled.
+
+
+58. AERO / LOAD
+
+Show real:
+
+    downforce
+    drag
+    aero balance
+    Cd / Cl where modeled
+    DRS / active-aero state
+
+
+59. G-FORCE
+
+Match target circular G display.
+
+Use actual:
+
+    lateral g
+    longitudinal g
+    vertical g
+
+Vertical g is now legitimate because full vertical dynamics exist.
+
+
+60. SUSPENSION & LOAD PANEL
+
+Create the target's lower-center engineering visual.
+
+Use either:
+
+    a simplified transparent vehicle schematic
+
+or:
+
+    processed actual vehicle chassis view
+
+Display actual per-corner:
+
+    suspension compression
+    damper velocity
+    tire normal load
+
+Do not fake springs.
+
+
+61. SETUP / OPTIMIZATION PANEL
+
+Match target visual structure.
+
+Contents must differ by vehicle.
+
+P1 might expose modeled parameters such as:
+
+    aero mode
+    brake bias
+    tire state/setup parameters
+    active-aero strategy
+    fuel load
+
+F1 might expose:
+
+    front/rear aero setup surrogate
+    ride height
+    brake bias
+    roll stiffness distribution
+    differential parameters if modeled
+    DRS strategy
+    ERS strategy
+    fuel load
+
+Only expose parameters that actually modify simulation.
+
+
+62. OPTIMIZATION UI
+
+Provide:
+
+    objective selector
+    advanced objective weights
+    constraints
+    Optimize button
+    progress/status
+    resulting objective values
+
+Example:
+
+    Objective:
+        Fastest Lap
+
+    or
+
+    Custom:
+        Time                70%
+        Tire wear           10%
+        Fuel                10%
+        Platform stability  10%
+
+
+63. FUEL UI
+
+Add a fuel/energy section using real model state.
+
+P1:
+    fuel
+    battery SOC where modeled
+
+F1:
+    fuel
+    ERS state/deployment
+
+
+64. TIRE UI
+
+For each tire:
+
+    temperature
+    wear
+    load
+    utilization
+
+Clicking tire should open its:
+
+    friction circle
+    temperature history
+    wear history
+    force history
+
+
+============================================================
+PHASE H — VALIDATION
+============================================================
+
+65. REAL VEHICLE CALIBRATION REPORT
+
+For P1 report simulated vs published:
+
+    0-100
+    0-200
+    top speed
+    100-0
+    200-0
+
+and errors.
+
+
+66. VEHICLE DIFFERENCE STUDY
+
+On Spa run P1 and F1.
+
+Compare:
+
+    mass
+    aero loads
+    maximum speed
+    braking
+    lateral acceleration
+    lap time
+    optimal racing line
+    tire utilization
+    fuel use
+
+Explain why differences emerge.
+
+
+67. AIRBORNE VALIDATION
+
+Run:
+
+    synthetic crest
+    Spa high-speed crest(s)
+
+Report wheel contact state and normal forces.
+
+Do not claim a real car would become fully airborne at a Spa location
+unless the model and geometry actually predict it.
+
+
+68. OPTIMIZER VALIDATION
+
+For each optimization mode report:
+
+    objective
+    constraint residuals
+    solver status
+    iteration count
+    wall time
+
+For fastest lap:
+
+replay optimized controls through the independent simulation.
+
+Compare optimizer prediction against replay.
+
+
+69. RACING LINE VALIDATION
+
+The fastest line should not be judged by appearance.
+
+Validate:
+
+    complete lap
+    no illegal boundary violation
+    physically valid tire forces
+    physically valid contact
+    controls within limits
+
+Compare it against:
+
+    centerline lap
+    existing heuristic lap
+
+
+70. MANUAL MODE VALIDATION
+
+Test:
+
+    keyboard
+    gamepad
+    ghost synchronization
+    live delta
+    leaving track
+    grass
+    crest contact loss
+    restart/reset
+
+
+71. UI VISUAL COMPARISON
+
+Capture final screenshot at approximately the same state/angle as:
+
+    docs/design/apexlab-target-ui.png
+
+Create:
+
+    docs/screenshots/m6-target-comparison.png
+
+Manually compare each major region.
+
+Do not stop with "close enough" if large visual discrepancies are still
+obvious.
+
+
+============================================================
+FINAL DELIVERABLE
+============================================================
+
+At completion report:
+
+1. new 3D contact model,
+2. airborne/contact validation,
+3. P1 calibration against published metrics,
+4. F1 parameter provenance,
+5. P1/F1 aero differences,
+6. fuel model,
+7. hybrid/ERS model,
+8. tire thermal model,
+9. tire wear model,
+10. manual-control architecture,
+11. gamepad/keyboard behavior,
+12. ghost implementation,
+13. live delta implementation,
+14. minimum-time optimizer,
+15. multi-objective optimizer,
+16. P1 vs F1 optimal-line differences,
+17. tire-force-arrow audit findings,
+18. final Spa lap results,
+19. UI visual changes,
+20. environment/render changes,
+21. rendering performance,
+22. full verification status,
+23. remaining known approximations.
+
+Do not make claims stronger than the available source data.

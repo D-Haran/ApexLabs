@@ -1,0 +1,2312 @@
+{
+  "status": "passed",
+  "scope": "Phase B fixed-mass mechanical calibration; resource states not yet included",
+  "source": "https://cars.mclaren.com/us_en/legacy/mclaren-p1",
+  "targets": {
+    "zero_to_100_s": 2.8,
+    "zero_to_200_s": 6.8,
+    "brake_100_m": 30.0,
+    "brake_200_m": 116.0
+  },
+  "p1": {
+    "0.002": {
+      "aero_70mps": {
+        "downforce_n": 5883.99,
+        "drag_n": 2461.0249999999996,
+        "drs_downforce_n": 5883.99,
+        "drs_drag_n": 2461.0249999999996,
+        "drs_front_fraction": 0.42,
+        "front_fraction": 0.42,
+        "raised_body_downforce_n": 5883.99
+      },
+      "brake_100_m": 30.024405064815667,
+      "brake_200_m": 115.92726890692586,
+      "dt_s": 0.002,
+      "final_gear": 7,
+      "name": "McLaren P1 \u2014 approximate calibrated model",
+      "top_speed_kph": 351.0029559225909,
+      "wall_s": 0.481209791,
+      "zero_to_100_s": 2.7996948597493145,
+      "zero_to_200_s": 6.800064504411558
+    },
+    "0.001": {
+      "aero_70mps": {
+        "downforce_n": 5883.99,
+        "drag_n": 2461.0249999999996,
+        "drs_downforce_n": 5883.99,
+        "drs_drag_n": 2461.0249999999996,
+        "drs_front_fraction": 0.42,
+        "front_fraction": 0.42,
+        "raised_body_downforce_n": 5883.99
+      },
+      "brake_100_m": 30.024355429192724,
+      "brake_200_m": 115.92725364357034,
+      "dt_s": 0.001,
+      "final_gear": 7,
+      "name": "McLaren P1 \u2014 approximate calibrated model",
+      "top_speed_kph": 351.0029559226067,
+      "wall_s": 0.964809792,
+      "zero_to_100_s": 2.7983244644257046,
+      "zero_to_200_s": 6.796412711765188
+    }
+  },
+  "f1": {
+    "aero_70mps": {
+      "downforce_n": 20818.057849680867,
+      "drag_n": 3601.5,
+      "drs_downforce_n": 18837.232849680866,
+      "drs_drag_n": 2881.2,
+      "drs_front_fraction": 0.4973196491816525,
+      "front_fraction": 0.44999999999999996,
+      "raised_body_downforce_n": 7242.804244859211
+    },
+    "brake_100_m": 16.9868608728224,
+    "brake_200_m": 48.488184398156314,
+    "dt_s": 0.002,
+    "final_gear": 8,
+    "name": "McLaren MCL36 / 2022 F1-inspired approximate model",
+    "top_speed_kph": 349.05878631397644,
+    "wall_s": 0.486971458,
+    "zero_to_100_s": 2.1051485465524276,
+    "zero_to_200_s": 3.921671082668134
+  },
+  "relative_errors": {
+    "0.002": {
+      "zero_to_100_s": -0.00010897866095903121,
+      "zero_to_200_s": 9.485942876164653e-06,
+      "brake_100_m": 0.000813502160522243,
+      "brake_200_m": -0.0006269921816736173
+    },
+    "0.001": {
+      "zero_to_100_s": -0.0005984055622482959,
+      "zero_to_200_s": -0.0005275423874722913,
+      "brake_100_m": 0.0008118476397574644,
+      "brake_200_m": -0.0006271237623246665
+    }
+  },
+  "solver": {
+    "success": true,
+    "status": 1,
+    "message": "`gtol` termination condition is satisfied.",
+    "nfev": 13,
+    "optimality": 1.623680565386887e-07
+  },
+  "wall_s": 35.42248958395794,
+  "evaluations": [
+    {
+      "parameters": {
+        "tire_mu": 1.4,
+        "efficiency": 0.9,
+        "brake_force_n": 18500.0,
+        "road_cda_m2": 0.68
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.908381933358417,
+        "brake_200_m": 118.58866823750066,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.6064101393807,
+        "wall_s": 0.494828084,
+        "zero_to_100_s": 2.904071059912059,
+        "zero_to_200_s": 6.388365986125665
+      },
+      "relative_errors": [
+        0.037168235682878255,
+        -0.060534413805049245,
+        0.030279397778613888,
+        0.022316105495695307
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4027999999999998,
+        "efficiency": 0.9,
+        "brake_force_n": 18500.0,
+        "road_cda_m2": 0.68
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.895753056307644,
+        "brake_200_m": 118.57544439077613,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.6064101394457,
+        "wall_s": 0.478062792,
+        "zero_to_100_s": 2.896901843367062,
+        "zero_to_200_s": 6.378875582589278
+      },
+      "relative_errors": [
+        0.034607801202522256,
+        -0.06193006138392968,
+        0.029858435210254795,
+        0.022202106817035577
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4,
+        "efficiency": 0.9018,
+        "brake_force_n": 18500.0,
+        "road_cda_m2": 0.68
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.908381933358417,
+        "brake_200_m": 118.58866823750066,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.60878050325545,
+        "wall_s": 0.463299417,
+        "zero_to_100_s": 2.9040710599120585,
+        "zero_to_200_s": 6.383074472987273
+      },
+      "relative_errors": [
+        0.0371682356828781,
+        -0.061312577501871586,
+        0.030279397778613888,
+        0.022316105495695307
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4,
+        "efficiency": 0.9,
+        "brake_force_n": 18537.0,
+        "road_cda_m2": 0.68
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.868608098869974,
+        "brake_200_m": 118.38580506824862,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.6064101393807,
+        "wall_s": 0.482243208,
+        "zero_to_100_s": 2.904071059912059,
+        "zero_to_200_s": 6.388365986125665
+      },
+      "relative_errors": [
+        0.037168235682878255,
+        -0.060534413805049245,
+        0.028953603295665785,
+        0.020567285071108752
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4,
+        "efficiency": 0.9,
+        "brake_force_n": 18500.0,
+        "road_cda_m2": 0.6813600000000001
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.90785876072019,
+        "brake_200_m": 118.58105014123335,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.60417415281313,
+        "wall_s": 0.479327125,
+        "zero_to_100_s": 2.904112239131301,
+        "zero_to_200_s": 6.388949400563566
+      },
+      "relative_errors": [
+        0.037182942546893284,
+        -0.060448617564181496,
+        0.03026195869067294,
+        0.02225043225201162
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4290163797006952,
+        "efficiency": 0.8016748088998977,
+        "brake_force_n": 18896.788765734615,
+        "road_cda_m2": 0.8176227141060962
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.309755090701735,
+        "brake_200_m": 115.58483411105674,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.2079926454329,
+        "wall_s": 0.489704917,
+        "zero_to_100_s": 2.8350953551828115,
+        "zero_to_200_s": 6.710878605925516
+      },
+      "relative_errors": [
+        0.012534055422432753,
+        -0.013106087363894665,
+        0.010325169690057834,
+        -0.003579016283993654
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4318744124600966,
+        "efficiency": 0.8016748088998977,
+        "brake_force_n": 18896.788765734615,
+        "road_cda_m2": 0.8176227141060962
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.29554846010475,
+        "brake_200_m": 115.56572114944365,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.2079926453678,
+        "wall_s": 0.515298709,
+        "zero_to_100_s": 2.8280528763326678,
+        "zero_to_200_s": 6.701841142807719
+      },
+      "relative_errors": [
+        0.01001888440452427,
+        -0.014435126057688303,
+        0.009851615336825029,
+        -0.0037437831944513215
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4290163797006952,
+        "efficiency": 0.8032781585176976,
+        "brake_force_n": 18896.788765734615,
+        "road_cda_m2": 0.8176227141060962
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.309755090701735,
+        "brake_200_m": 115.58483411105674,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.21114362697796,
+        "wall_s": 0.495348292,
+        "zero_to_100_s": 2.835095355182812,
+        "zero_to_200_s": 6.703867656322752
+      },
+      "relative_errors": [
+        0.01253405542243291,
+        -0.014137109364301093,
+        0.010325169690057834,
+        -0.003579016283993654
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4290163797006952,
+        "efficiency": 0.8016748088998977,
+        "brake_force_n": 18934.582343266084,
+        "road_cda_m2": 0.8176227141060962
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.27381487590211,
+        "brake_200_m": 115.39843113328767,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.2079926454329,
+        "wall_s": 0.499044208,
+        "zero_to_100_s": 2.8350953551828115,
+        "zero_to_200_s": 6.710878605925516
+      },
+      "relative_errors": [
+        0.012534055422432753,
+        -0.013106087363894665,
+        0.009127162530070383,
+        -0.005185938506140751
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4290163797006952,
+        "efficiency": 0.8016748088998977,
+        "brake_force_n": 18896.788765734615,
+        "road_cda_m2": 0.8192579595343084
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.309151394950884,
+        "brake_200_m": 115.57617663272507,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.20499525451834,
+        "wall_s": 0.486531333,
+        "zero_to_100_s": 2.835142596700424,
+        "zero_to_200_s": 6.711788717969517
+      },
+      "relative_errors": [
+        0.01255092739300864,
+        -0.012972247357423939,
+        0.010305046498362813,
+        -0.0036536497178873664
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4429369083525234,
+        "efficiency": 0.775769936373339,
+        "brake_force_n": 18913.80159639429,
+        "road_cda_m2": 0.8259680535411525
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.22371754561127,
+        "brake_200_m": 115.36975150076681,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.13950673608815,
+        "wall_s": 0.480027417,
+        "zero_to_100_s": 2.8021147413359877,
+        "zero_to_200_s": 6.797580416340446
+      },
+      "relative_errors": [
+        0.0007552647628528142,
+        -0.00035582112640502824,
+        0.007457251520375626,
+        -0.005433176717527499
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4458227821692284,
+        "efficiency": 0.775769936373339,
+        "brake_force_n": 18913.80159639429,
+        "road_cda_m2": 0.8259680535411525
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.21101796519309,
+        "brake_200_m": 115.35504576185772,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.13950673607997,
+        "wall_s": 0.470575,
+        "zero_to_100_s": 2.795285808157781,
+        "zero_to_200_s": 6.789726369158
+      },
+      "relative_errors": [
+        -0.0016836399436496016,
+        -0.0015108280649999597,
+        0.007033932173102997,
+        -0.005559950328812724
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4429369083525234,
+        "efficiency": 0.7773214762460857,
+        "brake_force_n": 18913.80159639429,
+        "road_cda_m2": 0.8259680535411525
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.22371754561127,
+        "brake_200_m": 115.36975150076681,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.1427909875234,
+        "wall_s": 0.470424,
+        "zero_to_100_s": 2.8019890109189625,
+        "zero_to_200_s": 6.789490467390747
+      },
+      "relative_errors": [
+        0.0007103610424866577,
+        -0.0015455195013606737,
+        0.007457251520375626,
+        -0.005433176717527499
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4429369083525234,
+        "efficiency": 0.775769936373339,
+        "brake_force_n": 18951.629199587078,
+        "road_cda_m2": 0.8259680535411525
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.185730364543794,
+        "brake_200_m": 115.17707903192014,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.13950673608815,
+        "wall_s": 0.475511292,
+        "zero_to_100_s": 2.8021147413359877,
+        "zero_to_200_s": 6.797580416340446
+      },
+      "relative_errors": [
+        0.0007552647628528142,
+        -0.00035582112640502824,
+        0.006191012151459793,
+        -0.007094146276550484
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4429369083525234,
+        "efficiency": 0.775769936373339,
+        "brake_force_n": 18913.80159639429,
+        "road_cda_m2": 0.8276199896482348
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.223110965486143,
+        "brake_200_m": 115.36103327686594,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.13638064640537,
+        "wall_s": 0.475453917,
+        "zero_to_100_s": 2.8021624974044457,
+        "zero_to_200_s": 6.798560724120884
+      },
+      "relative_errors": [
+        0.000772320501587804,
+        -0.00021165821751698827,
+        0.007437032182871424,
+        -0.0055083338201212155
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4422232792834973,
+        "efficiency": 0.7461461752243616,
+        "brake_force_n": 19124.331886991964,
+        "road_cda_m2": 0.5658047492858613
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.12235745367315,
+        "brake_200_m": 115.71277220110285,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.5884042135946,
+        "wall_s": 0.47449125,
+        "zero_to_100_s": 2.799823815602958,
+        "zero_to_200_s": 6.822297217203769
+      },
+      "relative_errors": [
+        -6.292299894350428e-05,
+        0.0032790025299659943,
+        0.004078581789104992,
+        -0.002476101714630595
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4451077258420642,
+        "efficiency": 0.7461461752243616,
+        "brake_force_n": 19124.331886991964,
+        "road_cda_m2": 0.5658047492858613
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.106959976663035,
+        "brake_200_m": 115.68879198497142,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.5884042135895,
+        "wall_s": 0.538331917,
+        "zero_to_100_s": 2.7931336539404645,
+        "zero_to_200_s": 6.815688717266547
+      },
+      "relative_errors": [
+        -0.002452266449834032,
+        0.0023071643039040317,
+        0.0035653325554344897,
+        -0.00268282771576365
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4422232792834973,
+        "efficiency": 0.7476384675748102,
+        "brake_force_n": 19124.331886991964,
+        "road_cda_m2": 0.5658047492858613
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.12235745367315,
+        "brake_200_m": 115.71277220110285,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.5908071939196,
+        "wall_s": 0.478462625,
+        "zero_to_100_s": 2.799581060513385,
+        "zero_to_200_s": 6.813418490925802
+      },
+      "relative_errors": [
+        -0.00014962124521963486,
+        0.0019733074890885207,
+        0.004078581789104992,
+        -0.002476101714630595
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4422232792834973,
+        "efficiency": 0.7461461752243616,
+        "brake_force_n": 19162.580550765946,
+        "road_cda_m2": 0.5658047492858613
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.087892476514483,
+        "brake_200_m": 115.53093167311745,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.5884042135946,
+        "wall_s": 0.475959083,
+        "zero_to_100_s": 2.799823815602958,
+        "zero_to_200_s": 6.822297217203769
+      },
+      "relative_errors": [
+        -6.292299894350428e-05,
+        0.0032790025299659943,
+        0.0029297492171494353,
+        -0.004043692473125427
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4422232792834973,
+        "efficiency": 0.7461461752243616,
+        "brake_force_n": 19124.331886991964,
+        "road_cda_m2": 0.566936358784433
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.12194434452435,
+        "brake_200_m": 115.70672846173177,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.5861558950121,
+        "wall_s": 0.487640792,
+        "zero_to_100_s": 2.799857698980426,
+        "zero_to_200_s": 6.822971986611202
+      },
+      "relative_errors": [
+        -5.0821792705007294e-05,
+        0.003378233325176851,
+        0.004064811484145044,
+        -0.002528202916105422
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4422541599721215,
+        "efficiency": 0.7457220133335128,
+        "brake_force_n": 19168.239455070285,
+        "road_cda_m2": 0.5246122079253736
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.097670892241364,
+        "brake_200_m": 115.7239011633831,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.66967888201606,
+        "wall_s": 0.491153375,
+        "zero_to_100_s": 2.7985879057698417,
+        "zero_to_200_s": 6.802913537965978
+      },
+      "relative_errors": [
+        -0.0005043193679136035,
+        0.00042846146558498977,
+        0.0032556964080454756,
+        -0.0023801623846284132
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4451386682920657,
+        "efficiency": 0.7457220133335128,
+        "brake_force_n": 19168.239455070285,
+        "road_cda_m2": 0.5246122079253736
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.082184216710726,
+        "brake_200_m": 115.69830361055598,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.669678882033,
+        "wall_s": 0.703000667,
+        "zero_to_100_s": 2.7919389655228555,
+        "zero_to_200_s": 6.795894709757719
+      },
+      "relative_errors": [
+        -0.0028789408846944097,
+        -0.0006037191532766032,
+        0.002739473890357521,
+        -0.0026008309434829148
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4422541599721215,
+        "efficiency": 0.7472134573601799,
+        "brake_force_n": 19168.239455070285,
+        "road_cda_m2": 0.5246122079253736
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.097670892241364,
+        "brake_200_m": 115.7239011633831,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.6719219003322,
+        "wall_s": 0.538601834,
+        "zero_to_100_s": 2.7983464835096368,
+        "zero_to_200_s": 6.794108473609244
+      },
+      "relative_errors": [
+        -0.0005905416037010891,
+        -0.0008664009398170534,
+        0.0032556964080454756,
+        -0.0023801623846284132
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4422541599721215,
+        "efficiency": 0.7457220133335128,
+        "brake_force_n": 19206.575933980424,
+        "road_cda_m2": 0.5246122079253736
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.063344077999336,
+        "brake_200_m": 115.54430505461153,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.66967888201606,
+        "wall_s": 0.512821166,
+        "zero_to_100_s": 2.7985879057698417,
+        "zero_to_200_s": 6.802913537965978
+      },
+      "relative_errors": [
+        -0.0005043193679136035,
+        0.00042846146558498977,
+        0.002111469266644524,
+        -0.003928404701624764
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4422541599721215,
+        "efficiency": 0.7457220133335128,
+        "brake_force_n": 19168.239455070285,
+        "road_cda_m2": 0.5256614323412243
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.097288372467272,
+        "brake_200_m": 115.7182921572021,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.6675895614887,
+        "wall_s": 0.745599708,
+        "zero_to_100_s": 2.7986192937670484,
+        "zero_to_200_s": 6.803532277063692
+      },
+      "relative_errors": [
+        -0.0004931093689112106,
+        0.0005194525093664496,
+        0.003242945748909065,
+        -0.0024285158861887916
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4415246875149306,
+        "efficiency": 0.738721520356165,
+        "brake_force_n": 19239.79757365124,
+        "road_cda_m2": 0.44669674380340035
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.06604740975933,
+        "brake_200_m": 115.81469466034402,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.8158890940563,
+        "wall_s": 0.622918833,
+        "zero_to_100_s": 2.799178100537883,
+        "zero_to_200_s": 6.80409671567892
+      },
+      "relative_errors": [
+        -0.0002935355221846324,
+        0.0006024581880765039,
+        0.0022015803253110514,
+        -0.0015974598246205427
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4444077368899604,
+        "efficiency": 0.738721520356165,
+        "brake_force_n": 19239.79757365124,
+        "road_cda_m2": 0.44669674380340035
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.050479800284613,
+        "brake_200_m": 115.78585793821934,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.8158890940604,
+        "wall_s": 0.497421292,
+        "zero_to_100_s": 2.7925747898711095,
+        "zero_to_200_s": 6.797554405934121
+      },
+      "relative_errors": [
+        -0.0026518607603179655,
+        -0.00035964618615867125,
+        0.0016826600094870987,
+        -0.0018460522567298541
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4415246875149306,
+        "efficiency": 0.7401989633968773,
+        "brake_force_n": 19239.79757365124,
+        "road_cda_m2": 0.44669674380340035
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.06604740975933,
+        "brake_200_m": 115.81469466034402,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.8178438418778,
+        "wall_s": 0.478190375,
+        "zero_to_100_s": 2.7989132645215142,
+        "zero_to_200_s": 6.795450464134436
+      },
+      "relative_errors": [
+        -0.00038811981374485354,
+        -0.0006690493919946165,
+        0.0022015803253110514,
+        -0.0015974598246205427
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4415246875149306,
+        "efficiency": 0.738721520356165,
+        "brake_force_n": 19278.277168798544,
+        "road_cda_m2": 0.44669674380340035
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.03196557938324,
+        "brake_200_m": 115.63927064867549,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.8158890940563,
+        "wall_s": 0.484689416,
+        "zero_to_100_s": 2.799178100537883,
+        "zero_to_200_s": 6.80409671567892
+      },
+      "relative_errors": [
+        -0.0002935355221846324,
+        0.0006024581880765039,
+        0.0010655193127746543,
+        -0.0031097357872802434
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4415246875149306,
+        "efficiency": 0.738721520356165,
+        "brake_force_n": 19239.79757365124,
+        "road_cda_m2": 0.44759013729100716
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.06572228112745,
+        "brake_200_m": 115.80990447335108,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.8140876678395,
+        "wall_s": 0.47645975,
+        "zero_to_100_s": 2.79920505627955,
+        "zero_to_200_s": 6.8046218616474015
+      },
+      "relative_errors": [
+        -0.0002839084715891957,
+        0.0006796855363825937,
+        0.0021907427042483127,
+        -0.0016387545400768767
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4412028431644144,
+        "efficiency": 0.7358788969541897,
+        "brake_force_n": 19274.61652268085,
+        "road_cda_m2": 0.4103116958957184
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.05025601692164,
+        "brake_200_m": 115.85441249271798,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.8858095089053,
+        "wall_s": 0.483309583,
+        "zero_to_100_s": 2.7993660779485046,
+        "zero_to_200_s": 6.802449944837663
+      },
+      "relative_errors": [
+        -0.00022640073267687913,
+        0.0003602860055387628,
+        0.0016752005640546723,
+        -0.0012550647179484164
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4440852488507432,
+        "efficiency": 0.7358788969541897,
+        "brake_force_n": 19274.61652268085,
+        "road_cda_m2": 0.4103116958957184
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.034529671558992,
+        "brake_200_m": 115.82386781480442,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.8858095089219,
+        "wall_s": 0.488878958,
+        "zero_to_100_s": 2.792781523414213,
+        "zero_to_200_s": 6.795627346955098
+      },
+      "relative_errors": [
+        -0.002578027352066708,
+        -0.000643037212485552,
+        0.001150989051966415,
+        -0.001518380906858484
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4412028431644144,
+        "efficiency": 0.7373506547480981,
+        "brake_force_n": 19274.61652268085,
+        "road_cda_m2": 0.4103116958957184
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.05025601692164,
+        "brake_200_m": 115.85441249271798,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.88762622160806,
+        "wall_s": 0.484517333,
+        "zero_to_100_s": 2.7990921950556844,
+        "zero_to_200_s": 6.793833033294192
+      },
+      "relative_errors": [
+        -0.0003242160515412199,
+        -0.0009069068685012038,
+        0.0016752005640546723,
+        -0.0012550647179484164
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4412028431644144,
+        "efficiency": 0.7358788969541897,
+        "brake_force_n": 19313.165755726215,
+        "road_cda_m2": 0.4103116958957184
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.01629944561216,
+        "brake_200_m": 115.68135029964178,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.8858095089053,
+        "wall_s": 0.490500708,
+        "zero_to_100_s": 2.7993660779485046,
+        "zero_to_200_s": 6.802449944837663
+      },
+      "relative_errors": [
+        -0.00022640073267687913,
+        0.0003602860055387628,
+        0.0005433148537386264,
+        -0.002746980175501912
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4412028431644144,
+        "efficiency": 0.7358788969541897,
+        "brake_force_n": 19274.61652268085,
+        "road_cda_m2": 0.4111323192875099
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.049957515079313,
+        "brake_200_m": 115.8500073221537,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.8841459898257,
+        "wall_s": 0.493832834,
+        "zero_to_100_s": 2.7993909212735018,
+        "zero_to_200_s": 6.802931062251968
+      },
+      "relative_errors": [
+        -0.00021752811660645323,
+        0.00043103856646592117,
+        0.0016652505026437817,
+        -0.0012930403262612002
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4409772201774083,
+        "efficiency": 0.7337485602538932,
+        "brake_force_n": 19299.590457619262,
+        "road_cda_m2": 0.3840780425166945
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.038962771699072,
+        "brake_200_m": 115.88533665880155,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.93652907611437,
+        "wall_s": 0.496600375,
+        "zero_to_100_s": 2.7995129074613896,
+        "zero_to_200_s": 6.801607658502967
+      },
+      "relative_errors": [
+        -0.00017396162093222654,
+        0.00023642036808334347,
+        0.0012987590566357454,
+        -0.0009884770792969915
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4438591746177631,
+        "efficiency": 0.7337485602538932,
+        "brake_force_n": 19299.590457619262,
+        "road_cda_m2": 0.3840780425166945
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.023272953148897,
+        "brake_200_m": 115.8535028936206,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.9365290761129,
+        "wall_s": 0.488494125,
+        "zero_to_100_s": 2.7929426872532312,
+        "zero_to_200_s": 6.7948059812720265
+      },
+      "relative_errors": [
+        -0.0025204688381316336,
+        -0.0007638262835254876,
+        0.0007757651049632368,
+        -0.001262906089477583
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4409772201774083,
+        "efficiency": 0.735216057374401,
+        "brake_force_n": 19299.590457619262,
+        "road_cda_m2": 0.3840780425166945
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.038962771699072,
+        "brake_200_m": 115.88533665880155,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.93824558270586,
+        "wall_s": 0.485794292,
+        "zero_to_100_s": 2.799231929644192,
+        "zero_to_200_s": 6.793009720010121
+      },
+      "relative_errors": [
+        -0.0002743108413599022,
+        -0.0010279823514527126,
+        0.0012987590566357454,
+        -0.0009884770792969915
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4409772201774083,
+        "efficiency": 0.7337485602538932,
+        "brake_force_n": 19338.189638534503,
+        "road_cda_m2": 0.3840780425166945
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.005084263659626,
+        "brake_200_m": 115.71381573140393,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.93652907611437,
+        "wall_s": 0.496853083,
+        "zero_to_100_s": 2.7995129074613896,
+        "zero_to_200_s": 6.801607658502967
+      },
+      "relative_errors": [
+        -0.00017396162093222654,
+        0.00023642036808334347,
+        0.0001694754553208592,
+        -0.002467105763759257
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4409772201774083,
+        "efficiency": 0.7337485602538932,
+        "brake_force_n": 19299.590457619262,
+        "road_cda_m2": 0.38484619860172786
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.038683566151438,
+        "brake_200_m": 115.881209503238,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.9349657379371,
+        "wall_s": 0.48772125,
+        "zero_to_100_s": 2.799536221985655,
+        "zero_to_200_s": 6.80205718503699
+      },
+      "relative_errors": [
+        -0.0001656350051231532,
+        0.00030252721132204827,
+        0.0012894522050479176,
+        -0.00102405600656899
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4408330745605622,
+        "efficiency": 0.7323879645479353,
+        "brake_force_n": 19315.622799166675,
+        "road_cda_m2": 0.3672478865500912
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.03180897291136,
+        "brake_200_m": 115.90587720661311,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.96925952185757,
+        "wall_s": 0.510437208,
+        "zero_to_100_s": 2.799676369485884,
+        "zero_to_200_s": 6.800845414518691
+      },
+      "relative_errors": [
+        -0.00011558232646995721,
+        0.00012432566451343478,
+        0.00106029909704534,
+        -0.0008114033912662702
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4437147407096833,
+        "efficiency": 0.7323879645479353,
+        "brake_force_n": 19315.622799166675,
+        "road_cda_m2": 0.3672478865500912
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.01598995095897,
+        "brake_200_m": 115.87323077800174,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.9692595218619,
+        "wall_s": 0.534879084,
+        "zero_to_100_s": 2.793048600912435,
+        "zero_to_200_s": 6.79426579953431
+      },
+      "relative_errors": [
+        -0.002482642531273108,
+        -0.000843264774366137,
+        0.0005329983652990459,
+        -0.0010928381206746487
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4408330745605622,
+        "efficiency": 0.7338527404770312,
+        "brake_force_n": 19315.622799166675,
+        "road_cda_m2": 0.3672478865500912
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.03180897291136,
+        "brake_200_m": 115.90587720661311,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.97091132927284,
+        "wall_s": 0.518002208,
+        "zero_to_100_s": 2.799386699989307,
+        "zero_to_200_s": 6.792253902175313
+      },
+      "relative_errors": [
+        -0.0002190357181045385,
+        -0.001139132033042213,
+        0.00106029909704534,
+        -0.0008114033912662702
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4408330745605622,
+        "efficiency": 0.7323879645479353,
+        "brake_force_n": 19354.254044765006,
+        "road_cda_m2": 0.3672478865500912
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 29.997976320592578,
+        "brake_200_m": 115.73518356027098,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.96925952185757,
+        "wall_s": 0.488268625,
+        "zero_to_100_s": 2.799676369485884,
+        "zero_to_200_s": 6.800845414518691
+      },
+      "relative_errors": [
+        -0.00011558232646995721,
+        0.00012432566451343478,
+        -6.745598024740692e-05,
+        -0.002282900342491529
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4408330745605622,
+        "efficiency": 0.7323879645479353,
+        "brake_force_n": 19315.622799166675,
+        "road_cda_m2": 0.3679823823231914
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.031542065341878,
+        "brake_200_m": 115.90192863065998,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.96776088836896,
+        "wall_s": 0.496882208,
+        "zero_to_100_s": 2.7996986995665765,
+        "zero_to_200_s": 6.801274738467897
+      },
+      "relative_errors": [
+        -0.00010760729765119898,
+        0.00018746153939662528,
+        0.0010514021780625882,
+        -0.0008454428391380951
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4407809885960765,
+        "efficiency": 0.7314973454858504,
+        "brake_force_n": 19325.483753213557,
+        "road_cda_m2": 0.3567739655108605
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.027264068703,
+        "brake_200_m": 115.91901108842755,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.9896532768285,
+        "wall_s": 0.489772,
+        "zero_to_100_s": 2.7996602698287916,
+        "zero_to_200_s": 6.801004739377228
+      },
+      "relative_errors": [
+        -0.00012133220400294726,
+        0.0001477557907688077,
+        0.0009088022901000414,
+        -0.0006981802721762704
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4436625505732688,
+        "efficiency": 0.7314973454858504,
+        "brake_force_n": 19325.483753213557,
+        "road_cda_m2": 0.3567739655108605
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.011423837159104,
+        "brake_200_m": 115.88589591700982,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.98965327683493,
+        "wall_s": 0.48112075,
+        "zero_to_100_s": 2.793036240595929,
+        "zero_to_200_s": 6.794126375798813
+      },
+      "relative_errors": [
+        -0.002487056930025362,
+        -0.0008637682648804379,
+        0.0003807945719701185,
+        -0.0009836558878463892
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4407809885960765,
+        "efficiency": 0.7329603401768221,
+        "brake_force_n": 19325.483753213557,
+        "road_cda_m2": 0.3567739655108605
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.027264068703,
+        "brake_200_m": 115.91901108842755,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.99126475737495,
+        "wall_s": 0.482384417,
+        "zero_to_100_s": 2.7993680574300974,
+        "zero_to_200_s": 6.79211703394021
+      },
+      "relative_errors": [
+        -0.00022569377496514269,
+        -0.0011592597146749834,
+        0.0009088022901000414,
+        -0.0006981802721762704
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4407809885960765,
+        "efficiency": 0.7314973454858504,
+        "brake_force_n": 19364.134720719983,
+        "road_cda_m2": 0.3567739655108605
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 29.99346252283231,
+        "brake_200_m": 115.74876657451546,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.9896532768285,
+        "wall_s": 0.479209458,
+        "zero_to_100_s": 2.7996602698287916,
+        "zero_to_200_s": 6.801004739377228
+      },
+      "relative_errors": [
+        -0.00012133220400294726,
+        0.0001477557907688077,
+        -0.00021791590558966806,
+        -0.002165805392108127
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4407809885960765,
+        "efficiency": 0.7314973454858504,
+        "brake_force_n": 19325.483753213557,
+        "road_cda_m2": 0.35748751344188223
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.02700482372047,
+        "brake_200_m": 115.91517359734016,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.98819499138426,
+        "wall_s": 0.4788895,
+        "zero_to_100_s": 2.799681986135304,
+        "zero_to_200_s": 6.8014216436567585
+      },
+      "relative_errors": [
+        -0.00011357638024844797,
+        0.0002090652436409817,
+        0.0009001607906823731,
+        -0.0007312620918951972
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4407387683832635,
+        "efficiency": 0.7312803650422867,
+        "brake_force_n": 19329.371928790337,
+        "road_cda_m2": 0.35273133543916274
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.02556294346894,
+        "brake_200_m": 115.92402213527085,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.9976789429116,
+        "wall_s": 0.473561833,
+        "zero_to_100_s": 2.7996815513529296,
+        "zero_to_200_s": 6.800272670037092
+      },
+      "relative_errors": [
+        -0.00011373165966792926,
+        4.009853486651531e-05,
+        0.0008520981156313685,
+        -0.000654981592492707
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.44362024592003,
+        "efficiency": 0.7312803650422867,
+        "brake_force_n": 19329.371928790337,
+        "road_cda_m2": 0.35273133543916274
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.009716701571108,
+        "brake_200_m": 115.8907234533941,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.9976789429117,
+        "wall_s": 0.473856583,
+        "zero_to_100_s": 2.7930584033835992,
+        "zero_to_200_s": 6.793395739768501
+      },
+      "relative_errors": [
+        -0.0024791416487144973,
+        -0.0009712147399263013,
+        0.00032389005237026445,
+        -0.0009420391948784293
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4407387683832635,
+        "efficiency": 0.7327429257723712,
+        "brake_force_n": 19329.371928790337,
+        "road_cda_m2": 0.35273133543916274
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.02556294346894,
+        "brake_200_m": 115.92402213527085,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.9992745515913,
+        "wall_s": 0.465077417,
+        "zero_to_100_s": 2.7993884742082527,
+        "zero_to_200_s": 6.791693376468012
+      },
+      "relative_errors": [
+        -0.00021840206848113198,
+        -0.0012215622841158776,
+        0.0008520981156313685,
+        -0.000654981592492707
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4407387683832635,
+        "efficiency": 0.7312803650422867,
+        "brake_force_n": 19368.030672647918,
+        "road_cda_m2": 0.35273133543916274
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 29.9917728446688,
+        "brake_200_m": 115.75396016424725,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.9976789429116,
+        "wall_s": 0.483729042,
+        "zero_to_100_s": 2.7996815513529296,
+        "zero_to_200_s": 6.800272670037092
+      },
+      "relative_errors": [
+        -0.00011373165966792926,
+        4.009853486651531e-05,
+        -0.0002742385110399444,
+        -0.0021210330668340843
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4407387683832635,
+        "efficiency": 0.7312803650422867,
+        "brake_force_n": 19329.371928790337,
+        "road_cda_m2": 0.3534367981100411
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.025306647542322,
+        "brake_200_m": 115.92022751568241,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 350.9962365140801,
+        "wall_s": 0.479963208,
+        "zero_to_100_s": 2.7997030265523914,
+        "zero_to_200_s": 6.800684629341958
+      },
+      "relative_errors": [
+        -0.00010606194557441892,
+        0.00010068078558202759,
+        0.000843554918077416,
+        -0.0006876938303240267
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4407204630453838,
+        "efficiency": 0.7310934467611626,
+        "brake_force_n": 19331.57462465994,
+        "road_cda_m2": 0.35041841767967374
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.0245769677168,
+        "brake_200_m": 115.92693157863317,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 351.00220518192805,
+        "wall_s": 0.479422709,
+        "zero_to_100_s": 2.7996925940380155,
+        "zero_to_200_s": 6.800265002784214
+      },
+      "relative_errors": [
+        -0.00010978784356582442,
+        3.8970997678584456e-05,
+        0.0008192322572266875,
+        -0.0006299001841967836
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4436019039714745,
+        "efficiency": 0.7310934467611626,
+        "brake_force_n": 19331.57462465994,
+        "road_cda_m2": 0.35041841767967374
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.00872854393516,
+        "brake_200_m": 115.89353621589706,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 351.00220518191554,
+        "wall_s": 0.481912375,
+        "zero_to_100_s": 2.7930701186366336,
+        "zero_to_200_s": 6.793389048438693
+      },
+      "relative_errors": [
+        -0.002474957629773662,
+        -0.0009721987590156503,
+        0.00029095146450532164,
+        -0.0009177912422667442
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4407204630453838,
+        "efficiency": 0.7325556336546849,
+        "brake_force_n": 19331.57462465994,
+        "road_cda_m2": 0.35041841767967374
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.0245769677168,
+        "brake_200_m": 115.92693157863317,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 351.00379183811,
+        "wall_s": 0.477890917,
+        "zero_to_100_s": 2.799398812767397,
+        "zero_to_200_s": 6.7913839915400604
+      },
+      "relative_errors": [
+        -0.00021470972592958177,
+        -0.001267060067638143,
+        0.0008192322572266875,
+        -0.0006299001841967836
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4407204630453838,
+        "efficiency": 0.7310934467611626,
+        "brake_force_n": 19370.237773909263,
+        "road_cda_m2": 0.35041841767967374
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 29.990701774982476,
+        "brake_200_m": 115.75696646889538,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 351.00220518192805,
+        "wall_s": 0.478327334,
+        "zero_to_100_s": 2.7996925940380155,
+        "zero_to_200_s": 6.800265002784214
+      },
+      "relative_errors": [
+        -0.00010978784356582442,
+        3.8970997678584456e-05,
+        -0.0003099408339174659,
+        -0.0020951166474535775
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4407204630453838,
+        "efficiency": 0.7310934467611626,
+        "brake_force_n": 19331.57462465994,
+        "road_cda_m2": 0.3511192545150331
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.0243223603002,
+        "brake_200_m": 115.92316155366389,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 351.00077170983025,
+        "wall_s": 0.477112292,
+        "zero_to_100_s": 2.7997139331977436,
+        "zero_to_200_s": 6.80067423240831
+      },
+      "relative_errors": [
+        -0.00010216671509149273,
+        9.915182475153498e-05,
+        0.0008107453433400025,
+        -0.0006624003994492378
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.44071474352239,
+        "efficiency": 0.7310942642775897,
+        "brake_force_n": 19331.959443361877,
+        "road_cda_m2": 0.35005181644175937
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.024405064815667,
+        "brake_200_m": 115.92726890692586,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 351.0029559225909,
+        "wall_s": 0.480781625,
+        "zero_to_100_s": 2.7996948597493145,
+        "zero_to_200_s": 6.800064504411558
+      },
+      "relative_errors": [
+        -0.00010897866095903121,
+        9.485942876164653e-06,
+        0.000813502160522243,
+        -0.0006269921816736173
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.4435961730094347,
+        "efficiency": 0.7310942642775897,
+        "brake_force_n": 19331.959443361877,
+        "road_cda_m2": 0.35005181644175937
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.0085560997135,
+        "brake_200_m": 115.89385638892873,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 351.00295592261466,
+        "wall_s": 0.472623875,
+        "zero_to_100_s": 2.7930724021169566,
+        "zero_to_200_s": 6.793188621456543
+      },
+      "relative_errors": [
+        -0.002474142101086858,
+        -0.0010016733152142538,
+        0.0002852033237832785,
+        -0.0009150311299247827
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.44071474352239,
+        "efficiency": 0.7325564528061449,
+        "brake_force_n": 19331.959443361877,
+        "road_cda_m2": 0.35005181644175937
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.024405064815667,
+        "brake_200_m": 115.92726890692586,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 351.00454109407997,
+        "wall_s": 0.473799583,
+        "zero_to_100_s": 2.7994010896663144,
+        "zero_to_200_s": 6.791184424699091
+      },
+      "relative_errors": [
+        -0.0002138965477447931,
+        -0.001296408132486542,
+        0.000813502160522243,
+        -0.0006269921816736173
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.44071474352239,
+        "efficiency": 0.7310942642775897,
+        "brake_force_n": 19370.6233622486,
+        "road_cda_m2": 0.35005181644175937
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 29.990531129706994,
+        "brake_200_m": 115.75732222615629,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 351.0029559225909,
+        "wall_s": 0.497330833,
+        "zero_to_100_s": 2.7996948597493145,
+        "zero_to_200_s": 6.800064504411558
+      },
+      "relative_errors": [
+        -0.00010897866095903121,
+        9.485942876164653e-06,
+        -0.00031562900976685643,
+        -0.002092049774514738
+      ]
+    },
+    {
+      "parameters": {
+        "tire_mu": 1.44071474352239,
+        "efficiency": 0.7310942642775897,
+        "brake_force_n": 19331.959443361877,
+        "road_cda_m2": 0.3507519200746429
+      },
+      "results": {
+        "aero_70mps": {
+          "downforce_n": 5883.99,
+          "drag_n": 2461.0249999999996,
+          "drs_downforce_n": 5883.99,
+          "drs_drag_n": 2461.0249999999996,
+          "drs_front_fraction": 0.42,
+          "front_fraction": 0.42,
+          "raised_body_downforce_n": 5883.99
+        },
+        "brake_100_m": 30.024150725028615,
+        "brake_200_m": 115.92350280476568,
+        "dt_s": 0.002,
+        "final_gear": 7,
+        "name": "McLaren P1 \u2014 approximate calibrated model",
+        "top_speed_kph": 351.0015239298204,
+        "wall_s": 0.483219667,
+        "zero_to_100_s": 2.799716176344936,
+        "zero_to_200_s": 6.800473268238375
+      },
+      "relative_errors": [
+        -0.00010136559109419352,
+        6.959827034926663e-05,
+        0.0008050241676205161,
+        -0.0006594585796062458
+      ]
+    }
+  ],
+  "limitations": [
+    "P1 top speed uses an explicitly configured electronic governor; F1 has no fixed speed cap.",
+    "Estimated torque envelope, gearbox ratios and active-aero/floor maps; no OEM maps.",
+    "Braking starts after a documented rolling-bench trim; no position/velocity intervention during measurement."
+  ]
+}

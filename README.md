@@ -2,6 +2,33 @@
 
 **Vehicle Dynamics · Lap Simulation · Telemetry Analysis**
 
+The **Milestone 6 dynamics** workspace now runs the native 500 Hz contact simulator with
+interactive keyboard/gamepad driving, distinct P1/MCL36 approximations, fuel/ERS/thermal/wear
+states, accepted policy ghosts and spatial comparison. Open **http://127.0.0.1:5173/?drive**.
+See the [final implementation/validation report](docs/experiments/milestone-6-dynamics-results.md)
+and [phase status](docs/architecture/milestone-6-dynamics-plan.md).
+The [Milestone 6.1 stabilization report](docs/experiments/milestone-6_1-stability-results.md)
+covers forward replay, interpolated rendering, chase/orbit cameras, Keyboard Friendly/Raw input,
+force audits, solver diagnostics and exact evaluation caching.
+
+The new optimizer searches a restricted path-and-speed policy family. Full-state optimal control,
+fine-grid convergence and robust open-loop Spa replay remain unfinished; these are **locally
+improved feedback policies**, not real-car minimum lap times. The standalone default replay at `/`
+and original CasADi/IPOPT planar optimizer remain independently runnable.
+
+```sh
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build -j 6
+python3 tools/dynamics/server.py
+# Second terminal:
+npm --prefix apps/dashboard install
+npm --prefix apps/dashboard run dev
+```
+
+The current workspace includes accepted Spa/P1 and Spa/MCL36 dynamic policies. On a fresh
+checkout, regenerate ignored solver traces with the commands in the report. Live driving does
+not require a generated ghost. Contact validation fixtures remain available at `/?contact`.
+
 ApexLab connects validated C++ vehicle dynamics to an interactive engineering workspace. Replay
 recorded laps in 3D, inspect individual tire forces, cross-seek telemetry and track position, and
 compare setups by distance. Every engineering value comes from simulation output or a documented
@@ -181,15 +208,18 @@ C++ physical validation intervals. These are explicitly labeled **not a lap**. E
 
 ## Explicit limits
 
-- Vehicle dynamics remain planar/still-air and do not yet apply the v2 track's grade to forces;
-  banking remains zero. There is no suspension travel, transient tire behavior, wheel rotational
-  dynamics, differential, ABS/TC, thermal model or detailed powertrain.
-- The runtime car remains an illustrative procedural fallback. The authenticated-download P1
-  preprocessing pipeline is ready, but no source or processed P1 mesh is fabricated or committed;
-  visual meshes never set physical parameters.
-- Recorded sessions only; optimization runs offline with CasADi/IPOPT and is then exported as a
-  production-simulator replay. No live transport, accounts, or cloud services.
-- Distance comparison uses shared exported coverage (1–1078 m in the demos), with no fabricated
-  start/finish extrapolation. Recorded lap times remain separate from interpolated region times.
-- Desktop first. WebGL2 required. Large multi-hour object-array sessions, mobile, external-resource
-  GLTF packages and production asset art have not been validated.
+- The original planar and passive sprung-body sessions retain their own model assumptions.
+  The new `/?drive` route uses independent unilateral 3D contact physics, estimated suspension,
+  powertrain/aero, fuel/ERS and thermal/wear states. It has no wheel angular dynamics, ABS/TC,
+  body/barrier collision, detailed differential, tire pressure or proprietary OEM maps.
+- Actual licensed P1 and F1 visuals are integrated; large source packages and processed GLBs
+  are ignored and must be regenerated on a fresh checkout. Wheel spin is kinematic visualization.
+- Spa elevation is filtered terrain DSM, widths are estimated, banking is zero and kerb locations
+  are illustrative. This is not surveyed circuit geometry or a real-car airborne predictor.
+- New native optimization uses constrained single shooting over path/speed spline policies.
+  Four-node Spa results and 4/6/8-node technical studies do not establish a minimum-time limit.
+  Half-step **feedback** replay passes; open-loop Spa replay can diverge materially.
+- Native driving requires the loopback server. The new scene does not yet meet 60 fps in its
+  measured comparison view. Desktop/WebGL2 first; no mobile or multi-user validation.
+- Tire/fuel/energy values are modeled estimates; fit against a few P1 headlines is calibration,
+  not independent validation of every regime. See the final report for measured errors and limits.

@@ -1,0 +1,370 @@
+{
+  "scope": "restricted native path-and-speed policy optimization; no global or full-state optimality claim",
+  "primary": {
+    "technical_test_circuit/mclaren-p1": {
+      "reference_lap_time_s": 50.80000000001612,
+      "lap_time_s": 41.48000000000473,
+      "improvement_s": 9.32000000001139,
+      "largest_100m_gain": {
+        "start_m": 523.5516762382986,
+        "end_m": 623.5516762382986,
+        "gain_s": 1.550728356583356
+      },
+      "peak_speed_kph": 143.99794244767386,
+      "peak_abs_lateral_g": 1.3696551770478282,
+      "peak_braking_g": 0.9632612349621904,
+      "peak_downforce_n": 1959.8872795619152,
+      "peak_drag_n": 805.3133535954448,
+      "maximum_offset_difference_m": 2.323799776872025,
+      "mean_tire_utilization": 0.6209972170379179,
+      "reference_mean_tire_utilization": 0.4118638160860035,
+      "peak_tire_utilization": 1.0000000000000002,
+      "minimum_tire_load_n": 136.26922676599185,
+      "samples_with_any_contact_loss": 0,
+      "fuel_kg": 0.33951776706591374,
+      "reference_fuel_kg": 0.24601739236121745,
+      "summed_wear_increment": 0.0049709434520580666,
+      "temperature_range_c": [
+        60.866475257423936,
+        96.03697999219166
+      ],
+      "mass_equation_residual": 9.614370179767373e-12,
+      "closure": {
+        "angular_rate_radps": 0.002373746502789572,
+        "body_velocity_mps": 0.07949287554245608,
+        "heading_rad": 0.0005023815779560473,
+        "normalized_max": 0.15898575108491217,
+        "suspension_m": 0.00043323799288035036
+      },
+      "solver": {
+        "name": "SciPy COBYLA (PRIMA)",
+        "success": true,
+        "status": 0,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+        "evaluations": 28,
+        "wall_s": 65.542249500053,
+        "nodes": 4,
+        "decision_variables": 6,
+        "inequality_constraints": 16
+      },
+      "replay": {
+        "position_max_m": 0.03701464162339826,
+        "position_rms_m": 0.017309035814118988,
+        "speed_max_mps": 0.021588705289939725,
+        "lap_time_difference_s": -0.005582942097326793,
+        "dt_s": 0.001,
+        "progress_m": 1078.9077043536824,
+        "mode": "native time-domain trajectory tracking at 1 ms; feedback recomputed",
+        "open_loop_final_position_error_m": 35.558952820313024,
+        "open_loop_complete": false,
+        "replay_minimum_clearance_m": 4.339660591096697
+      }
+    },
+    "technical_test_circuit/mcl36": {
+      "reference_lap_time_s": 51.24000000001666,
+      "lap_time_s": 38.34000000000089,
+      "improvement_s": 12.900000000015766,
+      "largest_100m_gain": {
+        "start_m": 558.5722654842994,
+        "end_m": 658.5722654842994,
+        "gain_s": 1.9245198136956994
+      },
+      "peak_speed_kph": 154.9566237311855,
+      "peak_abs_lateral_g": 1.446532578308747,
+      "peak_braking_g": 1.343783517938613,
+      "peak_downforce_n": 7847.816177728579,
+      "peak_drag_n": 1361.7631773917303,
+      "maximum_offset_difference_m": 0.4114862526076398,
+      "mean_tire_utilization": 0.465194081755131,
+      "reference_mean_tire_utilization": 0.29175500535736737,
+      "peak_tire_utilization": 1.0000000000000002,
+      "minimum_tire_load_n": 772.7714728165696,
+      "samples_with_any_contact_loss": 0,
+      "fuel_kg": 0.16194077152136188,
+      "reference_fuel_kg": 0.10182303109453628,
+      "summed_wear_increment": 0.0014198426126034243,
+      "temperature_range_c": [
+        68.4218987815,
+        72.57695305610673
+      ],
+      "mass_equation_residual": 5.9168591018568365e-12,
+      "closure": {
+        "angular_rate_radps": 0.0007448732045907173,
+        "body_velocity_mps": 0.014833262430332072,
+        "heading_rad": 0.0001311275458621211,
+        "normalized_max": 0.029666524860664144,
+        "suspension_m": 2.8775182682495848e-05
+      },
+      "solver": {
+        "name": "SciPy COBYLA (PRIMA)",
+        "success": true,
+        "status": 0,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+        "evaluations": 29,
+        "wall_s": 58.92418837500736,
+        "nodes": 4,
+        "decision_variables": 6,
+        "inequality_constraints": 16
+      },
+      "replay": {
+        "position_max_m": 0.003954333686412514,
+        "position_rms_m": 0.0022321050864703693,
+        "speed_max_mps": 0.01099535390163453,
+        "lap_time_difference_s": 4.547473508864641e-13,
+        "dt_s": 0.001,
+        "progress_m": 1078.7618296148155,
+        "mode": "independent native trajectory feedback",
+        "open_loop_final_position_error_m": 0.09185852944946815,
+        "open_loop_complete": true,
+        "replay_minimum_clearance_m": 6.391781897667656
+      }
+    },
+    "spa-francorchamps/mclaren-p1": {
+      "reference_lap_time_s": 276.3400000005914,
+      "lap_time_s": 223.94000000034117,
+      "improvement_s": 52.4000000002502,
+      "largest_100m_gain": {
+        "start_m": 4353.456386356158,
+        "end_m": 4453.456386356158,
+        "gain_s": 2.1491215513724455
+      },
+      "peak_speed_kph": 219.7439128589906,
+      "peak_abs_lateral_g": 1.4795457965699783,
+      "peak_braking_g": 1.194068097830173,
+      "peak_downforce_n": 4574.641795810825,
+      "peak_drag_n": 1893.130036547199,
+      "maximum_offset_difference_m": 3.071270706952237,
+      "mean_tire_utilization": 0.4455113114391702,
+      "reference_mean_tire_utilization": 0.31205284907653263,
+      "peak_tire_utilization": 1.0000000000000004,
+      "minimum_tire_load_n": 28.447145425579045,
+      "samples_with_any_contact_loss": 0,
+      "fuel_kg": 2.3432182565583695,
+      "reference_fuel_kg": 1.6606058458133894,
+      "summed_wear_increment": 0.014720217705959906,
+      "temperature_range_c": [
+        52.54105870175487,
+        92.46055394892404
+      ],
+      "mass_equation_residual": 7.73594548806065e-12,
+      "closure": {
+        "angular_rate_radps": 0.00547915754418202,
+        "body_velocity_mps": 0.08599814373740292,
+        "heading_rad": 0.0011705781407265192,
+        "normalized_max": 0.17199628747480583,
+        "suspension_m": 0.00024970504329854815
+      },
+      "solver": {
+        "name": "SciPy COBYLA (PRIMA)",
+        "success": true,
+        "status": 0,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+        "evaluations": 27,
+        "wall_s": 437.2819237910444,
+        "nodes": 4,
+        "decision_variables": 6,
+        "inequality_constraints": 16
+      },
+      "replay": {
+        "lap_time_s": 223.94000000034117,
+        "position_max_m": 0.025441525276467855,
+        "position_rms_m": 0.010104999330528087,
+        "speed_max_mps": 0.011414490312951386,
+        "yaw_max_rad": 0.005496716970628146,
+        "lap_time_difference_s": 3.6405367609404493e-10,
+        "dt_s": 0.001,
+        "mode": "independent native trajectory feedback; candidate audit",
+        "replay_minimum_clearance_m": 1.4402535629946405,
+        "accepted": true
+      }
+    },
+    "spa-francorchamps/mcl36": {
+      "reference_lap_time_s": 277.8800000005987,
+      "lap_time_s": 212.7600000002878,
+      "improvement_s": 65.12000000031094,
+      "largest_100m_gain": {
+        "start_m": 4354.429148901069,
+        "end_m": 4454.429148901069,
+        "gain_s": 2.9560840043313874
+      },
+      "peak_speed_kph": 253.7762852638034,
+      "peak_abs_lateral_g": 1.491384920780859,
+      "peak_braking_g": 1.4345313127973227,
+      "peak_downforce_n": 18075.58909731389,
+      "peak_drag_n": 3652.4020492282275,
+      "maximum_offset_difference_m": 1.1032230851040867,
+      "mean_tire_utilization": 0.34727374385305954,
+      "reference_mean_tire_utilization": 0.24476334489288898,
+      "peak_tire_utilization": 1.0000000000000002,
+      "minimum_tire_load_n": 501.43520612925505,
+      "samples_with_any_contact_loss": 0,
+      "fuel_kg": 1.174794382784718,
+      "reference_fuel_kg": 0.7032486297271561,
+      "summed_wear_increment": 0.007608577970581237,
+      "temperature_range_c": [
+        55.22431710231834,
+        60.554593025293734
+      ],
+      "mass_equation_residual": 5.31450074901086e-12,
+      "closure": {
+        "angular_rate_radps": 0.0012002102293004772,
+        "body_velocity_mps": 0.008226945650405883,
+        "heading_rad": 3.678954084618269e-05,
+        "normalized_max": 0.024004204586009544,
+        "suspension_m": 2.4475067353819935e-05
+      },
+      "solver": {
+        "name": "SciPy COBYLA (PRIMA)",
+        "success": true,
+        "status": 0,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+        "evaluations": 35,
+        "wall_s": 552.8315965000074,
+        "nodes": 4,
+        "decision_variables": 6,
+        "inequality_constraints": 16
+      },
+      "replay": {
+        "position_max_m": 0.02720663781012304,
+        "position_rms_m": 0.00946880321178849,
+        "speed_max_mps": 0.02662944506604248,
+        "lap_time_difference_s": 3.6405367609404493e-10,
+        "dt_s": 0.001,
+        "progress_m": 7010.075928520465,
+        "mode": "independent native trajectory feedback",
+        "open_loop_final_position_error_m": 2046.783137242175,
+        "open_loop_complete": false,
+        "replay_minimum_clearance_m": 3.622542201378053
+      }
+    }
+  },
+  "validation": [
+    {
+      "track": "technical_test_circuit",
+      "vehicle": "mclaren-p1",
+      "complete": true,
+      "position_max_m": 0.03701464162339826,
+      "speed_max_mps": 0.021588705289939725,
+      "yaw_max_rad": 0.003797582503425545,
+      "track_violation_m": 0,
+      "control_violation": -0.0,
+      "tire_violation": 4.440892098500626e-16,
+      "invalid_airborne_forces": 0,
+      "periodicity": {
+        "angular_rate_radps": 0.0019258092573530845,
+        "body_velocity_mps": 0.07559190012182102,
+        "heading_rad": 0.0004103028645525836,
+        "normalized_max": 0.15118380024364203,
+        "suspension_m": 0.00042948237689717506
+      },
+      "lap_time_s": 41.47999999999403,
+      "all_airborne_s": 0.0,
+      "minimum_clearance_m": 4.339660591096697,
+      "passed": true
+    },
+    {
+      "track": "technical_test_circuit",
+      "vehicle": "mcl36",
+      "complete": true,
+      "position_max_m": 0.003954333686412514,
+      "speed_max_mps": 0.01099535390163453,
+      "yaw_max_rad": 0.00026343406055495677,
+      "track_violation_m": 0,
+      "control_violation": -0.0,
+      "tire_violation": 2.220446049250313e-16,
+      "invalid_airborne_forces": 0,
+      "periodicity": {
+        "angular_rate_radps": 0.0007708078051609356,
+        "body_velocity_mps": 0.015095472654739499,
+        "heading_rad": 0.0001265024877281501,
+        "normalized_max": 0.030190945309478998,
+        "suspension_m": 2.8832230712760865e-05
+      },
+      "lap_time_s": 38.340000000001346,
+      "all_airborne_s": 0.0,
+      "minimum_clearance_m": 6.391781897667656,
+      "passed": true
+    },
+    {
+      "track": "spa-francorchamps",
+      "vehicle": "mclaren-p1",
+      "complete": true,
+      "position_max_m": 0.025441525276467855,
+      "speed_max_mps": 0.011414490312951386,
+      "yaw_max_rad": 0.005496716970628146,
+      "track_violation_m": 0,
+      "control_violation": -0.0,
+      "tire_violation": 4.440892098500626e-16,
+      "invalid_airborne_forces": 0,
+      "periodicity": {
+        "angular_rate_radps": 0.005331380887197146,
+        "body_velocity_mps": 0.08583035710403333,
+        "heading_rad": 0.0011669113728083325,
+        "normalized_max": 0.17166071420806667,
+        "suspension_m": 0.0002472261845765794
+      },
+      "lap_time_s": 223.94000000070523,
+      "all_airborne_s": 0.0,
+      "minimum_clearance_m": 1.4402535629946405,
+      "passed": true
+    },
+    {
+      "track": "spa-francorchamps",
+      "vehicle": "mcl36",
+      "complete": true,
+      "position_max_m": 0.02720663781012304,
+      "speed_max_mps": 0.02662944506604248,
+      "yaw_max_rad": 0.0004559740197684903,
+      "track_violation_m": 0,
+      "control_violation": -0.0,
+      "tire_violation": 4.440892098500626e-16,
+      "invalid_airborne_forces": 0,
+      "periodicity": {
+        "angular_rate_radps": 0.0014091595941088466,
+        "body_velocity_mps": 0.010531822355012814,
+        "heading_rad": 7.567102983263574e-05,
+        "normalized_max": 0.028183191882176932,
+        "suspension_m": 2.5940497585877353e-05
+      },
+      "lap_time_s": 212.76000000065184,
+      "all_airborne_s": 0.0,
+      "minimum_clearance_m": 3.622542201378053,
+      "passed": true
+    }
+  ],
+  "render": {
+    "viewport": [
+      1672,
+      944
+    ],
+    "mean": 20.58933333337307,
+    "p95": 35.10000002384186,
+    "calls": 296,
+    "triangles": 831530,
+    "textures": 63,
+    "carFirstRenderedMs": 2367.5999999046326,
+    "assetResponseMs": 788.4000000953674,
+    "environmentResponses": [
+      {
+        "file": "sky.hdr",
+        "durationMs": 10.599999904632568,
+        "transferBytes": 1435419
+      },
+      {
+        "file": "forest-atlas-generated.png",
+        "durationMs": 351.39999997615814,
+        "transferBytes": 2705846
+      }
+    ],
+    "seek_to_two_frames_ms": [
+      175,
+      147,
+      139
+    ],
+    "mode": "Headless Chromium on development host; not a manual hardware display benchmark"
+  },
+  "spa_vehicle_line_difference": {
+    "rms_m": 0.6105211313910133,
+    "maximum_m": 3.672521138598134
+  }
+}

@@ -1,0 +1,84 @@
+[
+  {
+    "vehicle": "mclaren-p1",
+    "track": "spa-francorchamps",
+    "duration_s": 2.0000000000000013,
+    "speed_mps": 13.466939221225644,
+    "passed": true
+  },
+  {
+    "vehicle": "mcl36",
+    "track": "spa-francorchamps",
+    "duration_s": 2.0000000000000013,
+    "speed_mps": 16.235528506677692,
+    "passed": true
+  },
+  {
+    "vehicle": "mclaren-p1",
+    "track": "monza",
+    "duration_s": 2.0000000000000013,
+    "speed_mps": 14.123168098496848,
+    "passed": true
+  },
+  {
+    "vehicle": "mcl36",
+    "track": "monza",
+    "duration_s": 2.0000000000000013,
+    "speed_mps": 17.12886212594539,
+    "passed": true
+  },
+  {
+    "vehicle": "mclaren-p1",
+    "track": "silverstone",
+    "duration_s": 2.0000000000000013,
+    "speed_mps": 14.123168098496832,
+    "passed": true
+  },
+  {
+    "vehicle": "mcl36",
+    "track": "silverstone",
+    "duration_s": 2.0000000000000013,
+    "speed_mps": 17.128521465598187,
+    "passed": true
+  },
+  {
+    "vehicle": "mclaren-p1",
+    "track": "suzuka",
+    "duration_s": 2.0000000000000013,
+    "speed_mps": 14.123115356332013,
+    "passed": true
+  },
+  {
+    "vehicle": "mcl36",
+    "track": "suzuka",
+    "duration_s": 2.0000000000000013,
+    "speed_mps": 17.128200790478274,
+    "passed": true
+  },
+  {
+    "vehicle": "mclaren-p1",
+    "track": "technical_test_circuit",
+    "duration_s": 2.0000000000000013,
+    "speed_mps": 14.123168098496851,
+    "passed": true
+  },
+  {
+    "vehicle": "mcl36",
+    "track": "technical_test_circuit",
+    "duration_s": 2.0000000000000013,
+    "speed_mps": 17.12886212594543,
+    "passed": true
+  },
+  {
+    "scenario": "manual curved input leaves track without teleport; rough grass; reset",
+    "materials": [
+      0,
+      2,
+      3
+    ],
+    "max_abs_offset_m": 42.8041505134455,
+    "airborne_wheel_samples": 0,
+    "reset_time_s": 0.0,
+    "passed": true
+  }
+]

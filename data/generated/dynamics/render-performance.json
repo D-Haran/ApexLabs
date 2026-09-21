@@ -1,0 +1,17 @@
+{
+  "viewport": [
+    1672,
+    944
+  ],
+  "mean": 27.16005917166817,
+  "p95": 52.89999997615814,
+  "calls": 298,
+  "triangles": 828678,
+  "textures": 63,
+  "seek_to_two_frames_ms": [
+    56,
+    67,
+    50
+  ],
+  "mode": "Headless Chromium on development host; not a manual hardware display benchmark"
+}

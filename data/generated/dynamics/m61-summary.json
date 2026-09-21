@@ -1,0 +1,654 @@
+{
+  "input": [
+    {
+      "vehicle": "p1",
+      "entry_speed_mps": 15.0,
+      "final_yaw_gain_per_s": 9.051861869614988e-08,
+      "mode": "old-keyboard",
+      "peak_beta_rad": 0.037810325556082984,
+      "peak_lateral_g": 0.8688269806534609,
+      "peak_slip_rad": 0.20029602949595812,
+      "peak_utilization": 1.0000000000000002,
+      "peak_yaw_radps": 0.778596762880106,
+      "saturation_time_s": 1.12
+    },
+    {
+      "vehicle": "p1",
+      "entry_speed_mps": 15.0,
+      "final_yaw_gain_per_s": 1.2259545483069473e-09,
+      "mode": "friendly-keyboard",
+      "peak_beta_rad": 0.0018539977956238086,
+      "peak_lateral_g": 0.09981994686272035,
+      "peak_slip_rad": 0.00898342163742434,
+      "peak_utilization": 0.12665024154054813,
+      "peak_yaw_radps": 0.07132050355970104,
+      "saturation_time_s": -1.0
+    },
+    {
+      "vehicle": "p1",
+      "entry_speed_mps": 15.0,
+      "final_yaw_gain_per_s": 5.972250847281387,
+      "mode": "physical-step",
+      "peak_beta_rad": 0.002488543213661188,
+      "peak_lateral_g": 0.1821166756288112,
+      "peak_slip_rad": 0.01753912387266046,
+      "peak_utilization": 0.22703853619972766,
+      "peak_yaw_radps": 0.11944521462338413,
+      "saturation_time_s": -1.0
+    },
+    {
+      "vehicle": "p1",
+      "entry_speed_mps": 30.0,
+      "final_yaw_gain_per_s": 0.09721800337234325,
+      "mode": "old-keyboard",
+      "peak_beta_rad": 0.17887429470698366,
+      "peak_lateral_g": 1.2858408606437648,
+      "peak_slip_rad": 0.26326915492261366,
+      "peak_utilization": 1.0000000000000004,
+      "peak_yaw_radps": 0.8422302697225071,
+      "saturation_time_s": 1.102
+    },
+    {
+      "vehicle": "p1",
+      "entry_speed_mps": 30.0,
+      "final_yaw_gain_per_s": 0.00017085655227125872,
+      "mode": "friendly-keyboard",
+      "peak_beta_rad": 0.0024374200672597403,
+      "peak_lateral_g": 0.04562276377961235,
+      "peak_slip_rad": 0.003576420277530183,
+      "peak_utilization": 0.0548766222830113,
+      "peak_yaw_radps": 0.027230600793297484,
+      "saturation_time_s": -1.0
+    },
+    {
+      "vehicle": "p1",
+      "entry_speed_mps": 30.0,
+      "final_yaw_gain_per_s": 13.722132359645428,
+      "mode": "physical-step",
+      "peak_beta_rad": 0.05037801817972091,
+      "peak_lateral_g": 0.8335207060559638,
+      "peak_slip_rad": 0.06117647861134689,
+      "peak_utilization": 0.8499529306205007,
+      "peak_yaw_radps": 0.2769835208889383,
+      "saturation_time_s": -1.0
+    },
+    {
+      "vehicle": "p1",
+      "entry_speed_mps": 50.0,
+      "final_yaw_gain_per_s": 14.013258060273895,
+      "mode": "old-keyboard",
+      "peak_beta_rad": 0.662260678467595,
+      "peak_lateral_g": 1.527865346421897,
+      "peak_slip_rad": 0.6734898504587731,
+      "peak_utilization": 1.0000000000000004,
+      "peak_yaw_radps": 0.9015323887599092,
+      "saturation_time_s": 1.102
+    },
+    {
+      "vehicle": "p1",
+      "entry_speed_mps": 50.0,
+      "final_yaw_gain_per_s": 0.061705145901440286,
+      "mode": "friendly-keyboard",
+      "peak_beta_rad": 0.0019431526667748693,
+      "peak_lateral_g": 0.03678809541246958,
+      "peak_slip_rad": 0.0020940469776909716,
+      "peak_utilization": 0.09155613844734356,
+      "peak_yaw_radps": 0.012473250962293837,
+      "saturation_time_s": -1.0
+    },
+    {
+      "vehicle": "p1",
+      "entry_speed_mps": 50.0,
+      "final_yaw_gain_per_s": 12.091564408649687,
+      "mode": "physical-step",
+      "peak_beta_rad": 0.11588733612147967,
+      "peak_lateral_g": 1.252907112202116,
+      "peak_slip_rad": 0.12845530858324872,
+      "peak_utilization": 1.0000000000000002,
+      "peak_yaw_radps": 0.3479934465574266,
+      "saturation_time_s": 1.6380000000000001
+    },
+    {
+      "vehicle": "mcl36",
+      "entry_speed_mps": 15.0,
+      "final_yaw_gain_per_s": -1.9691931170536446e-11,
+      "mode": "old-keyboard",
+      "peak_beta_rad": 0.058009119590308814,
+      "peak_lateral_g": 1.4767188966183895,
+      "peak_slip_rad": 0.13340167832877112,
+      "peak_utilization": 1.0000000000000002,
+      "peak_yaw_radps": 0.8640012552446618,
+      "saturation_time_s": 1.096
+    },
+    {
+      "vehicle": "mcl36",
+      "entry_speed_mps": 15.0,
+      "final_yaw_gain_per_s": 9.542121947952494e-13,
+      "mode": "friendly-keyboard",
+      "peak_beta_rad": 0.006664185755449367,
+      "peak_lateral_g": 0.19093373671329528,
+      "peak_slip_rad": 0.005843126488305125,
+      "peak_utilization": 0.12706909571681185,
+      "peak_yaw_radps": 0.090927393913907,
+      "saturation_time_s": -1.0
+    },
+    {
+      "vehicle": "mcl36",
+      "entry_speed_mps": 15.0,
+      "final_yaw_gain_per_s": 4.182064787478515,
+      "mode": "physical-step",
+      "peak_beta_rad": 0.00648944008461388,
+      "peak_lateral_g": 0.29080535156475384,
+      "peak_slip_rad": 0.014811832800005227,
+      "peak_utilization": 0.29191694682722075,
+      "peak_yaw_radps": 0.08364946681288112,
+      "saturation_time_s": -1.0
+    },
+    {
+      "vehicle": "mcl36",
+      "entry_speed_mps": 30.0,
+      "final_yaw_gain_per_s": 6.713932770558242e-13,
+      "mode": "old-keyboard",
+      "peak_beta_rad": 0.07311788190385192,
+      "peak_lateral_g": 2.230570429170172,
+      "peak_slip_rad": 0.22557970397239419,
+      "peak_utilization": 1.0000000000000002,
+      "peak_yaw_radps": 1.0964208748034545,
+      "saturation_time_s": 1.086
+    },
+    {
+      "vehicle": "mcl36",
+      "entry_speed_mps": 30.0,
+      "final_yaw_gain_per_s": -1.9444077980202422e-13,
+      "mode": "friendly-keyboard",
+      "peak_beta_rad": 0.0008347900452648189,
+      "peak_lateral_g": 0.11336109271930321,
+      "peak_slip_rad": 0.0032034676584978446,
+      "peak_utilization": 0.07274940772205143,
+      "peak_yaw_radps": 0.04158308512666572,
+      "saturation_time_s": -1.0
+    },
+    {
+      "vehicle": "mcl36",
+      "entry_speed_mps": 30.0,
+      "final_yaw_gain_per_s": 8.502381598949233,
+      "mode": "physical-step",
+      "peak_beta_rad": 0.0029651110615593525,
+      "peak_lateral_g": 0.5179489368864802,
+      "peak_slip_rad": 0.017016588760249904,
+      "peak_utilization": 0.26473678270737655,
+      "peak_yaw_radps": 0.17004784948380833,
+      "saturation_time_s": -1.0
+    },
+    {
+      "vehicle": "mcl36",
+      "entry_speed_mps": 50.0,
+      "final_yaw_gain_per_s": 5.173795881480388e-06,
+      "mode": "old-keyboard",
+      "peak_beta_rad": 0.23931093257870145,
+      "peak_lateral_g": 3.6115660994782366,
+      "peak_slip_rad": 0.27943202821300117,
+      "peak_utilization": 1.0000000000000004,
+      "peak_yaw_radps": 1.4159138182673314,
+      "saturation_time_s": 1.102
+    },
+    {
+      "vehicle": "mcl36",
+      "entry_speed_mps": 50.0,
+      "final_yaw_gain_per_s": 1.9977959678325704e-10,
+      "mode": "friendly-keyboard",
+      "peak_beta_rad": 0.0012944186061936355,
+      "peak_lateral_g": 0.06807605994991012,
+      "peak_slip_rad": 0.0018577266014517802,
+      "peak_utilization": 0.10589086669500067,
+      "peak_yaw_radps": 0.02219864795830167,
+      "saturation_time_s": -1.0
+    },
+    {
+      "vehicle": "mcl36",
+      "entry_speed_mps": 50.0,
+      "final_yaw_gain_per_s": 14.436492777229786,
+      "mode": "physical-step",
+      "peak_beta_rad": 0.026915958933790812,
+      "peak_lateral_g": 1.4540021546494204,
+      "peak_slip_rad": 0.03652822133003211,
+      "peak_utilization": 0.44771989947057106,
+      "peak_yaw_radps": 0.28878982268308334,
+      "saturation_time_s": -1.0
+    }
+  ],
+  "force": {
+    "p1": {
+      "frame": "tire basis projected into local road tangent plane; world normal load",
+      "passed": true,
+      "semantics": "road force on vehicle at actual contact patch",
+      "tests": [
+        {
+          "centripetal_force_n": 4659.921353153476,
+          "centripetal_relative_error": 0.0006555654534492984,
+          "max_world_transform_error_n": 0.0,
+          "radius_m": 71.39369859823117,
+          "steady_yaw_rate_change_radps": 0.0,
+          "tires": [
+            {
+              "body_force_n": [
+                -64.48912792190663,
+                1013.3507233515352,
+                2558.8015529937607
+              ],
+              "fx_n": -30.875717637302895,
+              "fy_n": 978.4389095818943,
+              "fz_n": 2572.976469775241,
+              "slip_rad": 0.01656161198570362,
+              "steering_rad": 0.035,
+              "world_force_n": [
+                -40.84554181921268,
+                978.0734386726389,
+                2572.976469775241
+              ]
+            },
+            {
+              "body_force_n": [
+                -80.55746861490442,
+                1082.6589365244681,
+                3767.957524438128
+              ],
+              "fx_n": -45.395928338109464,
+              "fy_n": 1031.0379125097595,
+              "fz_n": 3782.9940281757886,
+              "slip_rad": 0.016984787087491376,
+              "steering_rad": 0.035,
+              "world_force_n": [
+                -55.9010433287657,
+                1030.5217322778385,
+                3782.9940281757886
+              ]
+            },
+            {
+              "body_force_n": [
+                145.33555106040546,
+                1374.9503475686706,
+                3591.836233809425
+              ],
+              "fx_n": 144.48984719086454,
+              "fy_n": 1323.5913829157519,
+              "fz_n": 3611.1115942763995,
+              "slip_rad": 0.019395922619953727,
+              "steering_rad": 0.0,
+              "world_force_n": [
+                177.2738642994683,
+                1319.600485717706,
+                3611.1115942763995
+              ]
+            },
+            {
+              "body_force_n": [
+                129.9549460417814,
+                1397.2850012753875,
+                4898.883723787805
+              ],
+              "fx_n": 128.80309385638452,
+              "fy_n": 1327.2854217877914,
+              "fz_n": 4918.341038816399,
+              "slip_rad": 0.018965003314237366,
+              "steering_rad": 0.0,
+              "world_force_n": [
+                161.68355835133943,
+                1323.6824599715076,
+                4918.341038816399
+              ]
+            }
+          ],
+          "turn": "left",
+          "world_inward_force_n": 4656.866469698558,
+          "yaw_rate_radps": 0.2092985495108522
+        },
+        {
+          "centripetal_force_n": 4659.921353153478,
+          "centripetal_relative_error": 0.0006555654534496885,
+          "max_world_transform_error_n": 0.0,
+          "radius_m": 71.39369859823114,
+          "steady_yaw_rate_change_radps": 0.0,
+          "tires": [
+            {
+              "body_force_n": [
+                -80.55746861490417,
+                -1082.6589365244672,
+                3767.957524438112
+              ],
+              "fx_n": -45.39592833810927,
+              "fy_n": -1031.0379125097588,
+              "fz_n": 3782.9940281757727,
+              "slip_rad": -0.01698478708749137,
+              "steering_rad": -0.035,
+              "world_force_n": [
+                -55.901043328766576,
+                -1030.5217322778376,
+                3782.9940281757727
+              ]
+            },
+            {
+              "body_force_n": [
+                -64.48912792190657,
+                -1013.3507233515346,
+                2558.8015529937597
+              ],
+              "fx_n": -30.875717637302884,
+              "fy_n": -978.4389095818938,
+              "fz_n": 2572.9764697752403,
+              "slip_rad": -0.01656161198570361,
+              "steering_rad": -0.035,
+              "world_force_n": [
+                -40.84554181921368,
+                -978.0734386726382,
+                2572.9764697752403
+              ]
+            },
+            {
+              "body_force_n": [
+                129.95494604178145,
+                -1397.2850012753886,
+                4898.883723787804
+              ],
+              "fx_n": 128.80309385638455,
+              "fy_n": -1327.2854217877925,
+              "fz_n": 4918.341038816398,
+              "slip_rad": -0.018965003314237384,
+              "steering_rad": 0.0,
+              "world_force_n": [
+                161.6835583513381,
+                -1323.6824599715087,
+                4918.341038816398
+              ]
+            },
+            {
+              "body_force_n": [
+                145.33555106040535,
+                -1374.9503475686715,
+                3591.836233809437
+              ],
+              "fx_n": 144.4898471908644,
+              "fy_n": -1323.5913829157528,
+              "fz_n": 3611.111594276412,
+              "slip_rad": -0.019395922619953734,
+              "steering_rad": 0.0,
+              "world_force_n": [
+                177.2738642994668,
+                -1319.600485717707,
+                3611.111594276412
+              ]
+            }
+          ],
+          "turn": "right",
+          "world_inward_force_n": 4656.866469698558,
+          "yaw_rate_radps": -0.20929854951085228
+        }
+      ]
+    },
+    "mcl36": {
+      "frame": "tire basis projected into local road tangent plane; world normal load",
+      "passed": true,
+      "semantics": "road force on vehicle at actual contact patch",
+      "tests": [
+        {
+          "centripetal_force_n": 1741.5901456168117,
+          "centripetal_relative_error": 0.0020749811941537283,
+          "max_world_transform_error_n": 0.0,
+          "radius_m": 102.23934145099516,
+          "steady_yaw_rate_change_radps": 5.551115123125783e-17,
+          "tires": [
+            {
+              "body_force_n": [
+                -35.096218814683766,
+                384.59430984725964,
+                1835.9624064154464
+              ],
+              "fx_n": -22.040424227895524,
+              "fy_n": 382.0240812382574,
+              "fz_n": 1836.7020189912937,
+              "slip_rad": 0.0046639368879100316,
+              "steering_rad": 0.035,
+              "world_force_n": [
+                372.37317962477005,
+                -88.12714702189712,
+                1836.7020189912937
+              ]
+            },
+            {
+              "body_force_n": [
+                -40.425686020485045,
+                425.6487035922435,
+                2166.370689004125
+              ],
+              "fx_n": -26.00626486913102,
+              "fy_n": 422.59869908320314,
+              "fz_n": 2167.1887390942516,
+              "slip_rad": 0.005149334025001749,
+              "steering_rad": 0.035,
+              "world_force_n": [
+                412.3874610775712,
+                -95.93001733166663,
+                2167.1887390942516
+              ]
+            },
+            {
+              "body_force_n": [
+                112.93811355685841,
+                475.3823121447037,
+                2212.482087450382
+              ],
+              "fx_n": 112.57803549173912,
+              "fy_n": 471.07358585990534,
+              "fz_n": 2213.421832844462,
+              "slip_rad": 0.005153419652067776,
+              "steering_rad": 0.0,
+              "world_force_n": [
+                410.4615212358664,
+                -257.10985386567205,
+                2213.421832844462
+              ]
+            },
+            {
+              "body_force_n": [
+                109.14516427654144,
+                471.0445677275309,
+                2532.9147414981844
+              ],
+              "fx_n": 108.73295973705068,
+              "fy_n": 466.11194953629484,
+              "fz_n": 2533.8448124018328,
+              "slip_rad": 0.005073391675575303,
+              "steering_rad": 0.0,
+              "world_force_n": [
+                406.98748193712686,
+                -251.8817094990849,
+                2533.8448124018328
+              ]
+            }
+          ],
+          "turn": "left",
+          "world_inward_force_n": 1737.9763788167334,
+          "yaw_rate_radps": 0.1463795451417638
+        },
+        {
+          "centripetal_force_n": 1741.5901456168112,
+          "centripetal_relative_error": 0.0020749811941317958,
+          "max_world_transform_error_n": 0.0,
+          "radius_m": 102.23934145099521,
+          "steady_yaw_rate_change_radps": 0.0,
+          "tires": [
+            {
+              "body_force_n": [
+                -40.42568602048527,
+                -425.6487035922525,
+                2166.370689004128
+              ],
+              "fx_n": -26.00626486913106,
+              "fy_n": -422.59869908321207,
+              "fz_n": 2167.1887390942547,
+              "slip_rad": -0.005149334025001862,
+              "steering_rad": -0.035,
+              "world_force_n": [
+                412.38746107757976,
+                95.93001733166915,
+                2167.1887390942547
+              ]
+            },
+            {
+              "body_force_n": [
+                -35.09621881468399,
+                -384.5943098472686,
+                1835.962406415451
+              ],
+              "fx_n": -22.040424227895578,
+              "fy_n": -382.0240812382664,
+              "fz_n": 1836.7020189912982,
+              "slip_rad": -0.004663936887910145,
+              "steering_rad": -0.035,
+              "world_force_n": [
+                372.3731796247787,
+                88.12714702189965,
+                1836.7020189912982
+              ]
+            },
+            {
+              "body_force_n": [
+                109.1451642765415,
+                -471.0445677275408,
+                2532.9147414981876
+              ],
+              "fx_n": 108.73295973705063,
+              "fy_n": -466.11194953630473,
+              "fz_n": 2533.844812401836,
+              "slip_rad": -0.005073391675575414,
+              "steering_rad": 0.0,
+              "world_force_n": [
+                406.98748193713624,
+                251.881709499088,
+                2533.844812401836
+              ]
+            },
+            {
+              "body_force_n": [
+                112.93811355685835,
+                -475.38231214471364,
+                2212.482087450374
+              ],
+              "fx_n": 112.57803549173921,
+              "fy_n": -471.0735858599152,
+              "fz_n": 2213.421832844454,
+              "slip_rad": -0.005153419652067889,
+              "steering_rad": 0.0,
+              "world_force_n": [
+                410.4615212358758,
+                257.1098538656753,
+                2213.421832844454
+              ]
+            }
+          ],
+          "turn": "right",
+          "world_inward_force_n": 1737.976378816771,
+          "yaw_rate_radps": -0.14637954514176374
+        }
+      ]
+    }
+  },
+  "replay_unchanged": true,
+  "cache": [
+    {
+      "run": "validation",
+      "accepted": true,
+      "lap_time_s": 41.600000000004876,
+      "solver": {
+        "algorithm": "SciPy PRIMA COBYLA",
+        "decision_variables": 6,
+        "gradients": false,
+        "worker_count": 1,
+        "evaluations": 25,
+        "native_evaluations": 25,
+        "cache_hits": 26,
+        "best_objective": 0.8188976377951117,
+        "constraint_violation": 0.0,
+        "wall_s": 73.13711312494706,
+        "mean_evaluation_s": 2.5473366899089886,
+        "improvement": 0.1811023622048883,
+        "name": "SciPy COBYLA (PRIMA)",
+        "success": true,
+        "status": 0,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+        "nodes": 4,
+        "inequality_constraints": 16
+      },
+      "replay_validation": {
+        "position_max_m": 0.40622526109322077,
+        "position_rms_m": 0.07121484575472252,
+        "speed_max_mps": 0.10020398700020294,
+        "yaw_max_rad": 0.019521427880420994,
+        "lap_time_difference_s": 0.0014707337852684077,
+        "dt_s": 0.001,
+        "progress_m": 1079.2655958189619,
+        "mode": "native time-domain trajectory tracking at 1 ms; feedback recomputed",
+        "open_loop_final_position_error_m": 293.98323482439594,
+        "open_loop_complete": false,
+        "replay_minimum_clearance_m": 4.283705298760944
+      }
+    },
+    {
+      "run": "repeat",
+      "accepted": true,
+      "lap_time_s": 41.600000000004876,
+      "solver": {
+        "algorithm": "SciPy PRIMA COBYLA",
+        "decision_variables": 6,
+        "gradients": false,
+        "worker_count": 1,
+        "evaluations": 25,
+        "native_evaluations": 0,
+        "cache_hits": 51,
+        "best_objective": 0.8188976377951117,
+        "constraint_violation": 0.0,
+        "wall_s": 11.272630000021309,
+        "mean_evaluation_s": 0.0005646783160045743,
+        "improvement": 0.1811023622048883,
+        "name": "SciPy COBYLA (PRIMA)",
+        "success": true,
+        "status": 0,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+        "nodes": 4,
+        "inequality_constraints": 16
+      },
+      "replay_validation": {
+        "position_max_m": 0.40622526109322077,
+        "position_rms_m": 0.07121484575472252,
+        "speed_max_mps": 0.10020398700020294,
+        "yaw_max_rad": 0.019521427880420994,
+        "lap_time_difference_s": 0.0014707337852684077,
+        "dt_s": 0.001,
+        "progress_m": 1079.2655958189619,
+        "mode": "native time-domain trajectory tracking at 1 ms; feedback recomputed",
+        "open_loop_final_position_error_m": 293.98323482439594,
+        "open_loop_complete": false,
+        "replay_minimum_clearance_m": 4.283705298760944
+      }
+    }
+  ],
+  "candidate_profile": {
+    "lap_time_s": 223.94000000034117,
+    "wall_s": 18.530411792,
+    "simulation_steps": 111970,
+    "timing": {
+      "objective_and_diagnostics_s": 0.06371514399615996,
+      "other_native_s": 0.05028114301016118,
+      "simulation_s": 2.9862535098038827,
+      "track_projection_s": 15.430223245189797
+    },
+    "binding_timing": {
+      "encode_s": 6.933393888175488e-05,
+      "native_and_serialization_s": 18.530677624978125,
+      "decode_s": 0.00019208306912332773,
+      "total_s": 18.53093904198613,
+      "ipc_s": 0
+    },
+    "complete": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "lap_time_s": 223.94000000034117,
+  "wall_s": 18.530411792,
+  "simulation_steps": 111970,
+  "timing": {
+    "objective_and_diagnostics_s": 0.06371514399615996,
+    "other_native_s": 0.05028114301016118,
+    "simulation_s": 2.9862535098038827,
+    "track_projection_s": 15.430223245189797
+  },
+  "binding_timing": {
+    "encode_s": 6.933393888175488e-05,
+    "native_and_serialization_s": 18.530677624978125,
+    "decode_s": 0.00019208306912332773,
+    "total_s": 18.53093904198613,
+    "ipc_s": 0
+  },
+  "complete": true
+}

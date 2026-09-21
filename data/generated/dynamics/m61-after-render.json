@@ -1,0 +1,360 @@
+{
+  "drive": {
+    "mean": 16.650416666517653,
+    "p95": 24.100000023841858,
+    "frames": 480,
+    "details": {
+      "mean": 17.58266666650772,
+      "p95": 23.899999976158142,
+      "calls": 108,
+      "triangles": 372472,
+      "textures": 63
+    },
+    "cpu": {
+      "charts": {
+        "meanMs": 0.007196970509760307,
+        "p95Ms": 0.10000002384185791,
+        "count": 264,
+        "windowMs": 8000
+      },
+      "telemetry selectors": {
+        "meanMs": 0.0001644737234241084,
+        "p95Ms": 0,
+        "count": 608,
+        "windowMs": 8000
+      },
+      "React rendering": {
+        "meanMs": 0.8763157929244795,
+        "p95Ms": 1.100000023841858,
+        "count": 152,
+        "windowMs": 8000
+      },
+      "replay interpolation": {
+        "meanMs": 0.041372140083392295,
+        "p95Ms": 0.10000002384185791,
+        "count": 481,
+        "windowMs": 8000
+      },
+      "force arrows": {
+        "meanMs": 0.0035343038812744396,
+        "p95Ms": 0,
+        "count": 481,
+        "windowMs": 8000
+      },
+      "camera system": {
+        "meanMs": 0.006860706761572317,
+        "p95Ms": 0.10000002384185791,
+        "count": 481,
+        "windowMs": 8000
+      },
+      "Three.js rendering": {
+        "meanMs": 1.4386694396607842,
+        "p95Ms": 3,
+        "count": 481,
+        "windowMs": 8000
+      },
+      "environment submission": {
+        "meanMs": 0.1199584200575545,
+        "p95Ms": 0.2999999523162842,
+        "count": 481,
+        "windowMs": 8000
+      },
+      "ghost submission": {
+        "meanMs": 0.5746361733474256,
+        "p95Ms": 2,
+        "count": 481,
+        "windowMs": 8000
+      },
+      "force arrows submission": {
+        "meanMs": 0,
+        "p95Ms": 0,
+        "count": 481,
+        "windowMs": 8000
+      },
+      "vehicle/other submission": {
+        "meanMs": 0.35114345084604753,
+        "p95Ms": 0.5000001192092896,
+        "count": 481,
+        "windowMs": 8000
+      },
+      "environment React": {
+        "meanMs": 0.10196078524870031,
+        "p95Ms": 0.30000007152557373,
+        "count": 306,
+        "windowMs": 8000
+      },
+      "vehicle transforms": {
+        "meanMs": 0.006237005493497155,
+        "p95Ms": 0.09999990463256836,
+        "count": 481,
+        "windowMs": 8000
+      },
+      "ghost": {
+        "meanMs": 0.03534303484736262,
+        "p95Ms": 0.10000002384185791,
+        "count": 481,
+        "windowMs": 8000
+      },
+      "ghost transforms": {
+        "meanMs": 0.0022869018407968376,
+        "p95Ms": 0,
+        "count": 481,
+        "windowMs": 8000
+      }
+    },
+    "clock": {
+      "simulationTime": 10.00039999997618,
+      "playbackState": "paused",
+      "direction": "forward",
+      "carTime": 10.00039999997618,
+      "position": [
+        672.7880414719854,
+        -539.0651162121327,
+        55.60570647246645
+      ]
+    }
+  },
+  "optimized": {
+    "mean": 16.66624999990066,
+    "p95": 18.399999976158142,
+    "frames": 480,
+    "details": {
+      "mean": 16.943500000039737,
+      "p95": 18.5,
+      "calls": 122,
+      "triangles": 375708,
+      "textures": 63
+    },
+    "cpu": {
+      "charts": {
+        "meanMs": 0,
+        "p95Ms": 0,
+        "count": 0,
+        "windowMs": 8000
+      },
+      "telemetry selectors": {
+        "meanMs": 0.022058823880027324,
+        "p95Ms": 0.10000002384185791,
+        "count": 340,
+        "windowMs": 8000
+      },
+      "React rendering": {
+        "meanMs": 1.1858823467703428,
+        "p95Ms": 1.600000023841858,
+        "count": 85,
+        "windowMs": 8000
+      },
+      "replay interpolation": {
+        "meanMs": 0.04187500029802323,
+        "p95Ms": 0.10000002384185791,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "force arrows": {
+        "meanMs": 0.0054166672130425775,
+        "p95Ms": 0.09999990463256836,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "camera system": {
+        "meanMs": 0.007291666666666667,
+        "p95Ms": 0.10000002384185791,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "Three.js rendering": {
+        "meanMs": 0.9514583356678485,
+        "p95Ms": 1.2999999523162842,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "environment submission": {
+        "meanMs": 0.1760416644314925,
+        "p95Ms": 0.30000007152557373,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "ghost submission": {
+        "meanMs": 0,
+        "p95Ms": 0,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "force arrows submission": {
+        "meanMs": 0,
+        "p95Ms": 0,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "vehicle/other submission": {
+        "meanMs": 0.38729167158404987,
+        "p95Ms": 0.6000000238418579,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "environment React": {
+        "meanMs": 0.10529411820804371,
+        "p95Ms": 0.30000007152557373,
+        "count": 170,
+        "windowMs": 8000
+      },
+      "vehicle transforms": {
+        "meanMs": 0.008125000447034837,
+        "p95Ms": 0.10000002384185791,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "ghost": {
+        "meanMs": 0,
+        "p95Ms": 0,
+        "count": 0,
+        "windowMs": 8000
+      },
+      "ghost transforms": {
+        "meanMs": 0,
+        "p95Ms": 0,
+        "count": 0,
+        "windowMs": 8000
+      }
+    },
+    "clock": {
+      "simulationTime": 50.029100000023845,
+      "playbackState": "playing",
+      "direction": "forward",
+      "carTime": 50.029100000023845,
+      "position": [
+        317.86693831843,
+        -406.75134853500487,
+        11.47231596302809
+      ]
+    }
+  },
+  "compare": {
+    "mean": 16.655208333333334,
+    "p95": 17.800000071525574,
+    "frames": 480,
+    "details": {
+      "mean": 16.64616666674614,
+      "p95": 17.600000023841858,
+      "calls": 298,
+      "triangles": 829268,
+      "textures": 63
+    },
+    "cpu": {
+      "charts": {
+        "meanMs": 0,
+        "p95Ms": 0,
+        "count": 0,
+        "windowMs": 8000
+      },
+      "telemetry selectors": {
+        "meanMs": 0.02005813877249873,
+        "p95Ms": 0.10000002384185791,
+        "count": 344,
+        "windowMs": 8000
+      },
+      "React rendering": {
+        "meanMs": 1.0860465127368306,
+        "p95Ms": 1.3000001907348633,
+        "count": 86,
+        "windowMs": 8000
+      },
+      "replay interpolation": {
+        "meanMs": 0.04166666741172473,
+        "p95Ms": 0.10000002384185791,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "force arrows": {
+        "meanMs": 0.004791666318972905,
+        "p95Ms": 0,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "camera system": {
+        "meanMs": 0.006875000645716985,
+        "p95Ms": 0.10000002384185791,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "Three.js rendering": {
+        "meanMs": 2.895416668554147,
+        "p95Ms": 3.5,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "environment submission": {
+        "meanMs": 0.13729166562358538,
+        "p95Ms": 0.2999999523162842,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "ghost submission": {
+        "meanMs": 1.9549999999503294,
+        "p95Ms": 2.399999976158142,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "force arrows submission": {
+        "meanMs": 0.03291666656732559,
+        "p95Ms": 0.10000002384185791,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "vehicle/other submission": {
+        "meanMs": 0.3314583383500576,
+        "p95Ms": 0.5000001192092896,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "environment React": {
+        "meanMs": 0.09651162527328314,
+        "p95Ms": 0.2999999523162842,
+        "count": 172,
+        "windowMs": 8000
+      },
+      "vehicle transforms": {
+        "meanMs": 0.005833332985639572,
+        "p95Ms": 0.09999990463256836,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "ghost": {
+        "meanMs": 0.030625000347693762,
+        "p95Ms": 0.10000002384185791,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "ghost transforms": {
+        "meanMs": 0.0031250002483526867,
+        "p95Ms": 0,
+        "count": 480,
+        "windowMs": 8000
+      },
+      "tire-force arrow updates": {
+        "meanMs": 0.007083333283662796,
+        "p95Ms": 0.10000002384185791,
+        "count": 480,
+        "windowMs": 8000
+      }
+    },
+    "clock": {
+      "simulationTime": 185.02809999990464,
+      "playbackState": "playing",
+      "direction": "forward",
+      "carTime": 185.02809999990464,
+      "position": [
+        56.329126919900695,
+        924.730557910156,
+        -18.80936308060988
+      ]
+    }
+  },
+  "native": {
+    "physicsHz": 500,
+    "publishHz": 100,
+    "stepBatchMeanMs": 0.658238110714592,
+    "stepBatchP95Ms": 0.8359579369425774,
+    "wallLagMs": 0
+  }
+}

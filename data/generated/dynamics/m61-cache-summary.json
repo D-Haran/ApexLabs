@@ -1,0 +1,78 @@
+[
+  {
+    "run": "validation",
+    "accepted": true,
+    "lap_time_s": 41.600000000004876,
+    "solver": {
+      "algorithm": "SciPy PRIMA COBYLA",
+      "decision_variables": 6,
+      "gradients": false,
+      "worker_count": 1,
+      "evaluations": 25,
+      "native_evaluations": 25,
+      "cache_hits": 26,
+      "best_objective": 0.8188976377951117,
+      "constraint_violation": 0.0,
+      "wall_s": 73.13711312494706,
+      "mean_evaluation_s": 2.5473366899089886,
+      "improvement": 0.1811023622048883,
+      "name": "SciPy COBYLA (PRIMA)",
+      "success": true,
+      "status": 0,
+      "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+      "nodes": 4,
+      "inequality_constraints": 16
+    },
+    "replay_validation": {
+      "position_max_m": 0.40622526109322077,
+      "position_rms_m": 0.07121484575472252,
+      "speed_max_mps": 0.10020398700020294,
+      "yaw_max_rad": 0.019521427880420994,
+      "lap_time_difference_s": 0.0014707337852684077,
+      "dt_s": 0.001,
+      "progress_m": 1079.2655958189619,
+      "mode": "native time-domain trajectory tracking at 1 ms; feedback recomputed",
+      "open_loop_final_position_error_m": 293.98323482439594,
+      "open_loop_complete": false,
+      "replay_minimum_clearance_m": 4.283705298760944
+    }
+  },
+  {
+    "run": "repeat",
+    "accepted": true,
+    "lap_time_s": 41.600000000004876,
+    "solver": {
+      "algorithm": "SciPy PRIMA COBYLA",
+      "decision_variables": 6,
+      "gradients": false,
+      "worker_count": 1,
+      "evaluations": 25,
+      "native_evaluations": 0,
+      "cache_hits": 51,
+      "best_objective": 0.8188976377951117,
+      "constraint_violation": 0.0,
+      "wall_s": 11.272630000021309,
+      "mean_evaluation_s": 0.0005646783160045743,
+      "improvement": 0.1811023622048883,
+      "name": "SciPy COBYLA (PRIMA)",
+      "success": true,
+      "status": 0,
+      "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+      "nodes": 4,
+      "inequality_constraints": 16
+    },
+    "replay_validation": {
+      "position_max_m": 0.40622526109322077,
+      "position_rms_m": 0.07121484575472252,
+      "speed_max_mps": 0.10020398700020294,
+      "yaw_max_rad": 0.019521427880420994,
+      "lap_time_difference_s": 0.0014707337852684077,
+      "dt_s": 0.001,
+      "progress_m": 1079.2655958189619,
+      "mode": "native time-domain trajectory tracking at 1 ms; feedback recomputed",
+      "open_loop_final_position_error_m": 293.98323482439594,
+      "open_loop_complete": false,
+      "replay_minimum_clearance_m": 4.283705298760944
+    }
+  }
+]

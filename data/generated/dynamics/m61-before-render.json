@@ -1,0 +1,54 @@
+{
+  "drive": {
+    "mean": 16.66611226611227,
+    "p95": 16.700000000000728,
+    "frames": 481,
+    "details": {
+      "mean": 17.735499999920528,
+      "p95": 25.5,
+      "calls": 111,
+      "triangles": 375692,
+      "textures": 63,
+      "carFirstRenderedMs": 2219.2999999523163,
+      "assetResponseMs": 763.5,
+      "environmentResponses": [
+        {
+          "file": "sky.hdr",
+          "durationMs": 6,
+          "transferBytes": 1435419
+        },
+        {
+          "file": "forest-atlas-generated.png",
+          "durationMs": 349.2999999523163,
+          "transferBytes": 2705846
+        }
+      ]
+    }
+  },
+  "optimized": {
+    "mean": 16.666249999999998,
+    "p95": 16.799999999999272,
+    "frames": 480,
+    "details": {
+      "mean": 16.700499999920527,
+      "p95": 26.700000047683716,
+      "calls": 114,
+      "triangles": 376226,
+      "textures": 63,
+      "carFirstRenderedMs": 2219.2999999523163,
+      "assetResponseMs": 763.5,
+      "environmentResponses": [
+        {
+          "file": "sky.hdr",
+          "durationMs": 6,
+          "transferBytes": 1435419
+        },
+        {
+          "file": "forest-atlas-generated.png",
+          "durationMs": 349.2999999523163,
+          "transferBytes": 2705846
+        }
+      ]
+    }
+  }
+}
